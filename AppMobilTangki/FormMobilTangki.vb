@@ -174,21 +174,21 @@ Public Class FormMobilTangki
 
     End Sub
 
-    Private Sub LvMTangki_DoubleClick(sender As Object, e As EventArgs) Handles LvMTangki.DoubleClick
-        Dim A As String = MsgBox("Tambah Transaksi...?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "TRANKSAKSI")
-        Select Case A
-            Case vbCancel
-                LvMTangki.Clear()
-                FormMobilTangki_Load(sender, e)
-                Call KosongkanData()
-                Exit Sub
-            Case vbOK
-                FormMenu.clearMenu()
-                FormMenu.switchPanel(FormTransaksi)
-                AmbilDatakeTransakasi()
-                Me.Close()
-        End Select
-    End Sub
+    'Private Sub LvMTangki_DoubleClick(sender As Object, e As EventArgs) Handles LvMTangki.DoubleClick
+    '    Dim A As String = MsgBox("Tambah Transaksi...?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "TRANKSAKSI")
+    '    Select Case A
+    '        Case vbCancel
+    '            LvMTangki.Clear()
+    '            FormMobilTangki_Load(sender, e)
+    '            Call KosongkanData()
+    '            Exit Sub
+    '        Case vbOK
+    '            FormMenu.clearMenu()
+    '            FormMenu.switchPanel(FormTransaksi)
+    '            AmbilDatakeTransakasi()
+    '            Me.Close()
+    '    End Select
+    'End Sub
     Private Sub fieldaftif()
         txtNPerusahaan.Enabled = True
         txtPlatKendaraan.Enabled = True

@@ -1,11 +1,9 @@
-﻿Imports System.IO
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class FormUser
     Dim gender As String
     Dim user As String
     Dim idNilai As String
-    Dim gambarawal As Bitmap
 
     Private Sub KosongkanData()
         TxtNamaLengkap.Text = ""
@@ -49,10 +47,6 @@ Public Class FormUser
         BtnHapus.Text = "HAPUS"
         BtnTutup.Text = "TUTUP"
 
-        'gambarawal = AppMobilTangki.My.Resources.Resources.user
-
-        PictureBox1.Image = gambarawal
-        btnTambahGambar.Enabled = False
 
         BtnTambah.Enabled = True
         BtnHapus.Enabled = False
@@ -76,7 +70,7 @@ Public Class FormUser
                 .Columns(6).Width = 100
                 .Columns(7).Width = 100
                 .Columns(8).Width = 80
-                .Columns(9).Width = 150
+                '.Columns(9).Width = 150
 
 
                 .Columns(0).DataPropertyName = "id"
@@ -88,8 +82,7 @@ Public Class FormUser
                 .Columns(6).DataPropertyName = "user_name"
                 .Columns(7).DataPropertyName = "pwd"
                 .Columns(8).DataPropertyName = "lvl"
-                .Columns(9).DataPropertyName = "foto"
-                .Columns(10).DataPropertyName = "c"
+                .Columns(9).DataPropertyName = "c"
 
                 .Columns(1).HeaderText = "NAMA LENGKAP"
                 .Columns(2).HeaderText = "JENIS KELAMIN"
@@ -99,10 +92,9 @@ Public Class FormUser
                 .Columns(6).HeaderText = "USERNAME"
                 .Columns(7).HeaderText = "PASSWORD"
                 .Columns(8).HeaderText = "LEVEL"
-                .Columns(9).HeaderText = "GAMBAR"
 
                 .Columns(0).Visible = False
-                .Columns(10).Visible = False
+                .Columns(9).Visible = False
 
                 .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 .EnableHeadersVisualStyles = False
@@ -117,35 +109,9 @@ Public Class FormUser
                 .GridColor = Color.DarkRed
 
             End With
-            For i = 0 To DataGridView1.Rows.Count - 1
-                Dim r As DataGridViewRow = DataGridView1.Rows(i)
-                r.Height = 70
-            Next
-            'DataGridLock.Rows.GetRowsHeight = 150
 
-            Dim imagecolumn = DirectCast(DataGridView1.Columns(9), DataGridViewImageColumn)
-            imagecolumn.ImageLayout = DataGridViewImageCellLayout.Stretch
-
-
-
-            'ListView1.Items.Clear()
-            'For a = 0 To dsData.Tables(0).Rows.Count - 1
-            '    With ListView1
-            '        .Items.Add(dsData.Tables(0).Rows(a).Item(0))
-            '        .Items(a).SubItems.Add(dsData.Tables(0).Rows(a).Item(1))
-            '        .Items(a).SubItems.Add(dsData.Tables(0).Rows(a).Item(2))
-            '        .Items(a).SubItems.Add(dsData.Tables(0).Rows(a).Item(3))
-            '        .Items(a).SubItems.Add(dsData.Tables(0).Rows(a).Item(4))
-            '        .Items(a).SubItems.Add(dsData.Tables(0).Rows(a).Item(8))
-            '        .Items(a).SubItems.Add(dsData.Tables(0).Rows(a).Item(9))
-            '        .Items(a).SubItems.Add(dsData.Tables(0).Rows(a).Item(5))
-            '        .Items(a).SubItems.Add(dsData.Tables(0).Rows(a).Item(6))
-            '        .Items(a).SubItems.Add(dsData.Tables(0).Rows(a).Item(7))
-            '    End With
-            'Next
-            'MsgBox("database berhasil di tampil")
         Catch ex As Exception
-            MsgBox("Gagal di tampil")
+            MsgBox(ex.Message, "EROR")
         End Try
     End Sub
 
@@ -158,11 +124,6 @@ Public Class FormUser
         KondisiAwal()
         TxtUsername.CharacterCasing = CharacterCasing.Lower
         TxtPassword.CharacterCasing = CharacterCasing.Lower
-
-        For i = 0 To DataGridView1.Rows.Count - 1
-            Dim r As DataGridViewRow = DataGridView1.Rows(i)
-            r.Height = 70
-        Next
     End Sub
 
     Private Sub BtnTutup_Click(sender As Object, e As EventArgs) Handles BtnTutup.Click
@@ -193,7 +154,6 @@ Public Class FormUser
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
         Try
             If BtnTambah.Text = "INPUT" Then
-                btnTambahGambar.Enabled = True
                 BtnTambah.Text = "SIMPAN"
                 BtnEdit.Text = "CLEAR"
                 BtnHapus.Visible = False
@@ -222,9 +182,6 @@ Public Class FormUser
                     MsgBox("Minimal 5 Username")
                 ElseIf Not TxtPassword.Text.Length >= 5 Then
                     MsgBox("Minimal 5 Password")
-                ElseIf pathfile = Nothing Then
-                    MsgBox("Silakan tambah gambar")
-                    'ElseIf Not btnTambahGambar Then
                 Else
                     Call KoneksiKeDatabase()
                     CMD = New MySqlCommand("SELECT * FROM tbl_user where user_name='" & TxtUsername.Text & "' OR no_hp='" & txtNoWa.Text & "'", CONN)
@@ -235,12 +192,7 @@ Public Class FormUser
 
                     Else
 
-                        Dim ms As New MemoryStream
-                        Try
-                            PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
-                        Catch ex As Exception
-                            MessageBox.Show("ERORR" & ex.Message, "ERORR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        End Try
+
 
                         Call KoneksiKeDatabase()
                         If RBLaki.Checked = True Then
@@ -252,8 +204,7 @@ Public Class FormUser
                         Call KoneksiKeDatabase()
                         CMD = New MySqlCommand
                         CMD.Connection = CONN
-                        QUERY = "INSERT INTO `tbl_user`(`id`, `nama_lengkap`, `jenis_kelamin`, `alamat`, `tanggal_lahir`, `user_name`, `pwd`, `lvl`, `no_hp`, `foto`, `c`) VALUES ('','" & TxtNamaLengkap.Text & "','" & gender & "','" & TxtAlamat.Text & "','" & Format(DateTanggalLahir.Value, "yyyy-MM-dd") & "','" & TxtUsername.Text & "','" & TxtPassword.Text & "','" & CBLevel.Text & "','" & txtNoWa.Text & "',@foto,'-')"
-                        CMD.Parameters.Add("@foto", MySqlDbType.Blob).Value = ms.ToArray()
+                        QUERY = "INSERT INTO `tbl_user`(`id`, `nama_lengkap`, `jenis_kelamin`, `alamat`, `tanggal_lahir`, `user_name`, `pwd`, `lvl`, `no_hp`, `c`) VALUES ('','" & TxtNamaLengkap.Text & "','" & gender & "','" & TxtAlamat.Text & "','" & Format(DateTanggalLahir.Value, "yyyy-MM-dd") & "','" & TxtUsername.Text & "','" & TxtPassword.Text & "','" & CBLevel.Text & "','" & txtNoWa.Text & "','-')"
                         CMD.CommandText = QUERY
                         CMD.ExecuteNonQuery()
 
@@ -279,10 +230,6 @@ Public Class FormUser
     Dim dataID As String
 
     Private Sub DataGridView1_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseClick
-        For i = 0 To DataGridView1.Rows.Count - 1
-            Dim r As DataGridViewRow = DataGridView1.Rows(i)
-            r.Height = 70
-        Next
 
         Try
             BtnEdit.Enabled = True
@@ -311,7 +258,6 @@ Public Class FormUser
             TxtPassword.Text = DataGridView1.Rows(e.RowIndex).Cells(7).Value
             CBLevel.Text = DataGridView1.Rows(e.RowIndex).Cells(8).Value
 
-            tampilgambar()
         Catch ex As Exception
 
         End Try
@@ -336,23 +282,15 @@ Public Class FormUser
         If BtnEdit.Text = "EDIT" Then
             DataGridView1.Enabled = False
             BtnEdit.Text = "UPDATE"
-            btnTambahGambar.Enabled = True
 
             FieldAktif()
             BtnHapus.Enabled = False
         Else
             Try
-                Dim ms As New MemoryStream
-                Try
-                    PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
-                Catch ex As Exception
-                    MessageBox.Show("ERORR" & ex.Message, "ERORR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End Try
 
                 CMD = New MySqlCommand
                 CMD.Connection = CONN
-                QUERY = "UPDATE tbl_user SET nama_lengkap='" & TxtNamaLengkap.Text & "',jenis_kelamin='" & gender & "',alamat='" & TxtAlamat.Text & "',tanggal_lahir='" & Format(DateTanggalLahir.Value, "yyyy-MM-dd") & "',user_name='" & TxtUsername.Text & "',pwd='" & TxtPassword.Text & "',lvl='" & CBLevel.Text & "',no_hp='" & txtNoWa.Text & "',foto= @foto,c='-'where id='" & dataID & "'"
-                CMD.Parameters.Add("@foto", MySqlDbType.Blob).Value = MS.ToArray()
+                QUERY = "UPDATE tbl_user SET nama_lengkap='" & TxtNamaLengkap.Text & "',jenis_kelamin='" & gender & "',alamat='" & TxtAlamat.Text & "',tanggal_lahir='" & Format(DateTanggalLahir.Value, "yyyy-MM-dd") & "',user_name='" & TxtUsername.Text & "',pwd='" & TxtPassword.Text & "',lvl='" & CBLevel.Text & "',no_hp='" & txtNoWa.Text & "',c='-'where id='" & dataID & "'"
                 CMD.CommandText = QUERY
                 CMD.ExecuteNonQuery()
                 MsgBox("EDIT data berhasil")
@@ -410,51 +348,7 @@ Public Class FormUser
             End Select
         End If
     End Sub
-    Dim namafile As String
-    Dim pathfile As String = Nothing
-    Private Sub btnTambahGambar_Click(sender As Object, e As EventArgs) Handles btnTambahGambar.Click
-        Try
 
-
-            OpenFileDialog1.ShowDialog()
-            OpenFileDialog1.Filter = "JPG Files(*.jpg)|*.jpg*"
-            PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-            pathfile = OpenFileDialog1.FileName
-
-            'TextBox2.Text = pathfile.Substring(pathfile.LastIndexOf("\") + 1)
-            namafile = OpenFileDialog1.FileName
-
-            PictureBox1.Image = Image.FromFile(namafile)
-        Catch ex As Exception
-
-        End Try
-    End Sub
-    Private Sub tampilgambar()
-        QUERY = "SELECT * FROM tbl_user WHERE id like '" & dataID & "'"
-        CMD = New MySqlCommand(QUERY, CONN)
-        RD = CMD.ExecuteReader
-        RD.Read()
-        Try
-            Dim gambar() As Byte
-            If RD.HasRows() Then
-                gambar = RD("foto")
-
-                Dim ms As New MemoryStream(gambar)
-                PictureBox1.Image = Image.FromStream(ms)
-                PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-            End If
-            RD.Close()
-        Catch ex As Exception
-            MessageBox.Show("EROR : " & ex.Message, "ERORR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        For i = 0 To DataGridView1.Rows.Count - 1
-            Dim r As DataGridViewRow = DataGridView1.Rows(i)
-            r.Height = 70
-        Next
-    End Sub
 
 
 End Class

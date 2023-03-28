@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,17 @@ Partial Class FormMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblTangki = New System.Windows.Forms.Label()
         Me.btnMTangki = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.lblNLengkap = New System.Windows.Forms.Label()
         Me.lbl_level = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.BTNAMT = New System.Windows.Forms.Button()
         Me.btnUser = New System.Windows.Forms.Button()
         Me.btnLaporan = New System.Windows.Forms.Button()
         Me.PanelAkses = New System.Windows.Forms.Panel()
@@ -36,14 +38,11 @@ Partial Class FormMenu
         Me.btnTutup = New System.Windows.Forms.Label()
         Me.lblatas = New System.Windows.Forms.Label()
         Me.PanelMenu = New System.Windows.Forms.Panel()
-        Me.lblNLengkap = New System.Windows.Forms.Label()
-        Me.ptProfil = New System.Windows.Forms.PictureBox()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.PanelAkses.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ptProfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTangki
@@ -74,20 +73,32 @@ Partial Class FormMenu
         Me.btnMTangki.Name = "btnMTangki"
         Me.btnMTangki.Size = New System.Drawing.Size(336, 63)
         Me.btnMTangki.TabIndex = 8
-        Me.btnMTangki.Text = "REGISTRASI"
+        Me.btnMTangki.Text = "MOBIL TANGKI"
         Me.btnMTangki.UseVisualStyleBackColor = False
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.Panel4.Controls.Add(Me.lblNLengkap)
-        Me.Panel4.Controls.Add(Me.ptProfil)
         Me.Panel4.Controls.Add(Me.lbl_level)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel4.Location = New System.Drawing.Point(0, 447)
+        Me.Panel4.Location = New System.Drawing.Point(0, 561)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(366, 302)
+        Me.Panel4.Size = New System.Drawing.Size(366, 188)
         Me.Panel4.TabIndex = 4
+        '
+        'lblNLengkap
+        '
+        Me.lblNLengkap.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblNLengkap.AutoSize = True
+        Me.lblNLengkap.BackColor = System.Drawing.Color.Transparent
+        Me.lblNLengkap.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNLengkap.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.lblNLengkap.Location = New System.Drawing.Point(27, 35)
+        Me.lblNLengkap.Name = "lblNLengkap"
+        Me.lblNLengkap.Size = New System.Drawing.Size(123, 20)
+        Me.lblNLengkap.TabIndex = 21
+        Me.lblNLengkap.Text = "Nama lengkap"
         '
         'lbl_level
         '
@@ -96,7 +107,7 @@ Partial Class FormMenu
         Me.lbl_level.BackColor = System.Drawing.Color.Transparent
         Me.lbl_level.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_level.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.lbl_level.Location = New System.Drawing.Point(67, 231)
+        Me.lbl_level.Location = New System.Drawing.Point(27, 81)
         Me.lbl_level.Name = "lbl_level"
         Me.lbl_level.Size = New System.Drawing.Size(94, 20)
         Me.lbl_level.TabIndex = 15
@@ -127,6 +138,7 @@ Partial Class FormMenu
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.BTNAMT)
         Me.Panel3.Controls.Add(Me.btnUser)
         Me.Panel3.Controls.Add(Me.btnMTangki)
         Me.Panel3.Controls.Add(Me.Panel4)
@@ -138,6 +150,21 @@ Partial Class FormMenu
         Me.Panel3.Size = New System.Drawing.Size(366, 749)
         Me.Panel3.TabIndex = 124
         '
+        'BTNAMT
+        '
+        Me.BTNAMT.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.BTNAMT.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BTNAMT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BTNAMT.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNAMT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.BTNAMT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BTNAMT.Location = New System.Drawing.Point(15, 235)
+        Me.BTNAMT.Name = "BTNAMT"
+        Me.BTNAMT.Size = New System.Drawing.Size(336, 63)
+        Me.BTNAMT.TabIndex = 10
+        Me.BTNAMT.Text = "REGISTASI AMT"
+        Me.BTNAMT.UseVisualStyleBackColor = False
+        '
         'btnUser
         '
         Me.btnUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
@@ -146,7 +173,7 @@ Partial Class FormMenu
         Me.btnUser.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
         Me.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUser.Location = New System.Drawing.Point(15, 343)
+        Me.btnUser.Location = New System.Drawing.Point(15, 440)
         Me.btnUser.Name = "btnUser"
         Me.btnUser.Size = New System.Drawing.Size(336, 63)
         Me.btnUser.TabIndex = 9
@@ -161,7 +188,7 @@ Partial Class FormMenu
         Me.btnLaporan.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLaporan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
         Me.btnLaporan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLaporan.Location = New System.Drawing.Point(12, 247)
+        Me.btnLaporan.Location = New System.Drawing.Point(15, 342)
         Me.btnLaporan.Name = "btnLaporan"
         Me.btnLaporan.Size = New System.Drawing.Size(336, 63)
         Me.btnLaporan.TabIndex = 4
@@ -218,32 +245,6 @@ Partial Class FormMenu
         Me.PanelMenu.Size = New System.Drawing.Size(1002, 749)
         Me.PanelMenu.TabIndex = 47
         '
-        'lblNLengkap
-        '
-        Me.lblNLengkap.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.lblNLengkap.AutoSize = True
-        Me.lblNLengkap.BackColor = System.Drawing.Color.Transparent
-        Me.lblNLengkap.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNLengkap.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.lblNLengkap.Location = New System.Drawing.Point(67, 206)
-        Me.lblNLengkap.Name = "lblNLengkap"
-        Me.lblNLengkap.Size = New System.Drawing.Size(123, 20)
-        Me.lblNLengkap.TabIndex = 21
-        Me.lblNLengkap.Text = "Nama lengkap"
-        '
-        'ptProfil
-        '
-        Me.ptProfil.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ptProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ptProfil.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ptProfil.Location = New System.Drawing.Point(71, 43)
-        Me.ptProfil.Margin = New System.Windows.Forms.Padding(71, 3, 71, 3)
-        Me.ptProfil.Name = "ptProfil"
-        Me.ptProfil.Size = New System.Drawing.Size(224, 151)
-        Me.ptProfil.TabIndex = 20
-        Me.ptProfil.TabStop = False
-        '
         'FormMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -265,7 +266,6 @@ Partial Class FormMenu
         Me.PanelAkses.ResumeLayout(False)
         Me.PanelAkses.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ptProfil, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -285,5 +285,5 @@ Partial Class FormMenu
     Friend WithEvents btnUser As Button
     Friend WithEvents lbl_level As Label
     Friend WithEvents lblNLengkap As Label
-    Friend WithEvents ptProfil As PictureBox
+    Friend WithEvents BTNAMT As Button
 End Class

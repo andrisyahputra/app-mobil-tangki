@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports AppMobilTangki.FormMenu
 
 Public Class FormLogin
 
@@ -22,7 +21,6 @@ Public Class FormLogin
                 If RD.HasRows = True Then
                     FormMenu.lbl_level.Text = RD.Item("lvl")
                     FormMenu.lblNLengkap.Text = RD.Item("nama_lengkap")
-                    gambar = RD.Item("foto")
                     Me.Hide()
                     FormMenu.Show()
                 Else

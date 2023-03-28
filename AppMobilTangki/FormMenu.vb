@@ -1,5 +1,4 @@
-﻿Imports System.IO
-Public Class FormMenu
+﻿Public Class FormMenu
 
 
 
@@ -40,23 +39,13 @@ Public Class FormMenu
 
         switchPanel(FormMobilTangki)
     End Sub
-    Public Shared gambar() As Byte
+
     Private Sub FormMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
-
-        Try
-            Dim ms As New MemoryStream(gambar)
-            ptProfil.Image = Image.FromStream(ms)
-            ptProfil.SizeMode = PictureBoxSizeMode.StretchImage
-        Catch ex As Exception
-
-        End Try
 
         If lbl_level.Text = "Admin" Then
             btnUser.Visible = True
-            'tampilgambar()
         ElseIf lbl_level.Text = "Operator" Then
             btnUser.Visible = False
-            'tampilgambar()
         Else
             Me.Close()
             FormLogin.Show()
@@ -74,30 +63,12 @@ Public Class FormMenu
     Private Sub btnUser_Click(sender As Object, e As EventArgs) Handles btnUser.Click
         clearMenu()
         switchPanel(FormUser)
-        For i = 0 To FormUser.DataGridView1.Rows.Count - 1
-            Dim r As DataGridViewRow = FormUser.DataGridView1.Rows(i)
-            r.Height = 70
-        Next
+
     End Sub
-    'Private Sub tampilgambar()
 
-    '    Call KoneksiKeDatabase()
-    '    QUERY = "SELECT * FROM tbl_user WHERE id like '" & lbl_user.Text & "'"
-    '    CMD = New MySqlCommand(QUERY, CONN)
-    '    RD = CMD.ExecuteReader
-    '    RD.Read()
-    '    Try
-    '        Dim gambar() As Byte
-    '        If RD.HasRows() Then
-    '            gambar = RD("foto")
+    Private Sub BTNAMT_Click(sender As Object, e As EventArgs) Handles BTNAMT.Click
+        clearMenu()
+        switchPanel(FormTransaksi)
+    End Sub
 
-    '            Dim ms As New MemoryStream(gambar)
-    '            ptProfil.Image = Image.FromStream(ms)
-    '            ptProfil.SizeMode = PictureBoxSizeMode.StretchImage
-    '        End If
-    '        RD.Close()
-    '    Catch ex As Exception
-    '        MessageBox.Show("EROR : " & ex.Message, "ERORR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    End Try
-    'End Sub
 End Class
