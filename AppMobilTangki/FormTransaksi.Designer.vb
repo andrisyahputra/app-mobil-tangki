@@ -29,7 +29,7 @@ Partial Class FormTransaksi
         Me.txtJMHole1 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.LBLCARIDATA = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblJam = New System.Windows.Forms.Label()
         Me.lblIDPlat = New System.Windows.Forms.Label()
@@ -75,17 +75,17 @@ Partial Class FormTransaksi
         Me.txtCari.Size = New System.Drawing.Size(295, 29)
         Me.txtCari.TabIndex = 119
         '
-        'Label9
+        'LBLCARIDATA
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(57, 357)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(117, 27)
-        Me.Label9.TabIndex = 118
-        Me.Label9.Text = "Cari Data :"
+        Me.LBLCARIDATA.AutoSize = True
+        Me.LBLCARIDATA.BackColor = System.Drawing.Color.Transparent
+        Me.LBLCARIDATA.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLCARIDATA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.LBLCARIDATA.Location = New System.Drawing.Point(57, 357)
+        Me.LBLCARIDATA.Name = "LBLCARIDATA"
+        Me.LBLCARIDATA.Size = New System.Drawing.Size(117, 27)
+        Me.LBLCARIDATA.TabIndex = 118
+        Me.LBLCARIDATA.Text = "Cari Data :"
         '
         'GroupBox1
         '
@@ -269,7 +269,7 @@ Partial Class FormTransaksi
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.txtCari)
-        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.LBLCARIDATA)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.LblKode)
         Me.Controls.Add(Me.GroupBox1)
@@ -290,7 +290,7 @@ Partial Class FormTransaksi
     Friend WithEvents Label7 As Label
     Friend WithEvents btnHapus As Label
     Friend WithEvents txtCari As TextBox
-    Friend WithEvents Label9 As Label
+    Friend WithEvents LBLCARIDATA As Label
     Friend WithEvents BtnEdit As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnTutup As Label

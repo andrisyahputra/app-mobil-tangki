@@ -10,26 +10,26 @@ Public Class FormMobilTangki
     Dim imgUpdate As Bitmap
     Dim dataId%
 
-    Private Sub PosisiList()
-        With LvMTangki.Columns
-            .Add("ID", 0)
-            .Add("NAMA PERUSAHAAN", 200)
-            .Add("MOBIL TANGKI", 170)
-            .Add("KOMPERTEMEN1", 170)
-            .Add("KOMPERTEMEN2", 170)
-            .Add("NO PLAT MOBIL", 170)
-            '.Add("ID KENDARAAN", 100)
-            '.Add("TGL KENDARAAN", 110)
-            '.Add("TGL BAYAR", 100)
-            '.Add("TGL JATUH TEMPO", 120)
-            '.Add("TEMPO", 70)
-            '.Add("PEMBAYARAN", 100)
-            '.Add("HARGA", 60)
-            '.Add("KASIR", 100)
-        End With
-        'LvMTangki.BackColor = Co
+    'Private Sub PosisiList()
+    '    With LvMTangki.Columns
+    '        '.Add("ID", 0)
+    '        '.Add("NAMA PERUSAHAAN", 200)
+    '        '.Add("MOBIL TANGKI", 170)
+    '        '.Add("KOMPERTEMEN1", 170)
+    '        '.Add("KOMPERTEMEN2", 170)
+    '        '.Add("NO PLAT MOBIL", 170)
+    '        '.Add("ID KENDARAAN", 100)
+    '        '.Add("TGL KENDARAAN", 110)
+    '        '.Add("TGL BAYAR", 100)
+    '        '.Add("TGL JATUH TEMPO", 120)
+    '        '.Add("TEMPO", 70)
+    '        '.Add("PEMBAYARAN", 100)
+    '        '.Add("HARGA", 60)
+    '        '.Add("KASIR", 100)
+    '    End With
+    '    'LvMTangki.BackColor = Co
 
-    End Sub
+    'End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
         Try
@@ -46,7 +46,7 @@ Public Class FormMobilTangki
                 DS = New DataSet
                 DA.Fill(DS)
 
-                LvMTangki.Clear()
+                'LvMTangki.Clear()
                 FormMobilTangki_Load(sender, e)
                 Call KosongkanData()
             End If
@@ -60,13 +60,13 @@ Public Class FormMobilTangki
 
         'Timer1.Start()
         'comboBoxIDUnit()
-        LvMTangki.Clear()
+        'LvMTangki.Clear()
         KoneksiKeDatabase()
         kondisiawal()
-        PosisiList()
+        'PosisiList()
     End Sub
     Private Sub kondisiawal()
-        Dim a As Integer
+        'Dim a As Integer
         Try
             KosongkanData()
 
@@ -117,34 +117,96 @@ Public Class FormMobilTangki
             btnHapus.Enabled = False
             BtnEdit.Enabled = False
 
-            KoneksiKeDatabase()
-            QUERY = "Select * FROM tbl_mobil_tangki ORDER BY id"
-            DA = New MySqlDataAdapter(QUERY, CONN)
-            DS = New DataSet
-            DA.Fill(DS)
-            LvMTangki.Items.Clear()
-            For a = 0 To DS.Tables(0).Rows.Count - 1
-                With LvMTangki
-                    .Items.Add(DS.Tables(0).Rows(a).Item(0))
-                    .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(1))
-                    .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(2))
-                    .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(3))
-                    .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(4))
-                    .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(5))
-                    '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(5))
-                    '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(6))
-                    '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(7))
-                    '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(8))
-                    '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(9))
-                    '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(10))
-                    '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(11))
-                End With
+            'KoneksiKeDatabase()
+            'QUERY = "Select * FROM mt ORDER BY id"
+            'DA = New MySqlDataAdapter(QUERY, CONN)
+            'DS = New DataSet
+            'DA.Fill(DS)
+            'LvMTangki.Items.Clear()
+            'For a = 0 To DS.Tables(0).Rows.Count - 1
+            '    With LvMTangki
+            '        '.Items.Add(DS.Tables(0).Rows(a).Item(0))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(1))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(2))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(3))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(4))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(5))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(5))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(6))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(7))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(8))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(9))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(10))
+            '        '.Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(11))
+            '    End With
 
 
-            Next
+            'Next
+
+            'Try
+
+            QUERY = "Select * FROM mt ORDER BY id"
+                DA = New MySqlDataAdapter(QUERY, CONN)
+                DS = New DataSet
+                DA.Fill(DS, "mt")
+                DataGridView1.DataSource = DS.Tables("mt")
+
+            With DataGridView1
+                '    '.Columns(1).Width = 200
+                '    '.Columns(2).Width = 120
+                '    '.Columns(3).Width = 100
+                '    '.Columns(4).Width = 150
+                '    '.Columns(5).Width = 150
+                '    '.Columns(6).Width = 100
+                '    '.Columns(7).Width = 100
+                '    '.Columns(8).Width = 80
+                '    ''.Columns(9).Width = 150
+
+
+                '    '.Columns(0).DataPropertyName = "id"
+                '    '.Columns(1).DataPropertyName = "nama_lengkap"
+                '    '.Columns(2).DataPropertyName = "jenis_kelamin"
+                '    '.Columns(3).DataPropertyName = "no_hp"
+                '    '.Columns(4).DataPropertyName = "alamat"
+                '    '.Columns(5).DataPropertyName = "tanggal_lahir"
+                '    '.Columns(6).DataPropertyName = "user_name"
+                '    '.Columns(7).DataPropertyName = "pwd"
+                '    '.Columns(8).DataPropertyName = "lvl"
+                '    '.Columns(9).DataPropertyName = "c"
+
+                '    '.Columns(1).HeaderText = "NAMA LENGKAP"
+                '    '.Columns(2).HeaderText = "JENIS KELAMIN"
+                '    '.Columns(3).HeaderText = "NOMOR HP"
+                '    '.Columns(4).HeaderText = "ALAMAT"
+                '    '.Columns(5).HeaderText = "TANGGAL LAHIR"
+                '    '.Columns(6).HeaderText = "USERNAME"
+                '    '.Columns(7).HeaderText = "PASSWORD"
+                '    '.Columns(8).HeaderText = "LEVEL"
+
+                '    '.Columns(0).Visible = False
+                '    '.Columns(9).Visible = False
+
+                .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                .EnableHeadersVisualStyles = False
+                .ColumnHeadersDefaultCellStyle.BackColor = Color.Blue
+                .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+                .ColumnHeadersDefaultCellStyle.Font = New Font(DataGridView.DefaultFont, FontStyle.Bold)
+
+                .RowsDefaultCellStyle.BackColor = Color.Crimson
+                .DefaultCellStyle.ForeColor = Color.DarkRed
+                .RowsDefaultCellStyle.BackColor = Color.SkyBlue
+                .AlternatingRowsDefaultCellStyle.BackColor = Color.Wheat
+                .GridColor = Color.DarkRed
+
+            End With
+
+            'Catch ex As Exception
+            '    MsgBox(ex.Message, "EROR")
+            'End Try
+
             'MsgBox("database berhasil di tampil")
         Catch ex As Exception
-            MsgBox("database gagal di tampil")
+            MsgBox(ex.Message)
         End Try
     End Sub
     Private Sub KosongkanData()
@@ -162,15 +224,15 @@ Public Class FormMobilTangki
         'FormMenu.FormMenu_Load(sender, e)
     End Sub
     Private Sub AmbilDatakeTransakasi()
-        With LvMTangki.SelectedItems
-            BtnEdit.Text = "EDIT"
-            btnHapus.Text = "HAPUS"
-            BtnEdit.Image = ImgEdit
-            BtnEdit.Enabled = True
-            btnHapus.Enabled = True
-            BtnTambah.Enabled = False
-            FormTransaksi.lblIDPlat.Text = .Item(0).SubItems(5).Text
-        End With
+        'With LvMTangki.SelectedItems
+        '    BtnEdit.Text = "EDIT"
+        '    btnHapus.Text = "HAPUS"
+        '    BtnEdit.Image = ImgEdit
+        '    BtnEdit.Enabled = True
+        '    btnHapus.Enabled = True
+        '    BtnTambah.Enabled = False
+        '    FormTransaksi.lblIDPlat.Text = .Item(0).SubItems(5).Text
+        'End With
 
     End Sub
 
@@ -220,47 +282,47 @@ Public Class FormMobilTangki
                 MsgBox("Edit data berhasil")
 
                     Call kondisiawal()
-                LvMTangki.Enabled = True
+                'LvMTangki.Enabled = True
             End If
         Catch ex As Exception
             MsgBox("PLAT NOMOR SUDAH TERSEDIA")
         End Try
     End Sub
     Private Sub ambiledithapus()
-        With LvMTangki.SelectedItems
-            BtnEdit.Text = "EDIT"
-            btnHapus.Text = "HAPUS"
-            BtnEdit.Image = ImgEdit
-            btnClear.Text = "BATAL"
-            btnClear.Image = imgBatal
-            BtnEdit.Enabled = True
-            btnHapus.Enabled = True
-            BtnTambah.Enabled = False
-            btnClear.Enabled = True
+        'With LvMTangki.SelectedItems
+        'BtnEdit.Text = "EDIT"
+        '    btnHapus.Text = "HAPUS"
+        '    BtnEdit.Image = ImgEdit
+        '    btnClear.Text = "BATAL"
+        '    btnClear.Image = imgBatal
+        '    BtnEdit.Enabled = True
+        '    btnHapus.Enabled = True
+        '    BtnTambah.Enabled = False
+        '    btnClear.Enabled = True
 
-            txtNPerusahaan.Enabled = False
-            txtPlatKendaraan.Enabled = False
-            txtMTangki.Enabled = False
-            txtKTemen2.Enabled = False
-            txtKTemen1.Enabled = False
+        '    txtNPerusahaan.Enabled = False
+        '    txtPlatKendaraan.Enabled = False
+        '    txtMTangki.Enabled = False
+        '    txtKTemen2.Enabled = False
+        '    txtKTemen1.Enabled = False
 
-            dataId = .Item(0).SubItems(0).Text
-            txtNPerusahaan.Text = .Item(0).SubItems(1).Text
-            txtMTangki.Text = .Item(0).SubItems(2).Text
-            txtPlatKendaraan.Text = .Item(0).SubItems(5).Text
-            txtKTemen1.Text = .Item(0).SubItems(3).Text
-            txtKTemen2.Text = .Item(0).SubItems(4).Text
-        End With
+        '    dataId = .Item(0).SubItems(0).Text
+        '    txtNPerusahaan.Text = .Item(0).SubItems(1).Text
+        '    txtMTangki.Text = .Item(0).SubItems(2).Text
+        '    txtPlatKendaraan.Text = .Item(0).SubItems(5).Text
+        '    txtKTemen1.Text = .Item(0).SubItems(3).Text
+        '    txtKTemen2.Text = .Item(0).SubItems(4).Text
+        'End With
     End Sub
 
 
-    Private Sub LvMTangki_Click(sender As Object, e As EventArgs) Handles LvMTangki.Click
+    Private Sub LvMTangki_Click(sender As Object, e As EventArgs)
         ambiledithapus()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         If btnClear.Text = "BATAL" Then
-            LvMTangki.Clear()
+            'LvMTangki.Clear()
             FormMobilTangki_Load(sender, e)
             Call KosongkanData()
             Exit Sub
@@ -278,7 +340,7 @@ Public Class FormMobilTangki
 
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
         If btnHapus.Text = "BATAL" Then
-            LvMTangki.Clear()
+            'LvMTangki.Clear()
             FormMobilTangki_Load(sender, e)
             Call KosongkanData()
             Exit Sub
@@ -291,7 +353,7 @@ Public Class FormMobilTangki
                 A = MsgBox("Benar DIHAPUS...?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "HAPUS DATA")
                 Select Case A
                     Case vbCancel
-                        LvMTangki.Clear()
+                        'LvMTangki.Clear()
                         FormMobilTangki_Load(sender, e)
                         Call KosongkanData()
                         MsgBox("Data Tidak hapus", MsgBoxStyle.OkOnly, "HAPUS DATA")
@@ -301,7 +363,7 @@ Public Class FormMobilTangki
                         QUERY = "delete from tbl_mobil_tangki where id='" & dataId & "'"
                         CMD = New MySqlCommand(QUERY, CONN)
                         CMD.ExecuteNonQuery()
-                        LvMTangki.Clear()
+                        'LvMTangki.Clear()
                         FormMobilTangki_Load(sender, e)
                         Call KosongkanData()
                         MsgBox("Berhasil Di hapus", MsgBoxStyle.OkOnly, "HAPUS DATA")
@@ -317,26 +379,26 @@ Public Class FormMobilTangki
 
     End Sub
     Private Sub Caridata()
-        Try
-            KoneksiKeDatabase()
-            QUERY = "SELECT * FROM tbl_mobil_tangki WHERE nama_perusahaan LIKE '%" & Trim(txtCari.Text) & "%' OR mobil_tangki LIKE '%" & Trim(txtCari.Text) & "%'"
-            DA = New MySqlDataAdapter(QUERY, CONN)
-            DS = New DataSet
-            DA.Fill(DS)
-            LvMTangki.Items.Clear()
-            For a = 0 To DS.Tables(0).Rows.Count - 1
-                With LvMTangki
-                    .Items.Add(DS.Tables(0).Rows(a).Item(0))
-                    .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(1))
-                    .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(2))
-                    .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(3))
-                    .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(4))
-                    .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(5))
-                End With
-            Next
-        Catch ex As Exception
-            MsgBox("Data tidak di temukan")
-        End Try
+        'Try
+        '    KoneksiKeDatabase()
+        '    QUERY = "SELECT * FROM tbl_mobil_tangki WHERE nama_perusahaan LIKE '%" & Trim(txtCari.Text) & "%' OR mobil_tangki LIKE '%" & Trim(txtCari.Text) & "%'"
+        '    DA = New MySqlDataAdapter(QUERY, CONN)
+        '    DS = New DataSet
+        '    DA.Fill(DS)
+        '    LvMTangki.Items.Clear()
+        '    For a = 0 To DS.Tables(0).Rows.Count - 1
+        '        With LvMTangki
+        '            .Items.Add(DS.Tables(0).Rows(a).Item(0))
+        '            .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(1))
+        '            .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(2))
+        '            .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(3))
+        '            .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(4))
+        '            .Items(a).SubItems.Add(DS.Tables(0).Rows(a).Item(5))
+        '        End With
+        '    Next
+        'Catch ex As Exception
+        '    MsgBox("Data tidak di temukan")
+        'End Try
     End Sub
 
     Private Sub LblKode_Click(sender As Object, e As EventArgs) Handles LblKode.Click

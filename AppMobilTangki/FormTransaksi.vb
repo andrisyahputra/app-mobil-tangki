@@ -12,55 +12,55 @@ Public Class FormTransaksi
     Dim dataId%
     Dim tglsekarang As Date
 
-    Private Sub AturGridTransaksi()
+    'Private Sub AturGridTransaksi()
 
-        With DataGridTranksaksi
-            '.Columns(0).Width = 200
-            .Columns(1).Width = 200
-            .Columns(2).Width = 80
-            .Columns(3).Width = 100
-            .Columns(4).Width = 100
-            .Columns(5).Width = 100
-            .Columns(6).Width = 90
-            .Columns(7).Width = 90
-            .Columns(8).Width = 120
+    'With DataGridTranksaksi
+    '    '.Columns(0).Width = 200
+    '    .Columns(1).Width = 200
+    '    .Columns(2).Width = 80
+    '    .Columns(3).Width = 100
+    '    .Columns(4).Width = 100
+    '    .Columns(5).Width = 100
+    '    .Columns(6).Width = 90
+    '    .Columns(7).Width = 90
+    '    .Columns(8).Width = 120
 
-            .Columns(0).DataPropertyName = "id"
-            .Columns(1).DataPropertyName = "nama_perusahaan"
-            .Columns(2).DataPropertyName = "no_plat_mobil"
-            .Columns(3).DataPropertyName = "mobil_tangki"
-            .Columns(4).DataPropertyName = "id_kompartemen1"
-            .Columns(5).DataPropertyName = "id_kompartemen2"
-            .Columns(6).DataPropertyName = "jrk_m_hole1"
-            .Columns(7).DataPropertyName = "jrk_m_hole2"
-            .Columns(8).DataPropertyName = "tgl_jam_ukur"
+    '    .Columns(0).DataPropertyName = "id"
+    '    .Columns(1).DataPropertyName = "nama_perusahaan"
+    '    .Columns(2).DataPropertyName = "no_plat_mobil"
+    '    .Columns(3).DataPropertyName = "mobil_tangki"
+    '    .Columns(4).DataPropertyName = "id_kompartemen1"
+    '    .Columns(5).DataPropertyName = "id_kompartemen2"
+    '    .Columns(6).DataPropertyName = "jrk_m_hole1"
+    '    .Columns(7).DataPropertyName = "jrk_m_hole2"
+    '    .Columns(8).DataPropertyName = "tgl_jam_ukur"
 
-            .Columns(1).HeaderText = "NAMA PERUSAHAAN"
-            .Columns(2).HeaderText = "NO PLAT KENDARAAN"
-            .Columns(3).HeaderText = "MOBIL TANGKI"
-            .Columns(4).HeaderText = "KOMPARTEMEN 1"
-            .Columns(5).HeaderText = "KOMPARTEMEN 2"
-            .Columns(6).HeaderText = "JARAK HOLE 1"
-            .Columns(7).HeaderText = "JARAK HOLE 2"
-            .Columns(8).HeaderText = "TGL JAM UKUR"
+    '    .Columns(1).HeaderText = "NAMA PERUSAHAAN"
+    '    .Columns(2).HeaderText = "NO PLAT KENDARAAN"
+    '    .Columns(3).HeaderText = "MOBIL TANGKI"
+    '    .Columns(4).HeaderText = "KOMPARTEMEN 1"
+    '    .Columns(5).HeaderText = "KOMPARTEMEN 2"
+    '    .Columns(6).HeaderText = "JARAK HOLE 1"
+    '    .Columns(7).HeaderText = "JARAK HOLE 2"
+    '    .Columns(8).HeaderText = "TGL JAM UKUR"
 
-            .Columns(0).Visible = False
+    '    .Columns(0).Visible = False
 
-            '.Columns(9).Visible = False
-            '.Columns(10).Visible = False
+    '    '.Columns(9).Visible = False
+    '    '.Columns(10).Visible = False
 
-            .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .EnableHeadersVisualStyles = False
-            '.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue
-            '.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
-            .ColumnHeadersDefaultCellStyle.Font = New Font(DataGridView.DefaultFont, FontStyle.Bold)
-            '.DefaultCellStyle.ForeColor = Color.DarkRed
-            '.RowsDefaultCellStyle.BackColor = Color.PaleGreen
-            '.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkGreen
-            '.AlternatingRowsDefaultCellStyle.ForeColor = Color.White
-            '.GridColor = Color.DarkRed
-        End With
-    End Sub
+    '    .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+    '    .EnableHeadersVisualStyles = False
+    '    '.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue
+    '    '.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+    '    .ColumnHeadersDefaultCellStyle.Font = New Font(DataGridView.DefaultFont, FontStyle.Bold)
+    '    '.DefaultCellStyle.ForeColor = Color.DarkRed
+    '    '.RowsDefaultCellStyle.BackColor = Color.PaleGreen
+    '    '.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkGreen
+    '    '.AlternatingRowsDefaultCellStyle.ForeColor = Color.White
+    '    '.GridColor = Color.DarkRed
+    'End With
+    'End Sub
 
 
     Private Sub KosongkanData()
@@ -128,14 +128,62 @@ Public Class FormTransaksi
             btnHapus.Enabled = False
             BtnEdit.Enabled = False
 
+
             KoneksiKeDatabase()
-            QUERY = "Select * FROM relasitransaksi"
+            QUERY = "Select * FROM amt order by id"
             DA = New MySqlDataAdapter(QUERY, CONN)
             DS = New DataSet
-            DA.Fill(DS, "relasitransaksi")
-            DataGridTranksaksi.DataSource = DS.Tables("relasitransaksi")
+            DA.Fill(DS, "amt")
+            DataGridTranksaksi.DataSource = DS.Tables("amt")
+
+            'With DataGridTranksaksi
+            '    '.Columns(0).Width = 200
+            '    .Columns(1).Width = 200
+            '    .Columns(2).Width = 80
+            '    .Columns(3).Width = 100
+            '    .Columns(4).Width = 100
+            '    .Columns(5).Width = 100
+            '    .Columns(6).Width = 90
+            '    .Columns(7).Width = 90
+            '    .Columns(8).Width = 120
+
+            '.Columns(0).DataPropertyName = "id"
+            '.Columns(1).DataPropertyName = "nama_perusahaan"
+            '.Columns(2).DataPropertyName = "no_plat_mobil"
+            '.Columns(3).DataPropertyName = "mobil_tangki"
+            '.Columns(4).DataPropertyName = "id_kompartemen1"
+            '.Columns(5).DataPropertyName = "id_kompartemen2"
+            '.Columns(6).DataPropertyName = "jrk_m_hole1"
+            '.Columns(7).DataPropertyName = "jrk_m_hole2"
+            '.Columns(8).DataPropertyName = "tgl_jam_ukur"
+
+            '.Columns(1).HeaderText = "NAMA PERUSAHAAN"
+            '.Columns(2).HeaderText = "NO PLAT KENDARAAN"
+            '.Columns(3).HeaderText = "MOBIL TANGKI"
+            '.Columns(4).HeaderText = "KOMPARTEMEN 1"
+            '.Columns(5).HeaderText = "KOMPARTEMEN 2"
+            '.Columns(6).HeaderText = "JARAK HOLE 1"
+            '.Columns(7).HeaderText = "JARAK HOLE 2"
+            '.Columns(8).HeaderText = "TGL JAM UKUR"
+
+            '.Columns(0).Visible = False
+
+            '.Columns(9).Visible = False
+            '.Columns(10).Visible = False
+
+            '.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '    .EnableHeadersVisualStyles = False
+            '    '.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue
+            '    '.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+            '    .ColumnHeadersDefaultCellStyle.Font = New Font(DataGridView.DefaultFont, FontStyle.Bold)
+            '    '.DefaultCellStyle.ForeColor = Color.DarkRed
+            '    '.RowsDefaultCellStyle.BackColor = Color.PaleGreen
+            '    '.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkGreen
+            '    '.AlternatingRowsDefaultCellStyle.ForeColor = Color.White
+            '    '.GridColor = Color.DarkRed
+            'End With
         Catch ex As Exception
-            MsgBox("database gagal di tampil")
+            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -149,7 +197,7 @@ Public Class FormTransaksi
     Private Sub FormTransaksi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         KoneksiKeDatabase()
         kondisiawal()
-        AturGridTransaksi()
+        'AturGridTransaksi()
         Timer1.Start()
     End Sub
 

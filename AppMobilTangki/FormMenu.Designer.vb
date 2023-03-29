@@ -22,6 +22,10 @@ Partial Class FormMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTangki = New System.Windows.Forms.Label()
         Me.btnMTangki = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -34,15 +38,32 @@ Partial Class FormMenu
         Me.btnUser = New System.Windows.Forms.Button()
         Me.btnLaporan = New System.Windows.Forms.Button()
         Me.PanelAkses = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnTutup = New System.Windows.Forms.Label()
         Me.lblatas = New System.Windows.Forms.Label()
         Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.DataGridTranksaksi = New System.Windows.Forms.DataGridView()
+        Me.btnClear = New System.Windows.Forms.Label()
+        Me.BtnTambah = New System.Windows.Forms.Label()
+        Me.btnHapus = New System.Windows.Forms.Label()
+        Me.LBLCARIDATA = New System.Windows.Forms.Label()
+        Me.lblJam = New System.Windows.Forms.Label()
+        Me.lblIDPlat = New System.Windows.Forms.Label()
+        Me.txtJMHole2 = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.txtJMHole1 = New System.Windows.Forms.TextBox()
+        Me.txtCari = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.BtnEdit = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.PanelAkses.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridTranksaksi, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblTangki
@@ -50,14 +71,14 @@ Partial Class FormMenu
         Me.lblTangki.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTangki.AutoSize = True
-        Me.lblTangki.BackColor = System.Drawing.Color.Transparent
+        Me.lblTangki.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.lblTangki.Font = New System.Drawing.Font("Times New Roman", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTangki.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.lblTangki.Location = New System.Drawing.Point(768, 119)
+        Me.lblTangki.Location = New System.Drawing.Point(787, 3)
         Me.lblTangki.Name = "lblTangki"
-        Me.lblTangki.Size = New System.Drawing.Size(216, 55)
+        Me.lblTangki.Size = New System.Drawing.Size(307, 55)
         Me.lblTangki.TabIndex = 124
-        Me.lblTangki.Text = "TANGKI"
+        Me.lblTangki.Text = "TRANSAKSI"
         '
         'btnMTangki
         '
@@ -198,7 +219,15 @@ Partial Class FormMenu
         'PanelAkses
         '
         Me.PanelAkses.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.PanelAkses.Controls.Add(Me.PictureBox1)
+        Me.PanelAkses.Controls.Add(Me.DataGridTranksaksi)
+        Me.PanelAkses.Controls.Add(Me.btnClear)
+        Me.PanelAkses.Controls.Add(Me.BtnTambah)
+        Me.PanelAkses.Controls.Add(Me.btnHapus)
+        Me.PanelAkses.Controls.Add(Me.LBLCARIDATA)
+        Me.PanelAkses.Controls.Add(Me.txtCari)
+        Me.PanelAkses.Controls.Add(Me.Label9)
+        Me.PanelAkses.Controls.Add(Me.BtnEdit)
+        Me.PanelAkses.Controls.Add(Me.GroupBox1)
         Me.PanelAkses.Controls.Add(Me.btnTutup)
         Me.PanelAkses.Controls.Add(Me.lblTangki)
         Me.PanelAkses.Controls.Add(Me.lblatas)
@@ -208,15 +237,6 @@ Partial Class FormMenu
         Me.PanelAkses.Name = "PanelAkses"
         Me.PanelAkses.Size = New System.Drawing.Size(1370, 749)
         Me.PanelAkses.TabIndex = 126
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.AppMobilTangki.My.Resources.Resources.tanki_green
-        Me.PictureBox1.Location = New System.Drawing.Point(466, 177)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(802, 515)
-        Me.PictureBox1.TabIndex = 132
-        Me.PictureBox1.TabStop = False
         '
         'btnTutup
         '
@@ -245,6 +265,201 @@ Partial Class FormMenu
         Me.PanelMenu.Size = New System.Drawing.Size(1002, 749)
         Me.PanelMenu.TabIndex = 47
         '
+        'DataGridTranksaksi
+        '
+        Me.DataGridTranksaksi.AllowUserToAddRows = False
+        Me.DataGridTranksaksi.AllowUserToDeleteRows = False
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridTranksaksi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridTranksaksi.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridTranksaksi.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridTranksaksi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.DataGridTranksaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridTranksaksi.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DataGridTranksaksi.GridColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.DataGridTranksaksi.Location = New System.Drawing.Point(414, 484)
+        Me.DataGridTranksaksi.Name = "DataGridTranksaksi"
+        Me.DataGridTranksaksi.ReadOnly = True
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridTranksaksi.RowsDefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridTranksaksi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridTranksaksi.Size = New System.Drawing.Size(924, 253)
+        Me.DataGridTranksaksi.TabIndex = 140
+        '
+        'btnClear
+        '
+        Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!)
+        Me.btnClear.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnClear.Image = Global.AppMobilTangki.My.Resources.Resources.clear
+        Me.btnClear.Location = New System.Drawing.Point(1044, 395)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(69, 70)
+        Me.btnClear.TabIndex = 139
+        '
+        'BtnTambah
+        '
+        Me.BtnTambah.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!)
+        Me.BtnTambah.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BtnTambah.Image = Global.AppMobilTangki.My.Resources.Resources.save
+        Me.BtnTambah.Location = New System.Drawing.Point(944, 395)
+        Me.BtnTambah.Name = "BtnTambah"
+        Me.BtnTambah.Size = New System.Drawing.Size(69, 70)
+        Me.BtnTambah.TabIndex = 134
+        '
+        'btnHapus
+        '
+        Me.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnHapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!)
+        Me.btnHapus.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnHapus.Image = Global.AppMobilTangki.My.Resources.Resources.sampah
+        Me.btnHapus.Location = New System.Drawing.Point(1264, 395)
+        Me.btnHapus.Name = "btnHapus"
+        Me.btnHapus.Size = New System.Drawing.Size(69, 70)
+        Me.btnHapus.TabIndex = 136
+        '
+        'LBLCARIDATA
+        '
+        Me.LBLCARIDATA.BackColor = System.Drawing.Color.Transparent
+        Me.LBLCARIDATA.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LBLCARIDATA.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLCARIDATA.Image = Global.AppMobilTangki.My.Resources.Resources.search
+        Me.LBLCARIDATA.Location = New System.Drawing.Point(869, 412)
+        Me.LBLCARIDATA.Name = "LBLCARIDATA"
+        Me.LBLCARIDATA.Size = New System.Drawing.Size(40, 44)
+        Me.LBLCARIDATA.TabIndex = 133
+        '
+        'lblJam
+        '
+        Me.lblJam.AutoSize = True
+        Me.lblJam.BackColor = System.Drawing.Color.Transparent
+        Me.lblJam.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJam.Location = New System.Drawing.Point(488, 152)
+        Me.lblJam.Name = "lblJam"
+        Me.lblJam.Size = New System.Drawing.Size(47, 27)
+        Me.lblJam.TabIndex = 98
+        Me.lblJam.Text = "jam"
+        '
+        'lblIDPlat
+        '
+        Me.lblIDPlat.AutoSize = True
+        Me.lblIDPlat.BackColor = System.Drawing.Color.Transparent
+        Me.lblIDPlat.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIDPlat.Location = New System.Drawing.Point(443, 25)
+        Me.lblIDPlat.Name = "lblIDPlat"
+        Me.lblIDPlat.Size = New System.Drawing.Size(18, 27)
+        Me.lblIDPlat.TabIndex = 97
+        Me.lblIDPlat.Text = " "
+        Me.lblIDPlat.Visible = False
+        '
+        'txtJMHole2
+        '
+        Me.txtJMHole2.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtJMHole2.Location = New System.Drawing.Point(727, 75)
+        Me.txtJMHole2.Name = "txtJMHole2"
+        Me.txtJMHole2.Size = New System.Drawing.Size(147, 25)
+        Me.txtJMHole2.TabIndex = 69
+        '
+        'txtJMHole1
+        '
+        Me.txtJMHole1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtJMHole1.Location = New System.Drawing.Point(300, 75)
+        Me.txtJMHole1.Name = "txtJMHole1"
+        Me.txtJMHole1.Size = New System.Drawing.Size(147, 25)
+        Me.txtJMHole1.TabIndex = 69
+        '
+        'txtCari
+        '
+        Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCari.Location = New System.Drawing.Point(546, 419)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(295, 29)
+        Me.txtCari.TabIndex = 138
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(423, 421)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(117, 27)
+        Me.Label9.TabIndex = 137
+        Me.Label9.Text = "Cari Data :"
+        '
+        'BtnEdit
+        '
+        Me.BtnEdit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEdit.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BtnEdit.Image = Global.AppMobilTangki.My.Resources.Resources.update
+        Me.BtnEdit.Location = New System.Drawing.Point(1153, 395)
+        Me.BtnEdit.Name = "BtnEdit"
+        Me.BtnEdit.Size = New System.Drawing.Size(69, 70)
+        Me.BtnEdit.TabIndex = 135
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.lblJam)
+        Me.GroupBox1.Controls.Add(Me.lblIDPlat)
+        Me.GroupBox1.Controls.Add(Me.txtJMHole2)
+        Me.GroupBox1.Controls.Add(Me.txtJMHole1)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Font = New System.Drawing.Font("Times New Roman", 20.25!)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.GroupBox1.Location = New System.Drawing.Point(416, 82)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(922, 236)
+        Me.GroupBox1.TabIndex = 132
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "TRANSAKSI"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(482, 73)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(249, 27)
+        Me.Label4.TabIndex = 67
+        Me.Label4.Text = "Jarak Main Hole 2         :"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(55, 73)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(249, 27)
+        Me.Label7.TabIndex = 67
+        Me.Label7.Text = "Jarak Main Hole 1         :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(186, 152)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(296, 27)
+        Me.Label1.TabIndex = 67
+        Me.Label1.Text = "TGL JAM PENGUKURAN  :"
+        '
         'FormMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -265,7 +480,9 @@ Partial Class FormMenu
         Me.Panel3.ResumeLayout(False)
         Me.PanelAkses.ResumeLayout(False)
         Me.PanelAkses.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridTranksaksi, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -281,9 +498,25 @@ Partial Class FormMenu
     Friend WithEvents PanelMenu As Panel
     Friend WithEvents lblatas As Label
     Friend WithEvents btnLaporan As Button
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnUser As Button
     Friend WithEvents lbl_level As Label
     Friend WithEvents lblNLengkap As Label
     Friend WithEvents BTNAMT As Button
+    Friend WithEvents DataGridTranksaksi As DataGridView
+    Friend WithEvents btnClear As Label
+    Friend WithEvents BtnTambah As Label
+    Friend WithEvents btnHapus As Label
+    Friend WithEvents LBLCARIDATA As Label
+    Friend WithEvents txtCari As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents BtnEdit As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents lblJam As Label
+    Friend WithEvents lblIDPlat As Label
+    Friend WithEvents txtJMHole2 As TextBox
+    Friend WithEvents txtJMHole1 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Timer1 As Timer
 End Class

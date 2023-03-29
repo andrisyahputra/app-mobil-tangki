@@ -22,6 +22,8 @@ Partial Class FormMobilTangki
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtKTemen2 = New System.Windows.Forms.TextBox()
         Me.txtKTemen1 = New System.Windows.Forms.TextBox()
@@ -33,7 +35,6 @@ Partial Class FormMobilTangki
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtMTangki = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.LvMTangki = New System.Windows.Forms.ListView()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnClear = New System.Windows.Forms.Label()
@@ -42,7 +43,9 @@ Partial Class FormMobilTangki
         Me.BtnTambah = New System.Windows.Forms.Label()
         Me.LblKode = New System.Windows.Forms.Label()
         Me.btnTutup = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -162,26 +165,6 @@ Partial Class FormMobilTangki
         Me.Label3.TabIndex = 67
         Me.Label3.Text = "Mobil Tangki           :"
         '
-        'LvMTangki
-        '
-        Me.LvMTangki.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LvMTangki.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.LvMTangki.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LvMTangki.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LvMTangki.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LvMTangki.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.LvMTangki.FullRowSelect = True
-        Me.LvMTangki.GridLines = True
-        Me.LvMTangki.HideSelection = False
-        Me.LvMTangki.Location = New System.Drawing.Point(43, 444)
-        Me.LvMTangki.MultiSelect = False
-        Me.LvMTangki.Name = "LvMTangki"
-        Me.LvMTangki.Size = New System.Drawing.Size(924, 247)
-        Me.LvMTangki.TabIndex = 103
-        Me.LvMTangki.UseCompatibleStateImageBehavior = False
-        Me.LvMTangki.View = System.Windows.Forms.View.Details
-        '
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -269,12 +252,37 @@ Partial Class FormMobilTangki
         Me.btnTutup.Size = New System.Drawing.Size(36, 39)
         Me.btnTutup.TabIndex = 101
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(139, Byte), Integer))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DataGridView1.Location = New System.Drawing.Point(25, 413)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(952, 302)
+        Me.DataGridView1.TabIndex = 112
+        '
         'FormMobilTangki
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1002, 749)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.Label9)
@@ -282,7 +290,6 @@ Partial Class FormMobilTangki
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.LblKode)
-        Me.Controls.Add(Me.LvMTangki)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnTutup)
         Me.ForeColor = System.Drawing.Color.White
@@ -291,6 +298,7 @@ Partial Class FormMobilTangki
         Me.Text = "FormMobilTangki"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -306,7 +314,6 @@ Partial Class FormMobilTangki
     Friend WithEvents txtMTangki As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents LvMTangki As ListView
     Friend WithEvents LblKode As Label
     Friend WithEvents txtCari As TextBox
     Friend WithEvents Label9 As Label
@@ -316,4 +323,5 @@ Partial Class FormMobilTangki
     Friend WithEvents txtNPerusahaan As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents btnClear As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

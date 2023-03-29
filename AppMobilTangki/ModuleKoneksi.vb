@@ -9,7 +9,8 @@ Module ModuleKoneksi
 
     Public Sub KoneksiKeDatabase()
         Try
-            Dim str As String = "Server=localhost;user id=root;database=app_mobil_tangki"
+            Dim str As String = "server=localhost;User Id=root;password=;Persist Security Info=True;database=app_mobil_tangki;Convert Zero Datetime=True"
+            'Dim str As String = "Server=localhost;user id=root;database=app_mobil_tangki"
             CONN = New MySqlConnection(str)
             If CONN.State = ConnectionState.Closed Then
                 Try

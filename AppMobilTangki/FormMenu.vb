@@ -4,15 +4,43 @@
 
     Public Sub clearMenu()
         btnTutup.Visible = False
-        PictureBox1.Visible = False
+        'PictureBox1.Visible = False
+
         lblTangki.Visible = False
         lblatas.Visible = False
+
+
+        GroupBox1.Visible = False
+        DataGridTranksaksi.Visible = False
+        btnHapus.Visible = False
+        btnClear.Visible = False
+        BtnEdit.Visible = False
+        BtnTambah.Visible = False
+        LBLCARIDATA.Visible = False
+        txtCari.Visible = False
+        LBLCARIDATA.Visible = False
+        Label9.Visible = False
+
+
     End Sub
     Public Sub tampilMenu()
         btnTutup.Visible = True
-        PictureBox1.Visible = True
+        'PictureBox1.Visible = True
         lblTangki.Visible = True
         lblatas.Visible = True
+
+
+        GroupBox1.Visible = True
+        DataGridTranksaksi.Visible = True
+        btnHapus.Visible = True
+        btnClear.Visible = True
+        BtnEdit.Visible = True
+        BtnTambah.Visible = True
+        LBLCARIDATA.Visible = True
+        txtCari.Visible = True
+        LBLCARIDATA.Visible = True
+        Label9.Visible = True
+
 
     End Sub
 
