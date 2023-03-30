@@ -76,6 +76,8 @@ Public Class FormMobilTangki
             txtKTemen2.Enabled = True
             txtKTemen1.Enabled = True
 
+            'btnUploud.Enabled = False
+
             'txtId.ReadOnly = True
             'CBIDUnit.Enabled = False
             'CBIDKamar.Enabled = False
@@ -403,5 +405,116 @@ Public Class FormMobilTangki
 
     Private Sub LblKode_Click(sender As Object, e As EventArgs) Handles LblKode.Click
         Caridata()
+    End Sub
+
+    Private Function saveData(sql As String)
+        Dim CONN As MySqlConnection = New MySqlConnection("server=localhost;User Id=root;password=;Persist Security Info=True;database=app_mobil_tangki;Convert Zero Datetime=True")
+        Dim mysqlcmd As MySqlCommand
+        Dim mysqlresult As Boolean
+
+        Try
+            CONN.Open()
+            mysqlcmd = New MySqlCommand
+            With mysqlcmd
+                .Connection = CONN
+                .CommandText = sql
+                mysqlresult = .ExecuteNonQuery
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            CONN.Close()
+        End Try
+        Return mysqlresult
+
+    End Function
+    Dim lokasifile As String
+
+    Private Sub BTNEXCEL_Click(sender As Object, e As EventArgs) Handles BTNEXCEL.Click
+
+        Dim ofd As New OpenFileDialog
+        Dim con As OleDb.OleDbConnection
+        Dim cmd As New OleDb.OleDbCommand
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim dt As New DataTable
+
+
+        Try
+            With ofd
+                .Filter = "Excel Files(*.xlsx)|*.xlsx| All files(*.*)|*.*"
+                .FilterIndex = 1
+                .Title = "Import data from excel file"
+            End With
+            If ofd.ShowDialog() = DialogResult.OK Then
+                lokasifile = ofd.FileName
+
+                con = New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + lokasifile + ";Extended Properties=Excel 12.0;")
+                con.Open()
+                With cmd
+                    .Connection = con
+                    .CommandText = "SELECT * FROM [MT$]"
+                End With
+
+
+                da.SelectCommand = cmd
+                da.Fill(dt)
+                DataGridView1.DataSource = dt
+                con.Close()
+                'btnUploud.Enabled = True
+
+            End If
+
+
+
+
+
+
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If ProgressBar1.Value = 100 Then
+            Timer1.Stop()
+            MessageBox.Show("Sucessfully imported", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ProgressBar1.Value = 0
+        Else
+            ProgressBar1.Value += 1
+        End If
+    End Sub
+
+    Private Sub btnUploud_Click(sender As Object, e As EventArgs) Handles btnUploud.Click
+        Dim con As OleDb.OleDbConnection = New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + lokasifile + ";Extended Properties=Excel 12.0;")
+        Dim cmd1 As New OleDb.OleDbCommand
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim dt As New DataTable
+        Dim result As Boolean
+        Dim sql As String
+
+        Call KoneksiKeDatabase()
+        QUERY = "DELETE FROM `mt`"
+        CMD = New MySqlCommand(QUERY, CONN)
+        cmd.ExecuteNonQuery()
+
+        With cmd1
+            .Connection = con
+            .CommandText = "SELECT * FROM [MT$]"
+        End With
+
+        da.SelectCommand = cmd1
+        da.Fill(dt)
+
+        For Each r As DataRow In dt.Rows
+            'sql = "INSERT INTO mt (fname,lname) VALUES ('" & r(0).ToString & "','" & r(1).ToString & "')"
+            sql = "INSERT INTO `mt`(`id`, `no_urut`, `kode_rfid`, `no_polis`, `ket_blokir`, `title`, `nama_perusahaan`, `sts`, `merk_type`, `model`, `thn_pembuatan`, `kapasitas`, `kompartemen`, `produk`, `no_mesin`, `no_rangka`, `hsl_uji_emisi`, `pas_masuk`, `stnk`, `keur`, `tera`, `ijin_brg_khusus`, `skt`, `no_pas`, `status2`, `ksong`, `keterangan`, `tgl_penerima`, `no_surat_tera`, `komp1_t1`, `komp1_t2`, `komp1_t3`, `komp1_ruang_ksg`, `komp1_k1`, `komp2_t1`, `komp2_t2`, `komp2_t3`, `komp2_ruang_ksg`, `komp2_k1`, `tera2`, `thn_pembuatan2`, `no_stnk`, `m_berlaku_stnk`, `no_keur`, `m_berlaku_kier`, `no_dok_uji_emisi`, `hasil_uji_emisi`, `m_berlaku_uji_emisi`, `no_spb_skt`, `m_berlaku_spb_mkt`, `no_z_m_terminal_bbm`, `no_izin_masuk`, `kode_area`, `area`, `kd_lokasi`, `lokasi`, `kd_kategori`, `kategori`, `delivery_point`, `sewa`, `tarif`, `agen`, `industri`, `angkutan_sendiri`, `umur`, `kat`, `produk2`, `engkel_tronton_semit`, `pabrikan_tangki`, `material_tangki`, `pembuatan_tangki`, `sts_armada`, `plat`, `asuransi`, `alamat`, `telepon`, `email`, `npwp`, `penanggung_jawab`, `jabatan`, `data_umur_mt`) VALUES ('','" & r(1).ToString & "','" & r(2).ToString & "','" & r(3).ToString & "','" & r(4).ToString & "','" & r(5).ToString & "','" & r(6).ToString & "','" & r(7).ToString & "','" & r(8).ToString & "','" & r(9).ToString & "','" & r(10).ToString & "','" & Format(r(11).ToString, "yyyy-MM-dd") & "','" & r(12).ToString & "','" & r(13).ToString & "','" & r(14).ToString & "','" & r(15).ToString & "','" & r(16).ToString & "','" & r(17).ToString & "','" & r(18).ToString & "','" & r(19).ToString & "','" & r(20).ToString & "','" & r(21).ToString & "','" & r(22).ToString & "','" & r(23).ToString & "','" & r(24).ToString & "','" & r(25).ToString & "','" & r(26).ToString & "','" & r(27).ToString & "','" & r(28).ToString & "','" & r(29).ToString & "','" & r(30).ToString & "','" & r(31).ToString & "','" & r(32).ToString & "','" & r(33).ToString & "','" & r(34).ToString & "','" & r(35).ToString & "','" & r(36).ToString & "','" & r(37).ToString & "','" & r(38).ToString & "','" & r(39).ToString & "','" & r(40).ToString & "','" & r(41).ToString & "','" & r(42).ToString & "','" & r(43).ToString & "','" & r(44).ToString & "','" & r(45).ToString & "','" & r(46).ToString & "','" & r(47).ToString & "','" & r(48).ToString & "','" & r(49).ToString & "','" & r(50).ToString & "','" & r(51).ToString & "','" & r(52).ToString & "','" & r(53).ToString & "','" & r(54).ToString & "','" & r(55).ToString & "','" & r(56).ToString & "','" & r(57).ToString & "','" & r(58).ToString & "','" & r(59).ToString & "','" & r(69).ToString & "','" & r(61).ToString & "','" & r(62).ToString & "','" & r(63).ToString & "','" & r(64).ToString & "','" & r(65).ToString & "','" & r(66).ToString & "','" & r(67).ToString & "','" & r(68).ToString & "','" & r(69).ToString & "','" & r(70).ToString & "','" & r(71).ToString & "','" & r(72).ToString & "','" & r(73).ToString & "','" & r(74).ToString & "','" & r(75).ToString & "','" & r(76).ToString & "','" & r(77).ToString & "','" & r(78).ToString & "','" & r(79).ToString & "','" & r(80).ToString & "')"
+            result = saveData(sql)
+            If result Then
+                Timer1.Start()
+            End If
+        Next
     End Sub
 End Class

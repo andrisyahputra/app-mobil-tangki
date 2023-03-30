@@ -38,26 +38,26 @@ Partial Class FormMenu
         Me.btnUser = New System.Windows.Forms.Button()
         Me.btnLaporan = New System.Windows.Forms.Button()
         Me.PanelAkses = New System.Windows.Forms.Panel()
-        Me.btnTutup = New System.Windows.Forms.Label()
-        Me.lblatas = New System.Windows.Forms.Label()
-        Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.DataGridTranksaksi = New System.Windows.Forms.DataGridView()
         Me.btnClear = New System.Windows.Forms.Label()
         Me.BtnTambah = New System.Windows.Forms.Label()
         Me.btnHapus = New System.Windows.Forms.Label()
         Me.LBLCARIDATA = New System.Windows.Forms.Label()
-        Me.lblJam = New System.Windows.Forms.Label()
-        Me.lblIDPlat = New System.Windows.Forms.Label()
-        Me.txtJMHole2 = New System.Windows.Forms.TextBox()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.txtJMHole1 = New System.Windows.Forms.TextBox()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.BtnEdit = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblJam = New System.Windows.Forms.Label()
+        Me.lblIDPlat = New System.Windows.Forms.Label()
+        Me.txtJMHole2 = New System.Windows.Forms.TextBox()
+        Me.txtJMHole1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnTutup = New System.Windows.Forms.Label()
+        Me.lblatas = New System.Windows.Forms.Label()
+        Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -238,33 +238,6 @@ Partial Class FormMenu
         Me.PanelAkses.Size = New System.Drawing.Size(1370, 749)
         Me.PanelAkses.TabIndex = 126
         '
-        'btnTutup
-        '
-        Me.btnTutup.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.btnTutup.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnTutup.Image = Global.AppMobilTangki.My.Resources.Resources.close
-        Me.btnTutup.Location = New System.Drawing.Point(1320, 1)
-        Me.btnTutup.Name = "btnTutup"
-        Me.btnTutup.Size = New System.Drawing.Size(50, 39)
-        Me.btnTutup.TabIndex = 125
-        '
-        'lblatas
-        '
-        Me.lblatas.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.lblatas.Location = New System.Drawing.Point(365, 0)
-        Me.lblatas.Name = "lblatas"
-        Me.lblatas.Size = New System.Drawing.Size(1005, 63)
-        Me.lblatas.TabIndex = 131
-        '
-        'PanelMenu
-        '
-        Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PanelMenu.Location = New System.Drawing.Point(368, 0)
-        Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(1002, 749)
-        Me.PanelMenu.TabIndex = 47
-        '
         'DataGridTranksaksi
         '
         Me.DataGridTranksaksi.AllowUserToAddRows = False
@@ -338,45 +311,6 @@ Partial Class FormMenu
         Me.LBLCARIDATA.Size = New System.Drawing.Size(40, 44)
         Me.LBLCARIDATA.TabIndex = 133
         '
-        'lblJam
-        '
-        Me.lblJam.AutoSize = True
-        Me.lblJam.BackColor = System.Drawing.Color.Transparent
-        Me.lblJam.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJam.Location = New System.Drawing.Point(488, 152)
-        Me.lblJam.Name = "lblJam"
-        Me.lblJam.Size = New System.Drawing.Size(47, 27)
-        Me.lblJam.TabIndex = 98
-        Me.lblJam.Text = "jam"
-        '
-        'lblIDPlat
-        '
-        Me.lblIDPlat.AutoSize = True
-        Me.lblIDPlat.BackColor = System.Drawing.Color.Transparent
-        Me.lblIDPlat.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIDPlat.Location = New System.Drawing.Point(443, 25)
-        Me.lblIDPlat.Name = "lblIDPlat"
-        Me.lblIDPlat.Size = New System.Drawing.Size(18, 27)
-        Me.lblIDPlat.TabIndex = 97
-        Me.lblIDPlat.Text = " "
-        Me.lblIDPlat.Visible = False
-        '
-        'txtJMHole2
-        '
-        Me.txtJMHole2.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtJMHole2.Location = New System.Drawing.Point(727, 75)
-        Me.txtJMHole2.Name = "txtJMHole2"
-        Me.txtJMHole2.Size = New System.Drawing.Size(147, 25)
-        Me.txtJMHole2.TabIndex = 69
-        '
-        'txtJMHole1
-        '
-        Me.txtJMHole1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtJMHole1.Location = New System.Drawing.Point(300, 75)
-        Me.txtJMHole1.Name = "txtJMHole1"
-        Me.txtJMHole1.Size = New System.Drawing.Size(147, 25)
-        Me.txtJMHole1.TabIndex = 69
-        '
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -427,6 +361,45 @@ Partial Class FormMenu
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "TRANSAKSI"
         '
+        'lblJam
+        '
+        Me.lblJam.AutoSize = True
+        Me.lblJam.BackColor = System.Drawing.Color.Transparent
+        Me.lblJam.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJam.Location = New System.Drawing.Point(488, 152)
+        Me.lblJam.Name = "lblJam"
+        Me.lblJam.Size = New System.Drawing.Size(47, 27)
+        Me.lblJam.TabIndex = 98
+        Me.lblJam.Text = "jam"
+        '
+        'lblIDPlat
+        '
+        Me.lblIDPlat.AutoSize = True
+        Me.lblIDPlat.BackColor = System.Drawing.Color.Transparent
+        Me.lblIDPlat.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIDPlat.Location = New System.Drawing.Point(443, 25)
+        Me.lblIDPlat.Name = "lblIDPlat"
+        Me.lblIDPlat.Size = New System.Drawing.Size(18, 27)
+        Me.lblIDPlat.TabIndex = 97
+        Me.lblIDPlat.Text = " "
+        Me.lblIDPlat.Visible = False
+        '
+        'txtJMHole2
+        '
+        Me.txtJMHole2.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtJMHole2.Location = New System.Drawing.Point(727, 75)
+        Me.txtJMHole2.Name = "txtJMHole2"
+        Me.txtJMHole2.Size = New System.Drawing.Size(147, 25)
+        Me.txtJMHole2.TabIndex = 69
+        '
+        'txtJMHole1
+        '
+        Me.txtJMHole1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtJMHole1.Location = New System.Drawing.Point(300, 75)
+        Me.txtJMHole1.Name = "txtJMHole1"
+        Me.txtJMHole1.Size = New System.Drawing.Size(147, 25)
+        Me.txtJMHole1.TabIndex = 69
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -459,6 +432,33 @@ Partial Class FormMenu
         Me.Label1.Size = New System.Drawing.Size(296, 27)
         Me.Label1.TabIndex = 67
         Me.Label1.Text = "TGL JAM PENGUKURAN  :"
+        '
+        'btnTutup
+        '
+        Me.btnTutup.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.btnTutup.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnTutup.Image = Global.AppMobilTangki.My.Resources.Resources.close
+        Me.btnTutup.Location = New System.Drawing.Point(1320, 1)
+        Me.btnTutup.Name = "btnTutup"
+        Me.btnTutup.Size = New System.Drawing.Size(50, 39)
+        Me.btnTutup.TabIndex = 125
+        '
+        'lblatas
+        '
+        Me.lblatas.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.lblatas.Location = New System.Drawing.Point(365, 0)
+        Me.lblatas.Name = "lblatas"
+        Me.lblatas.Size = New System.Drawing.Size(1005, 63)
+        Me.lblatas.TabIndex = 131
+        '
+        'PanelMenu
+        '
+        Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PanelMenu.Location = New System.Drawing.Point(368, 0)
+        Me.PanelMenu.Name = "PanelMenu"
+        Me.PanelMenu.Size = New System.Drawing.Size(1002, 749)
+        Me.PanelMenu.TabIndex = 47
         '
         'FormMenu
         '
