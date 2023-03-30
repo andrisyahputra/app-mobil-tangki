@@ -23,9 +23,9 @@ Partial Class FormMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTangki = New System.Windows.Forms.Label()
         Me.btnMTangki = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -48,7 +48,6 @@ Partial Class FormMenu
         Me.BtnEdit = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblJam = New System.Windows.Forms.Label()
-        Me.lblIDPlat = New System.Windows.Forms.Label()
         Me.txtJMHole2 = New System.Windows.Forms.TextBox()
         Me.txtJMHole1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -58,6 +57,16 @@ Partial Class FormMenu
         Me.lblatas = New System.Windows.Forms.Label()
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -242,29 +251,29 @@ Partial Class FormMenu
         '
         Me.DataGridTranksaksi.AllowUserToAddRows = False
         Me.DataGridTranksaksi.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DataGridTranksaksi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridTranksaksi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridTranksaksi.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridTranksaksi.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridTranksaksi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridTranksaksi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridTranksaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridTranksaksi.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DataGridTranksaksi.GridColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.DataGridTranksaksi.Location = New System.Drawing.Point(414, 484)
+        Me.DataGridTranksaksi.Location = New System.Drawing.Point(414, 712)
         Me.DataGridTranksaksi.Name = "DataGridTranksaksi"
         Me.DataGridTranksaksi.ReadOnly = True
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DataGridTranksaksi.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridTranksaksi.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridTranksaksi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridTranksaksi.Size = New System.Drawing.Size(924, 253)
+        Me.DataGridTranksaksi.Size = New System.Drawing.Size(924, 25)
         Me.DataGridTranksaksi.TabIndex = 140
         '
         'btnClear
@@ -273,7 +282,7 @@ Partial Class FormMenu
         Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!)
         Me.btnClear.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnClear.Image = Global.AppMobilTangki.My.Resources.Resources.clear
-        Me.btnClear.Location = New System.Drawing.Point(1044, 395)
+        Me.btnClear.Location = New System.Drawing.Point(1038, 633)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(69, 70)
         Me.btnClear.TabIndex = 139
@@ -284,7 +293,7 @@ Partial Class FormMenu
         Me.BtnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!)
         Me.BtnTambah.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.BtnTambah.Image = Global.AppMobilTangki.My.Resources.Resources.save
-        Me.BtnTambah.Location = New System.Drawing.Point(944, 395)
+        Me.BtnTambah.Location = New System.Drawing.Point(938, 633)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(69, 70)
         Me.BtnTambah.TabIndex = 134
@@ -295,7 +304,7 @@ Partial Class FormMenu
         Me.btnHapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!)
         Me.btnHapus.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnHapus.Image = Global.AppMobilTangki.My.Resources.Resources.sampah
-        Me.btnHapus.Location = New System.Drawing.Point(1264, 395)
+        Me.btnHapus.Location = New System.Drawing.Point(1258, 633)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(69, 70)
         Me.btnHapus.TabIndex = 136
@@ -306,7 +315,7 @@ Partial Class FormMenu
         Me.LBLCARIDATA.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LBLCARIDATA.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLCARIDATA.Image = Global.AppMobilTangki.My.Resources.Resources.search
-        Me.LBLCARIDATA.Location = New System.Drawing.Point(869, 412)
+        Me.LBLCARIDATA.Location = New System.Drawing.Point(863, 650)
         Me.LBLCARIDATA.Name = "LBLCARIDATA"
         Me.LBLCARIDATA.Size = New System.Drawing.Size(40, 44)
         Me.LBLCARIDATA.TabIndex = 133
@@ -314,7 +323,7 @@ Partial Class FormMenu
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCari.Location = New System.Drawing.Point(546, 419)
+        Me.txtCari.Location = New System.Drawing.Point(540, 657)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(295, 29)
         Me.txtCari.TabIndex = 138
@@ -325,7 +334,7 @@ Partial Class FormMenu
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(423, 421)
+        Me.Label9.Location = New System.Drawing.Point(417, 659)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(117, 27)
         Me.Label9.TabIndex = 137
@@ -337,7 +346,7 @@ Partial Class FormMenu
         Me.BtnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEdit.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.BtnEdit.Image = Global.AppMobilTangki.My.Resources.Resources.update
-        Me.BtnEdit.Location = New System.Drawing.Point(1153, 395)
+        Me.BtnEdit.Location = New System.Drawing.Point(1147, 633)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(69, 70)
         Me.BtnEdit.TabIndex = 135
@@ -345,10 +354,19 @@ Partial Class FormMenu
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.Label15)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.lblJam)
-        Me.GroupBox1.Controls.Add(Me.lblIDPlat)
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.txtJMHole2)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.txtJMHole1)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -356,7 +374,7 @@ Partial Class FormMenu
         Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
         Me.GroupBox1.Location = New System.Drawing.Point(416, 82)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(922, 236)
+        Me.GroupBox1.Size = New System.Drawing.Size(922, 548)
         Me.GroupBox1.TabIndex = 132
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "TRANSAKSI"
@@ -366,28 +384,16 @@ Partial Class FormMenu
         Me.lblJam.AutoSize = True
         Me.lblJam.BackColor = System.Drawing.Color.Transparent
         Me.lblJam.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJam.Location = New System.Drawing.Point(488, 152)
+        Me.lblJam.Location = New System.Drawing.Point(350, 493)
         Me.lblJam.Name = "lblJam"
         Me.lblJam.Size = New System.Drawing.Size(47, 27)
         Me.lblJam.TabIndex = 98
         Me.lblJam.Text = "jam"
         '
-        'lblIDPlat
-        '
-        Me.lblIDPlat.AutoSize = True
-        Me.lblIDPlat.BackColor = System.Drawing.Color.Transparent
-        Me.lblIDPlat.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIDPlat.Location = New System.Drawing.Point(443, 25)
-        Me.lblIDPlat.Name = "lblIDPlat"
-        Me.lblIDPlat.Size = New System.Drawing.Size(18, 27)
-        Me.lblIDPlat.TabIndex = 97
-        Me.lblIDPlat.Text = " "
-        Me.lblIDPlat.Visible = False
-        '
         'txtJMHole2
         '
         Me.txtJMHole2.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtJMHole2.Location = New System.Drawing.Point(727, 75)
+        Me.txtJMHole2.Location = New System.Drawing.Point(272, 99)
         Me.txtJMHole2.Name = "txtJMHole2"
         Me.txtJMHole2.Size = New System.Drawing.Size(147, 25)
         Me.txtJMHole2.TabIndex = 69
@@ -395,7 +401,7 @@ Partial Class FormMenu
         'txtJMHole1
         '
         Me.txtJMHole1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtJMHole1.Location = New System.Drawing.Point(300, 75)
+        Me.txtJMHole1.Location = New System.Drawing.Point(272, 50)
         Me.txtJMHole1.Name = "txtJMHole1"
         Me.txtJMHole1.Size = New System.Drawing.Size(147, 25)
         Me.txtJMHole1.TabIndex = 69
@@ -405,29 +411,29 @@ Partial Class FormMenu
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(482, 73)
+        Me.Label4.Location = New System.Drawing.Point(27, 97)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(249, 27)
+        Me.Label4.Size = New System.Drawing.Size(245, 27)
         Me.Label4.TabIndex = 67
-        Me.Label4.Text = "Jarak Main Hole 2         :"
+        Me.Label4.Text = "JARAK MAIN HOLE 2"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(55, 73)
+        Me.Label7.Location = New System.Drawing.Point(27, 48)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(249, 27)
+        Me.Label7.Size = New System.Drawing.Size(245, 27)
         Me.Label7.TabIndex = 67
-        Me.Label7.Text = "Jarak Main Hole 1         :"
+        Me.Label7.Text = "JARAK MAIN HOLE 1"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(186, 152)
+        Me.Label1.Location = New System.Drawing.Point(27, 493)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(296, 27)
         Me.Label1.TabIndex = 67
@@ -453,12 +459,116 @@ Partial Class FormMenu
         '
         'PanelMenu
         '
-        Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.PanelMenu.BackColor = System.Drawing.Color.Red
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PanelMenu.Location = New System.Drawing.Point(368, 0)
+        Me.PanelMenu.Location = New System.Drawing.Point(1360, 0)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(1002, 749)
+        Me.PanelMenu.Size = New System.Drawing.Size(10, 749)
         Me.PanelMenu.TabIndex = 47
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(27, 153)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(94, 27)
+        Me.Label3.TabIndex = 99
+        Me.Label3.Text = "AMT    :"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(443, 48)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(175, 27)
+        Me.Label5.TabIndex = 67
+        Me.Label5.Text = "MEREK / TYPE"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(443, 97)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(124, 27)
+        Me.Label6.TabIndex = 67
+        Me.Label6.Text = "TANGGAL"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(688, 50)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(147, 25)
+        Me.TextBox1.TabIndex = 69
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(688, 99)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(147, 25)
+        Me.TextBox2.TabIndex = 69
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(27, 435)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(249, 27)
+        Me.Label8.TabIndex = 99
+        Me.Label8.Text = "Jarak Main Hole 2         :"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(443, 153)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(135, 27)
+        Me.Label10.TabIndex = 100
+        Me.Label10.Text = "OPERATOR"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(26, 208)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(121, 27)
+        Me.Label11.TabIndex = 67
+        Me.Label11.Text = "PLAT NO :"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(26, 257)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(154, 27)
+        Me.Label12.TabIndex = 67
+        Me.Label12.Text = "KAPASITOR :"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(26, 313)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(109, 27)
+        Me.Label15.TabIndex = 99
+        Me.Label15.Text = "PRODUK"
         '
         'FormMenu
         '
@@ -512,11 +622,20 @@ Partial Class FormMenu
     Friend WithEvents BtnEdit As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents lblJam As Label
-    Friend WithEvents lblIDPlat As Label
     Friend WithEvents txtJMHole2 As TextBox
     Friend WithEvents txtJMHole1 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
 End Class

@@ -23,8 +23,6 @@ Partial Class FormMobilTangki
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtKTemen2 = New System.Windows.Forms.TextBox()
         Me.txtKTemen1 = New System.Windows.Forms.TextBox()
@@ -44,13 +42,24 @@ Partial Class FormMobilTangki
         Me.BtnTambah = New System.Windows.Forms.Label()
         Me.LblKode = New System.Windows.Forms.Label()
         Me.btnTutup = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.BTNEXCEL = New System.Windows.Forms.Button()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnUploud = New System.Windows.Forms.Button()
+        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
+        Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
+        Me.LBLLOADER = New System.Windows.Forms.Label()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -257,30 +266,6 @@ Partial Class FormMobilTangki
         Me.btnTutup.Size = New System.Drawing.Size(36, 39)
         Me.btnTutup.TabIndex = 101
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(139, Byte), Integer))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridView1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.DataGridView1.Location = New System.Drawing.Point(25, 413)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(952, 302)
-        Me.DataGridView1.TabIndex = 112
-        '
         'BTNEXCEL
         '
         Me.BTNEXCEL.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
@@ -289,22 +274,12 @@ Partial Class FormMobilTangki
         Me.BTNEXCEL.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNEXCEL.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
         Me.BTNEXCEL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BTNEXCEL.Location = New System.Drawing.Point(25, 364)
+        Me.BTNEXCEL.Location = New System.Drawing.Point(43, 377)
         Me.BTNEXCEL.Name = "BTNEXCEL"
-        Me.BTNEXCEL.Size = New System.Drawing.Size(213, 33)
+        Me.BTNEXCEL.Size = New System.Drawing.Size(145, 33)
         Me.BTNEXCEL.TabIndex = 113
-        Me.BTNEXCEL.Text = "IMPORT EXCEL"
+        Me.BTNEXCEL.Text = "BROWSE"
         Me.BTNEXCEL.UseVisualStyleBackColor = False
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(253, 364)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(491, 33)
-        Me.ProgressBar1.TabIndex = 114
-        '
-        'Timer1
-        '
         '
         'btnUploud
         '
@@ -314,12 +289,90 @@ Partial Class FormMobilTangki
         Me.btnUploud.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUploud.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
         Me.btnUploud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUploud.Location = New System.Drawing.Point(764, 364)
+        Me.btnUploud.Location = New System.Drawing.Point(208, 377)
         Me.btnUploud.Name = "btnUploud"
-        Me.btnUploud.Size = New System.Drawing.Size(213, 33)
+        Me.btnUploud.Size = New System.Drawing.Size(159, 33)
         Me.btnUploud.TabIndex = 115
         Me.btnUploud.Text = "UPLOUD"
         Me.btnUploud.UseVisualStyleBackColor = False
+        '
+        'ProgressBar2
+        '
+        Me.ProgressBar2.Location = New System.Drawing.Point(373, 399)
+        Me.ProgressBar2.Name = "ProgressBar2"
+        Me.ProgressBar2.Size = New System.Drawing.Size(604, 10)
+        Me.ProgressBar2.TabIndex = 124
+        '
+        'LBLLOADER
+        '
+        Me.LBLLOADER.BackColor = System.Drawing.Color.White
+        Me.LBLLOADER.Location = New System.Drawing.Point(386, 512)
+        Me.LBLLOADER.Name = "LBLLOADER"
+        Me.LBLLOADER.Size = New System.Drawing.Size(229, 188)
+        Me.LBLLOADER.TabIndex = 123
+        '
+        'BackgroundWorker1
+        '
+        Me.BackgroundWorker1.WorkerReportsProgress = True
+        Me.BackgroundWorker1.WorkerSupportsCancellation = True
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(373, 400)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(603, 10)
+        Me.ProgressBar1.TabIndex = 122
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(373, 382)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.TabIndex = 121
+        Me.Label4.Text = "Label4"
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(208, 236)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(687, 20)
+        Me.TextBox1.TabIndex = 119
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "COBA"
+        Me.ColumnHeader3.Width = 118
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "ALAMAT"
+        Me.ColumnHeader2.Width = 113
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "NAMA BEALAKANG"
+        Me.ColumnHeader1.Width = 121
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "NAMA DEPAN"
+        '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader5, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
+        Me.ListView1.GridLines = True
+        Me.ListView1.HideSelection = False
+        Me.ListView1.Location = New System.Drawing.Point(43, 433)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(933, 304)
+        Me.ListView1.TabIndex = 120
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'FormMobilTangki
         '
@@ -327,10 +380,16 @@ Partial Class FormMobilTangki
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1002, 749)
+        Me.Controls.Add(Me.ProgressBar2)
+        Me.Controls.Add(Me.LBLLOADER)
+        Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.btnTutup)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnUploud)
         Me.Controls.Add(Me.BTNEXCEL)
-        Me.Controls.Add(Me.ProgressBar1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.Label9)
@@ -338,15 +397,12 @@ Partial Class FormMobilTangki
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.LblKode)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.btnTutup)
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormMobilTangki"
         Me.Text = "FormMobilTangki"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -371,9 +427,21 @@ Partial Class FormMobilTangki
     Friend WithEvents txtNPerusahaan As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents btnClear As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BTNEXCEL As Button
-    Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnUploud As Button
+    Friend WithEvents ProgressBar2 As ProgressBar
+    Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents LBLLOADER As Label
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ListView1 As ListView
 End Class
