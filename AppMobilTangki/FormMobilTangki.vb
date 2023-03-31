@@ -1,4 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Threading
+
 Public Class FormMobilTangki
     Dim ImgInput As Bitmap
     Dim ImgEdit As Bitmap
@@ -147,60 +149,60 @@ Public Class FormMobilTangki
 
             'Try
 
-            QUERY = "Select * FROM mt ORDER BY id"
-                DA = New MySqlDataAdapter(QUERY, CONN)
-                DS = New DataSet
-                DA.Fill(DS, "mt")
-                DataGridView1.DataSource = DS.Tables("mt")
+            'QUERY = "Select * FROM mt ORDER BY id"
+            '    DA = New MySqlDataAdapter(QUERY, CONN)
+            '    DS = New DataSet
+            '    DA.Fill(DS, "mt")
+            '    DataGridView1.DataSource = DS.Tables("mt")
 
-            With DataGridView1
-                '    '.Columns(1).Width = 200
-                '    '.Columns(2).Width = 120
-                '    '.Columns(3).Width = 100
-                '    '.Columns(4).Width = 150
-                '    '.Columns(5).Width = 150
-                '    '.Columns(6).Width = 100
-                '    '.Columns(7).Width = 100
-                '    '.Columns(8).Width = 80
-                '    ''.Columns(9).Width = 150
+            'With DataGridView1
+            '    '.Columns(1).Width = 200
+            '    '.Columns(2).Width = 120
+            '    '.Columns(3).Width = 100
+            '    '.Columns(4).Width = 150
+            '    '.Columns(5).Width = 150
+            '    '.Columns(6).Width = 100
+            '    '.Columns(7).Width = 100
+            '    '.Columns(8).Width = 80
+            '    ''.Columns(9).Width = 150
 
 
-                '    '.Columns(0).DataPropertyName = "id"
-                '    '.Columns(1).DataPropertyName = "nama_lengkap"
-                '    '.Columns(2).DataPropertyName = "jenis_kelamin"
-                '    '.Columns(3).DataPropertyName = "no_hp"
-                '    '.Columns(4).DataPropertyName = "alamat"
-                '    '.Columns(5).DataPropertyName = "tanggal_lahir"
-                '    '.Columns(6).DataPropertyName = "user_name"
-                '    '.Columns(7).DataPropertyName = "pwd"
-                '    '.Columns(8).DataPropertyName = "lvl"
-                '    '.Columns(9).DataPropertyName = "c"
+            '    '.Columns(0).DataPropertyName = "id"
+            '    '.Columns(1).DataPropertyName = "nama_lengkap"
+            '    '.Columns(2).DataPropertyName = "jenis_kelamin"
+            '    '.Columns(3).DataPropertyName = "no_hp"
+            '    '.Columns(4).DataPropertyName = "alamat"
+            '    '.Columns(5).DataPropertyName = "tanggal_lahir"
+            '    '.Columns(6).DataPropertyName = "user_name"
+            '    '.Columns(7).DataPropertyName = "pwd"
+            '    '.Columns(8).DataPropertyName = "lvl"
+            '    '.Columns(9).DataPropertyName = "c"
 
-                '    '.Columns(1).HeaderText = "NAMA LENGKAP"
-                '    '.Columns(2).HeaderText = "JENIS KELAMIN"
-                '    '.Columns(3).HeaderText = "NOMOR HP"
-                '    '.Columns(4).HeaderText = "ALAMAT"
-                '    '.Columns(5).HeaderText = "TANGGAL LAHIR"
-                '    '.Columns(6).HeaderText = "USERNAME"
-                '    '.Columns(7).HeaderText = "PASSWORD"
-                '    '.Columns(8).HeaderText = "LEVEL"
+            '    '.Columns(1).HeaderText = "NAMA LENGKAP"
+            '    '.Columns(2).HeaderText = "JENIS KELAMIN"
+            '    '.Columns(3).HeaderText = "NOMOR HP"
+            '    '.Columns(4).HeaderText = "ALAMAT"
+            '    '.Columns(5).HeaderText = "TANGGAL LAHIR"
+            '    '.Columns(6).HeaderText = "USERNAME"
+            '    '.Columns(7).HeaderText = "PASSWORD"
+            '    '.Columns(8).HeaderText = "LEVEL"
 
-                '    '.Columns(0).Visible = False
-                '    '.Columns(9).Visible = False
+            '    '.Columns(0).Visible = False
+            '    '.Columns(9).Visible = False
 
-                .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                .EnableHeadersVisualStyles = False
-                .ColumnHeadersDefaultCellStyle.BackColor = Color.Blue
-                .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
-                .ColumnHeadersDefaultCellStyle.Font = New Font(DataGridView.DefaultFont, FontStyle.Bold)
+            '.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '    .EnableHeadersVisualStyles = False
+            '    .ColumnHeadersDefaultCellStyle.BackColor = Color.Blue
+            '    .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+            '    .ColumnHeadersDefaultCellStyle.Font = New Font(DataGridView.DefaultFont, FontStyle.Bold)
 
-                .RowsDefaultCellStyle.BackColor = Color.Crimson
-                .DefaultCellStyle.ForeColor = Color.DarkRed
-                .RowsDefaultCellStyle.BackColor = Color.SkyBlue
-                .AlternatingRowsDefaultCellStyle.BackColor = Color.Wheat
-                .GridColor = Color.DarkRed
+            '    .RowsDefaultCellStyle.BackColor = Color.Crimson
+            '    .DefaultCellStyle.ForeColor = Color.DarkRed
+            '    .RowsDefaultCellStyle.BackColor = Color.SkyBlue
+            '    .AlternatingRowsDefaultCellStyle.BackColor = Color.Wheat
+            '    .GridColor = Color.DarkRed
 
-            End With
+            'End With
 
             'Catch ex As Exception
             '    MsgBox(ex.Message, "EROR")
@@ -377,9 +379,10 @@ Public Class FormMobilTangki
         End Try
     End Sub
 
-    Private Sub txtCari_TextChanged(sender As Object, e As EventArgs) Handles txtCari.TextChanged
 
-    End Sub
+
+
+
     Private Sub Caridata()
         'Try
         '    KoneksiKeDatabase()
@@ -428,13 +431,57 @@ Public Class FormMobilTangki
         Return mysqlresult
 
     End Function
-    Dim lokasifile As String
 
 
-
-    Private Sub DataGridView1_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs)
-        If e.RowIndex >= 0 Then
-            Me.DataGridView1.Rows(e.RowIndex).Cells(0).Value = e.RowIndex + 1
+    Public Sub LOADDATA(lv As ListView)
+        If lv.InvokeRequired Then
+            lv.Invoke(Sub() lv.Items.Clear())
+        Else
+            lv.Items.Clear()
         End If
+
+
+        KoneksiKeDatabase()
+        'QUERY = "Select * FROM tbl_coba ORDER BY id"
+        QUERY = "Select * FROM mt"
+        DA = New MySqlDataAdapter(QUERY, CONN)
+        Dim dt As New DataTable
+        'DS = New DataSet
+        DA.Fill(dt)
+        ListView1.Items.Clear()
+        For Each drow As DataRow In dt.Rows
+
+            If lv.InvokeRequired Then
+                lv.Invoke(Sub()
+                              With ListView1
+                                  .Items.Add(drow(0).ToString)
+                                  .Items(ListView1.Items.Count - 1).SubItems.Add(drow(1).ToString)
+                                  .Items(ListView1.Items.Count - 1).SubItems.Add(drow(2).ToString)
+                                  .Items(ListView1.Items.Count - 1).SubItems.Add(drow(3).ToString)
+                              End With
+                          End Sub)
+            Else
+                With ListView1
+                    .Items.Add(drow(0).ToString)
+                    .Items(ListView1.Items.Count - 1).SubItems.Add(drow(1).ToString)
+                    .Items(ListView1.Items.Count - 1).SubItems.Add(drow(2).ToString)
+                    .Items(ListView1.Items.Count - 1).SubItems.Add(drow(3).ToString)
+                End With
+            End If
+            Thread.Sleep(500)
+        Next
+        CONN.Close()
+
+        If LBLLOADER.InvokeRequired Then
+            LBLLOADER.Invoke(Sub()
+                                 LBLLOADER.Visible = False
+                             End Sub)
+        Else
+            LBLLOADER.Visible = False
+
+        End If
+
     End Sub
+
+
 End Class

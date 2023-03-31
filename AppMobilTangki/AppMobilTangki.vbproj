@@ -296,5 +296,8 @@
   <ItemGroup>
     <None Include="asset\user.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="asset\load2.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

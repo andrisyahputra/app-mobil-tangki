@@ -306,6 +306,7 @@ Partial Class FormMobilTangki
         'LBLLOADER
         '
         Me.LBLLOADER.BackColor = System.Drawing.Color.White
+        Me.LBLLOADER.Image = Global.AppMobilTangki.My.Resources.Resources.load2
         Me.LBLLOADER.Location = New System.Drawing.Point(386, 512)
         Me.LBLLOADER.Name = "LBLLOADER"
         Me.LBLLOADER.Size = New System.Drawing.Size(229, 188)
