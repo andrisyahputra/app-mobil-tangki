@@ -52,6 +52,11 @@ AppMobilTangki
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:AppMobilTangki.My.Resources.Resources.load2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:AppMobilTangki.My.Resources.Resources.prter">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

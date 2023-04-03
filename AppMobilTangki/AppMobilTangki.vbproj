@@ -115,6 +115,12 @@
     <Compile Include="FormLoader.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormLoader2.Designer.vb">
+      <DependentUpon>FormLoader2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoader2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormLogin.Designer.vb">
       <DependentUpon>FormLogin.vb</DependentUpon>
     </Compile>
@@ -179,6 +185,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SpinerCircle.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -195,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoader.resx">
       <DependentUpon>FormLoader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoader2.resx">
+      <DependentUpon>FormLoader2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
@@ -290,6 +302,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="asset\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="asset\load2.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

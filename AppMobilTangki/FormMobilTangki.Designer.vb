@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormMobilTangki
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,10 @@ Partial Class FormMobilTangki
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtKTemen2 = New System.Windows.Forms.TextBox()
         Me.txtKTemen1 = New System.Windows.Forms.TextBox()
@@ -38,19 +37,21 @@ Partial Class FormMobilTangki
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.BTNEXCEL = New System.Windows.Forms.Button()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnUploud = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Label()
         Me.btnHapus = New System.Windows.Forms.Label()
         Me.BtnEdit = New System.Windows.Forms.Label()
         Me.BtnTambah = New System.Windows.Forms.Label()
         Me.LblKode = New System.Windows.Forms.Label()
         Me.btnTutup = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BTNEXCEL = New System.Windows.Forms.Button()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnUploud = New System.Windows.Forms.Button()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.lblloader = New System.Windows.Forms.Label()
+        Me.DTGridMT = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DTGridMT, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -190,6 +191,46 @@ Partial Class FormMobilTangki
         Me.Label9.TabIndex = 109
         Me.Label9.Text = "Cari Data :"
         '
+        'BTNEXCEL
+        '
+        Me.BTNEXCEL.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.BTNEXCEL.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BTNEXCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BTNEXCEL.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNEXCEL.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.BTNEXCEL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BTNEXCEL.Location = New System.Drawing.Point(25, 364)
+        Me.BTNEXCEL.Name = "BTNEXCEL"
+        Me.BTNEXCEL.Size = New System.Drawing.Size(213, 33)
+        Me.BTNEXCEL.TabIndex = 113
+        Me.BTNEXCEL.Text = "IMPORT EXCEL"
+        Me.BTNEXCEL.UseVisualStyleBackColor = False
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(253, 385)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(491, 12)
+        Me.ProgressBar1.TabIndex = 114
+        '
+        'Timer1
+        '
+        '
+        'btnUploud
+        '
+        Me.btnUploud.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.btnUploud.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnUploud.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUploud.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUploud.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.btnUploud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUploud.Location = New System.Drawing.Point(764, 364)
+        Me.btnUploud.Name = "btnUploud"
+        Me.btnUploud.Size = New System.Drawing.Size(213, 33)
+        Me.btnUploud.TabIndex = 115
+        Me.btnUploud.Text = "UPLOUD"
+        Me.btnUploud.UseVisualStyleBackColor = False
+        '
         'btnClear
         '
         Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
@@ -257,69 +298,40 @@ Partial Class FormMobilTangki
         Me.btnTutup.Size = New System.Drawing.Size(36, 39)
         Me.btnTutup.TabIndex = 101
         '
-        'DataGridView1
+        'BackgroundWorker1
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(139, Byte), Integer))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridView1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.DataGridView1.Location = New System.Drawing.Point(25, 413)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(952, 302)
-        Me.DataGridView1.TabIndex = 112
+        Me.BackgroundWorker1.WorkerReportsProgress = True
         '
-        'BTNEXCEL
+        'lblloader
         '
-        Me.BTNEXCEL.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.BTNEXCEL.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BTNEXCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BTNEXCEL.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNEXCEL.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.BTNEXCEL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BTNEXCEL.Location = New System.Drawing.Point(25, 364)
-        Me.BTNEXCEL.Name = "BTNEXCEL"
-        Me.BTNEXCEL.Size = New System.Drawing.Size(213, 33)
-        Me.BTNEXCEL.TabIndex = 113
-        Me.BTNEXCEL.Text = "IMPORT EXCEL"
-        Me.BTNEXCEL.UseVisualStyleBackColor = False
+        Me.lblloader.AutoSize = True
+        Me.lblloader.BackColor = System.Drawing.Color.Transparent
+        Me.lblloader.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblloader.Location = New System.Drawing.Point(256, 355)
+        Me.lblloader.Name = "lblloader"
+        Me.lblloader.Size = New System.Drawing.Size(20, 27)
+        Me.lblloader.TabIndex = 93
+        Me.lblloader.Text = "-"
         '
-        'ProgressBar1
+        'DTGridMT
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(253, 364)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(491, 33)
-        Me.ProgressBar1.TabIndex = 114
-        '
-        'Timer1
-        '
-        '
-        'btnUploud
-        '
-        Me.btnUploud.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.btnUploud.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnUploud.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUploud.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUploud.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.btnUploud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUploud.Location = New System.Drawing.Point(764, 364)
-        Me.btnUploud.Name = "btnUploud"
-        Me.btnUploud.Size = New System.Drawing.Size(213, 33)
-        Me.btnUploud.TabIndex = 115
-        Me.btnUploud.Text = "UPLOUD"
-        Me.btnUploud.UseVisualStyleBackColor = False
+        Me.DTGridMT.AllowUserToAddRows = False
+        Me.DTGridMT.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTGridMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DTGridMT.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DTGridMT.Location = New System.Drawing.Point(25, 422)
+        Me.DTGridMT.Name = "DTGridMT"
+        Me.DTGridMT.ReadOnly = True
+        Me.DTGridMT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DTGridMT.Size = New System.Drawing.Size(952, 302)
+        Me.DTGridMT.TabIndex = 116
         '
         'FormMobilTangki
         '
@@ -327,10 +339,11 @@ Partial Class FormMobilTangki
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1002, 749)
+        Me.Controls.Add(Me.DTGridMT)
+        Me.Controls.Add(Me.lblloader)
         Me.Controls.Add(Me.btnUploud)
         Me.Controls.Add(Me.BTNEXCEL)
         Me.Controls.Add(Me.ProgressBar1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.Label9)
@@ -346,7 +359,7 @@ Partial Class FormMobilTangki
         Me.Text = "FormMobilTangki"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DTGridMT, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -371,9 +384,11 @@ Partial Class FormMobilTangki
     Friend WithEvents txtNPerusahaan As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents btnClear As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BTNEXCEL As Button
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnUploud As Button
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents lblloader As Label
+    Friend WithEvents DTGridMT As DataGridView
 End Class

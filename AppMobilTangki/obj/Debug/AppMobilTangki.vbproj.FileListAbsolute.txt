@@ -43,3 +43,4 @@ C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\Ap
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLoader.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormUser.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLogin.resources
+C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLoader2.resources

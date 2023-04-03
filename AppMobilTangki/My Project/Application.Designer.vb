@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.AppMobilTangki.FormLoader
+            Me.MainForm = Global.AppMobilTangki.FormLoader2
         End Sub
     End Class
 End Namespace
