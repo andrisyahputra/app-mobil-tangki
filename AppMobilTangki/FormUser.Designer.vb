@@ -77,7 +77,7 @@ Partial Class FormUser
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCari.Location = New System.Drawing.Point(182, 393)
+        Me.txtCari.Location = New System.Drawing.Point(177, 336)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(268, 29)
         Me.txtCari.TabIndex = 74
@@ -87,7 +87,7 @@ Partial Class FormUser
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(59, 395)
+        Me.Label9.Location = New System.Drawing.Point(54, 338)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(117, 27)
         Me.Label9.TabIndex = 73
@@ -122,7 +122,7 @@ Partial Class FormUser
         Me.BtnTutup.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTutup.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold)
         Me.BtnTutup.ForeColor = System.Drawing.Color.White
-        Me.BtnTutup.Location = New System.Drawing.Point(831, 386)
+        Me.BtnTutup.Location = New System.Drawing.Point(826, 329)
         Me.BtnTutup.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         Me.BtnTutup.Name = "BtnTutup"
         Me.BtnTutup.Size = New System.Drawing.Size(109, 36)
@@ -137,7 +137,7 @@ Partial Class FormUser
         Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHapus.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold)
         Me.BtnHapus.ForeColor = System.Drawing.Color.White
-        Me.BtnHapus.Location = New System.Drawing.Point(709, 386)
+        Me.BtnHapus.Location = New System.Drawing.Point(704, 329)
         Me.BtnHapus.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(109, 36)
@@ -152,7 +152,7 @@ Partial Class FormUser
         Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEdit.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold)
         Me.BtnEdit.ForeColor = System.Drawing.Color.White
-        Me.BtnEdit.Location = New System.Drawing.Point(587, 386)
+        Me.BtnEdit.Location = New System.Drawing.Point(582, 329)
         Me.BtnEdit.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(109, 36)
@@ -167,7 +167,7 @@ Partial Class FormUser
         Me.BtnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambah.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold)
         Me.BtnTambah.ForeColor = System.Drawing.Color.White
-        Me.BtnTambah.Location = New System.Drawing.Point(466, 386)
+        Me.BtnTambah.Location = New System.Drawing.Point(461, 329)
         Me.BtnTambah.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(109, 36)
@@ -371,7 +371,7 @@ Partial Class FormUser
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(25, 0, 25, 3)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.GroupBox2.Size = New System.Drawing.Size(952, 375)
+        Me.GroupBox2.Size = New System.Drawing.Size(952, 318)
         Me.GroupBox2.TabIndex = 84
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "USER"
