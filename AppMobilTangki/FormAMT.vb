@@ -9,7 +9,7 @@ Public Class FormAMT
     Dim imgBatal As Bitmap
     Dim imgSimpan As Bitmap
     Dim imgUpdate As Bitmap
-    Dim dataId%
+    'Dim dataId%
     Dim tglsekarang As Date
 
     'Private Sub AturGridTransaksi()
@@ -290,66 +290,66 @@ Public Class FormAMT
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        Try
+        'Try
 
-            If BtnEdit.Text = "EDIT" Then
-                BtnEdit.Image = imgUpdate
-                BtnEdit.Text = "UPDATE"
-                btnHapus.Enabled = True
-                btnHapus.Text = "BATAL"
-                btnHapus.Image = imgBatal
-                BtnTambah.Enabled = False
-                btnClear.Text = "CLEAR"
-                btnClear.Image = ImgClear
-                fieldaktif()
-            Else
-                Call KoneksiKeDatabase()
-                QUERY = "UPDATE tbl_transaksi SET no_plat_mobil='" & lblIDPlat.Text & "',jrk_m_hole1='" & txtJMHole1.Text & "',jrk_m_hole2='" & txtJMHole2.Text & "',tgl_jam_ukur='" & Today() & "',a='-',b='-',c='-',d='-',e='-'where id='" & dataId & "'"
-                DA = New MySqlDataAdapter(QUERY, CONN)
-                DS = New DataSet
-                DA.Fill(DS)
+        '    If BtnEdit.Text = "EDIT" Then
+        '        BtnEdit.Image = imgUpdate
+        '        BtnEdit.Text = "UPDATE"
+        '        btnHapus.Enabled = True
+        '        btnHapus.Text = "BATAL"
+        '        btnHapus.Image = imgBatal
+        '        BtnTambah.Enabled = False
+        '        btnClear.Text = "CLEAR"
+        '        btnClear.Image = ImgClear
+        '        fieldaktif()
+        '    Else
+        '        Call KoneksiKeDatabase()
+        '        QUERY = "UPDATE tbl_transaksi SET no_plat_mobil='" & lblIDPlat.Text & "',jrk_m_hole1='" & txtJMHole1.Text & "',jrk_m_hole2='" & txtJMHole2.Text & "',tgl_jam_ukur='" & Today() & "',a='-',b='-',c='-',d='-',e='-'where id='" & dataId & "'"
+        '        DA = New MySqlDataAdapter(QUERY, CONN)
+        '        DS = New DataSet
+        '        DA.Fill(DS)
 
-                MsgBox("Edit data berhasil")
+        '        MsgBox("Edit data berhasil")
 
-                Call kondisiawal()
-            End If
-        Catch ex As Exception
-            MsgBox("PLAT NOMOR SUDAH TERSEDIA")
-        End Try
+        '        Call kondisiawal()
+        '    End If
+        'Catch ex As Exception
+        '    MsgBox("PLAT NOMOR SUDAH TERSEDIA")
+        'End Try
     End Sub
 
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
-        If btnHapus.Text = "BATAL" Then
-            FormAMT_Load(sender, e)
-            Call KosongkanData()
-            Exit Sub
-        End If
+        'If btnHapus.Text = "BATAL" Then
+        '    FormAMT_Load(sender, e)
+        '    Call KosongkanData()
+        '    Exit Sub
+        'End If
 
 
-        Try
-            If btnHapus.Text = "HAPUS" Then
-                Dim A As String
-                A = MsgBox("BENAR DIHAPUS...?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "HAPUS DATA")
-                Select Case A
-                    Case vbCancel
-                        FormAMT_Load(sender, e)
-                        Call KosongkanData()
-                        MsgBox("Data Tidak hapus", MsgBoxStyle.OkOnly, "HAPUS DATA")
-                        Exit Sub
-                    Case vbOK
-                        Call KoneksiKeDatabase()
-                        QUERY = "delete from tbl_transaksi where id='" & dataId & "'"
-                        CMD = New MySqlCommand(QUERY, CONN)
-                        CMD.ExecuteNonQuery()
-                        FormAMT_Load(sender, e)
-                        Call KosongkanData()
-                        MsgBox("Berhasil Di hapus", MsgBoxStyle.OkOnly, "HAPUS DATA")
-                End Select
-            End If
+        'Try
+        '    If btnHapus.Text = "HAPUS" Then
+        '        Dim A As String
+        '        A = MsgBox("BENAR DIHAPUS...?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "HAPUS DATA")
+        '        Select Case A
+        '            Case vbCancel
+        '                FormAMT_Load(sender, e)
+        '                Call KosongkanData()
+        '                MsgBox("Data Tidak hapus", MsgBoxStyle.OkOnly, "HAPUS DATA")
+        '                Exit Sub
+        '            Case vbOK
+        '                Call KoneksiKeDatabase()
+        '                QUERY = "delete from tbl_transaksi where id='" & dataId & "'"
+        '                CMD = New MySqlCommand(QUERY, CONN)
+        '                CMD.ExecuteNonQuery()
+        '                FormAMT_Load(sender, e)
+        '                Call KosongkanData()
+        '                MsgBox("Berhasil Di hapus", MsgBoxStyle.OkOnly, "HAPUS DATA")
+        '        End Select
+        '    End If
 
-        Catch ex As Exception
-            MsgBox("Data Tidak bisa di Hapus", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Hapus Data")
-        End Try
+        'Catch ex As Exception
+        '    MsgBox("Data Tidak bisa di Hapus", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Hapus Data")
+        'End Try
     End Sub
     'Private Sub Caridata(pencarian As String)
     '    Try
