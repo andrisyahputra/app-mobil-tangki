@@ -23,7 +23,7 @@ Partial Class FormMobilTangki
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtKTemen2 = New System.Windows.Forms.TextBox()
         Me.txtKTemen1 = New System.Windows.Forms.TextBox()
@@ -48,7 +48,6 @@ Partial Class FormMobilTangki
         Me.LblKode = New System.Windows.Forms.Label()
         Me.btnTutup = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.lblloader = New System.Windows.Forms.Label()
         Me.DTGridMT = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DTGridMT, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -208,9 +207,9 @@ Partial Class FormMobilTangki
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(253, 385)
+        Me.ProgressBar1.Location = New System.Drawing.Point(253, 364)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(491, 12)
+        Me.ProgressBar1.Size = New System.Drawing.Size(491, 33)
         Me.ProgressBar1.TabIndex = 114
         '
         'Timer1
@@ -302,29 +301,18 @@ Partial Class FormMobilTangki
         '
         Me.BackgroundWorker1.WorkerReportsProgress = True
         '
-        'lblloader
-        '
-        Me.lblloader.AutoSize = True
-        Me.lblloader.BackColor = System.Drawing.Color.Transparent
-        Me.lblloader.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblloader.Location = New System.Drawing.Point(256, 355)
-        Me.lblloader.Name = "lblloader"
-        Me.lblloader.Size = New System.Drawing.Size(20, 27)
-        Me.lblloader.TabIndex = 93
-        Me.lblloader.Text = "-"
-        '
         'DTGridMT
         '
         Me.DTGridMT.AllowUserToAddRows = False
         Me.DTGridMT.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTGridMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTGridMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DTGridMT.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DTGridMT.Location = New System.Drawing.Point(25, 422)
         Me.DTGridMT.Name = "DTGridMT"
@@ -340,7 +328,6 @@ Partial Class FormMobilTangki
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1002, 749)
         Me.Controls.Add(Me.DTGridMT)
-        Me.Controls.Add(Me.lblloader)
         Me.Controls.Add(Me.btnUploud)
         Me.Controls.Add(Me.BTNEXCEL)
         Me.Controls.Add(Me.ProgressBar1)
@@ -389,6 +376,5 @@ Partial Class FormMobilTangki
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnUploud As Button
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents lblloader As Label
     Friend WithEvents DTGridMT As DataGridView
 End Class

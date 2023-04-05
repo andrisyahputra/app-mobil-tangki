@@ -96,7 +96,7 @@
 
     Private Sub BTNAMT_Click(sender As Object, e As EventArgs) Handles BTNAMT.Click
         clearMenu()
-        switchPanel(FormTransaksi)
+        switchPanel(FormAMT)
     End Sub
 
 End Class

@@ -151,10 +151,10 @@
     <Compile Include="FormTahunan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTransaksi.Designer.vb">
-      <DependentUpon>FormTransaksi.vb</DependentUpon>
+    <Compile Include="FormAMT.Designer.vb">
+      <DependentUpon>FormAMT.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormTransaksi.vb">
+    <Compile Include="FormAMT.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUser.Designer.vb">
@@ -223,8 +223,8 @@
     <EmbeddedResource Include="FormTahunan.resx">
       <DependentUpon>FormTahunan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTransaksi.resx">
-      <DependentUpon>FormTransaksi.vb</DependentUpon>
+    <EmbeddedResource Include="FormAMT.resx">
+      <DependentUpon>FormAMT.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUser.resx">
       <DependentUpon>FormUser.vb</DependentUpon>

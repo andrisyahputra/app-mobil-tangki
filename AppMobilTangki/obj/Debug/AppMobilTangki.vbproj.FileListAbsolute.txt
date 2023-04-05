@@ -16,7 +16,6 @@ C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\Ap
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLaporan.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormMenu.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormMobilTangki.resources
-C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormTransaksi.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\CrystalDecisions.Shared.dll
@@ -44,3 +43,4 @@ C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\Ap
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormUser.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLogin.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLoader2.resources
+C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormAMT.resources
