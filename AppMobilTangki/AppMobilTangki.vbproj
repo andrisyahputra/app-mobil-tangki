@@ -142,12 +142,6 @@
     <Compile Include="FormMobilTangki.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQRCODE.Designer.vb">
-      <DependentUpon>FormQRCODE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormQRCODE.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormTahunan.Designer.vb">
       <DependentUpon>FormTahunan.vb</DependentUpon>
     </Compile>
@@ -219,9 +213,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMobilTangki.resx">
       <DependentUpon>FormMobilTangki.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormQRCODE.resx">
-      <DependentUpon>FormQRCODE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTahunan.resx">
       <DependentUpon>FormTahunan.vb</DependentUpon>

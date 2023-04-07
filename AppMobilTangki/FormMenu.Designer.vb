@@ -23,9 +23,9 @@ Partial Class FormMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTangki = New System.Windows.Forms.Label()
         Me.btnMTangki = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -76,9 +76,9 @@ Partial Class FormMenu
         Me.lblTangki.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
         Me.lblTangki.Location = New System.Drawing.Point(787, 3)
         Me.lblTangki.Name = "lblTangki"
-        Me.lblTangki.Size = New System.Drawing.Size(307, 55)
+        Me.lblTangki.Size = New System.Drawing.Size(198, 55)
         Me.lblTangki.TabIndex = 124
-        Me.lblTangki.Text = "TRANSAKSI"
+        Me.lblTangki.Text = "ORDER"
         '
         'btnMTangki
         '
@@ -242,27 +242,27 @@ Partial Class FormMenu
         '
         Me.DataGridTranksaksi.AllowUserToAddRows = False
         Me.DataGridTranksaksi.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DataGridTranksaksi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridTranksaksi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridTranksaksi.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridTranksaksi.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridTranksaksi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridTranksaksi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridTranksaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridTranksaksi.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DataGridTranksaksi.GridColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.DataGridTranksaksi.Location = New System.Drawing.Point(414, 484)
         Me.DataGridTranksaksi.Name = "DataGridTranksaksi"
         Me.DataGridTranksaksi.ReadOnly = True
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DataGridTranksaksi.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridTranksaksi.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridTranksaksi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridTranksaksi.Size = New System.Drawing.Size(924, 253)
         Me.DataGridTranksaksi.TabIndex = 140
@@ -359,14 +359,13 @@ Partial Class FormMenu
         Me.GroupBox1.Size = New System.Drawing.Size(922, 236)
         Me.GroupBox1.TabIndex = 132
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "TRANSAKSI"
         '
         'lblJam
         '
         Me.lblJam.AutoSize = True
         Me.lblJam.BackColor = System.Drawing.Color.Transparent
         Me.lblJam.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJam.Location = New System.Drawing.Point(488, 152)
+        Me.lblJam.Location = New System.Drawing.Point(357, 189)
         Me.lblJam.Name = "lblJam"
         Me.lblJam.Size = New System.Drawing.Size(47, 27)
         Me.lblJam.TabIndex = 98
@@ -387,7 +386,7 @@ Partial Class FormMenu
         'txtJMHole2
         '
         Me.txtJMHole2.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtJMHole2.Location = New System.Drawing.Point(727, 75)
+        Me.txtJMHole2.Location = New System.Drawing.Point(727, 52)
         Me.txtJMHole2.Name = "txtJMHole2"
         Me.txtJMHole2.Size = New System.Drawing.Size(147, 25)
         Me.txtJMHole2.TabIndex = 69
@@ -395,7 +394,7 @@ Partial Class FormMenu
         'txtJMHole1
         '
         Me.txtJMHole1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtJMHole1.Location = New System.Drawing.Point(300, 75)
+        Me.txtJMHole1.Location = New System.Drawing.Point(300, 52)
         Me.txtJMHole1.Name = "txtJMHole1"
         Me.txtJMHole1.Size = New System.Drawing.Size(147, 25)
         Me.txtJMHole1.TabIndex = 69
@@ -405,7 +404,7 @@ Partial Class FormMenu
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(482, 73)
+        Me.Label4.Location = New System.Drawing.Point(482, 50)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(249, 27)
         Me.Label4.TabIndex = 67
@@ -416,7 +415,7 @@ Partial Class FormMenu
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(55, 73)
+        Me.Label7.Location = New System.Drawing.Point(55, 50)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(249, 27)
         Me.Label7.TabIndex = 67
@@ -427,7 +426,7 @@ Partial Class FormMenu
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(186, 152)
+        Me.Label1.Location = New System.Drawing.Point(55, 189)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(296, 27)
         Me.Label1.TabIndex = 67

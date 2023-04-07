@@ -10,10 +10,6 @@ Public Class FormMenu
     Dim imgBatal As Bitmap
     Dim imgSimpan As Bitmap
     Dim imgUpdate As Bitmap
-
-
-
-
     Public Sub clearMenu()
         btnTutup.Visible = False
         'PictureBox1.Visible = False
@@ -299,8 +295,8 @@ Public Class FormMenu
 
     Private Sub PD2_BeginPrint(sender As Object, e As Printing.PrintEventArgs) Handles PD2.BeginPrint
         Dim pagesetup As New PageSettings
-        pagesetup.PaperSize = New PaperSize("Custom", 250, 500) 'fixed long paper
-        'pagesetup.PaperSize = New PaperSize("Custom", 250, Longpaper)
+        'pagesetup.PaperSize = New PaperSize("Custom", 250, 500) 'fixed long paper
+        pagesetup.PaperSize = New PaperSize("Custom", 250, Longpaper)
         PD2.DefaultPageSettings = pagesetup
     End Sub
 
