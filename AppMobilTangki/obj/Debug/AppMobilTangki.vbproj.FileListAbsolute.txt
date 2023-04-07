@@ -44,3 +44,4 @@ C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\Ap
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLogin.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLoader2.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormAMT.resources
+C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\MessagingToolkit.QRCode.dll
