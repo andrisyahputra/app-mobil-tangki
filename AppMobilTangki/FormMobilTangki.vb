@@ -460,7 +460,7 @@ Public Class FormMobilTangki
             'DateJTempo.Enabled = False
             'txtTempo.Enabled = False
             'txtHargaSw.MaxLength = 20
-            txtNPerusahaan.Focus()
+            'txtNPerusahaan.Focus()
 
             ImgInput = AppMobilTangki.My.Resources.Resources.save
             ImgEdit = AppMobilTangki.My.Resources.Resources.update
