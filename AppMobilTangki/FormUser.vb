@@ -349,6 +349,7 @@ Public Class FormUser
         End If
     End Sub
 
+    Private Sub txtCari_TextChanged(sender As Object, e As EventArgs) Handles txtCari.TextChanged
 
-
+    End Sub
 End Class

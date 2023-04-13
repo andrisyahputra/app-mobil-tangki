@@ -38,10 +38,10 @@ C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\st
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormBulanan.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormHarian.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormTahunan.resources
-C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormQRCODE.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLoader.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormUser.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLogin.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLoader2.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormAMT.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.vbproj.ResolveComReference.cache

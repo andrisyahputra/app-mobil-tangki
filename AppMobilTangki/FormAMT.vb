@@ -212,7 +212,7 @@ Public Class FormAMT
 
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs)
-        lblJam.Text = DateTime.Now.ToString()
+        'lblJam.Text = DateTime.Now.ToString()
         tglsekarang = Today
     End Sub
 
@@ -635,4 +635,64 @@ Public Class FormAMT
             ProgressBar1.Value += 1
         End If
     End Sub
+
+    Private Sub BTNEXPORT_Click(sender As Object, e As EventArgs) Handles BTNEXPORT.Click
+        Try
+            BTNEXPORT.Text = "Please Wait..."
+            BTNEXPORT.Enabled = False
+
+            SaveFileDialog1.Filter = "Excel Document (*.xlsx)|*.xlsx"
+            If SaveFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+                Dim xlApp As Microsoft.Office.Interop.Excel.Application
+                Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
+                Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
+                Dim misValue As Object = System.Reflection.Missing.Value
+                'Dim i As Integer
+                'Dim j As Integer
+
+                xlApp = New Microsoft.Office.Interop.Excel.Application
+                'xlApp.Workbooks.Open()
+                xlWorkBook = xlApp.Workbooks.Add(misValue)
+                xlWorkSheet = xlWorkBook.Sheets("Daftar AMT")
+
+                For i = 0 To DataGridAMT.RowCount - 2
+                    For j = 0 To DataGridAMT.ColumnCount - 1
+                        For k As Integer = 1 To DataGridAMT.Columns.Count
+                            xlWorkSheet.Cells(1, k) = DataGridAMT.Columns(k - 1).HeaderText
+                            xlWorkSheet.Cells(i + 2, j + 1) = DataGridAMT(j, i).Value.ToString()
+                        Next
+                    Next
+                Next
+
+                xlWorkSheet.SaveAs(SaveFileDialog1.FileName)
+                xlWorkBook.Close()
+                xlApp.Quit()
+
+                releaseObject(xlApp)
+                releaseObject(xlWorkBook)
+                releaseObject(xlWorkSheet)
+
+                MsgBox("Successfully saved" & vbCrLf & "File are saved at : " & SaveFileDialog1.FileName, MsgBoxStyle.Information, "Information")
+
+                BTNEXPORT.Text = "Export To MS Excel"
+                BTNEXPORT.Enabled = True
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Buka File excel Failed to save !!!" & vbCrLf & ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'MessageBox.Show("Failed to save !!!", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End Try
+    End Sub
+
+    Private Sub releaseObject(ByVal obj As Object)
+        Try
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(obj)
+            obj = Nothing
+        Catch ex As Exception
+            obj = Nothing
+        Finally
+            GC.Collect()
+        End Try
+    End Sub
+
 End Class
