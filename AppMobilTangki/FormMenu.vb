@@ -270,20 +270,20 @@ Public Class FormMenu
         '        DS = New DataSet
         '        DA.Fill(DS)
 
-        '        Dim A As String = MsgBox("PRINT QRCODE...?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "PRINT QRCODE")
-        '        Select Case A
-        '            Case vbCancel
-        '                FormMenu_Load(sender, e)
-        '                MsgBox("Berhasil Ditambah", MsgBoxStyle.OkOnly, "SUKSES")
-        '                Call KosongkanData()
-        '                Exit Sub
-        '            Case vbOK
-        '                'MsgBox("Print QRCODE")
-        '                changelongpaper()
-        '                PPD.Document = PD2
-        '                PPD.ShowDialog()
-        '                'Print barcode
-        '        End Select
+        Dim A As String = MsgBox("PRINT QRCODE...?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "PRINT QRCODE")
+        Select Case A
+            Case vbCancel
+                FormMenu_Load(sender, e)
+                MsgBox("Berhasil Ditambah", MsgBoxStyle.OkOnly, "SUKSES")
+                Call KosongkanData()
+                Exit Sub
+            Case vbOK
+                'MsgBox("Print QRCODE")
+                changelongpaper()
+                PPD.Document = PD2
+                PPD.ShowDialog()
+                'Print barcode
+        End Select
 
 
         '        FormMenu_Load(sender, e)
@@ -365,17 +365,8 @@ Public Class FormMenu
                 Dim qrCode As New MessagingToolkit.QRCode.Codec.QRCodeEncoder
                 Try
                     Dim qrCodeImage As Image
-                qrCodeImage = New Bitmap(qrCode.Encode("1: " & LBLID1.Text & vbCrLf &
-                                                           "2: " & LBLID2.Text & vbCrLf &
-                                                           "3: " & LBLJRKHOLE1.Text & vbCrLf &
-                                                           "4: " & LBLJRKHOLE2.Text & vbCrLf &
-                                                           "5: " & LBLAMT.Text & vbCrLf &
-                                                           "6: " & LBLPLATNO.Text & vbCrLf &
-                                                           "7: " & LBLKAPASTAS.Text & vbCrLf &
-                                                           "8: " & LBLPRODUK.Text & vbCrLf &
-                                                           "9: " & LBLMEREK.Text & vbCrLf &
-                                                           "10: " & LBLOPERATOR.Text & vbCrLf &
-                                                           "11: " & LBLJAM.Text & " " & LBLTGL.Text))
+                'qrCodeImage = New Bitmap(qrCode.Encode("1: " & LBLID1.Text & vbCrLf & "2: " & LBLID2.Text & vbCrLf & "3: " & LBLJRKHOLE1.Text & vbCrLf & "4: " & LBLJRKHOLE2.Text & vbCrLf & "5: " & LBLAMT.Text & vbCrLf & "6: " & LBLPLATNO.Text & vbCrLf & "7: " & LBLKAPASTAS.Text & vbCrLf & "8: " & LBLPRODUK.Text & vbCrLf & "9: " & LBLMEREK.Text & vbCrLf & "10: " & LBLOPERATOR.Text & vbCrLf & "11: " & LBLJAM.Text & " " & LBLTGL.Text))
+                qrCodeImage = New Bitmap(qrCode.Encode("1: " & LBLID1.Text & vbCrLf & "2: " & LBLID2.Text & vbCrLf & "3: " & LBLJRKHOLE1.Text & vbCrLf & "4: " & LBLJRKHOLE2.Text & vbCrLf & "5: " & LBLAMT.Text & vbCrLf & "6: " & LBLPLATNO.Text & vbCrLf & "7: " & LBLKAPASTAS.Text & vbCrLf & "8: " & LBLPRODUK.Text & vbCrLf & "9: " & LBLMEREK.Text & vbCrLf & "10: " & LBLOPERATOR.Text))
                 e.Graphics.DrawImage(qrCodeImage, CInt((e.PageBounds.Width - 60) / 2), 60 + height2, 60, 60)
 
                 Catch ex As Exception
@@ -446,12 +437,14 @@ Public Class FormMenu
                 Dim value2 As Double = Double.Parse(myValues(1))
 
                 Call KoneksiKeDatabase()
-                CMD = New MySqlCommand("select * from `mt` where `no_polis`='" & value1 & "'", CONN)
+                CMD = New MySqlCommand("select * from `relasimtdanamt` where `no_polis`='" & value1 & "'", CONN)
                 RD = CMD.ExecuteReader
                 RD.Read()
                 If RD.HasRows = True Then
                     LBLID1.Text = value1
                     LBLJRKHOLE1.Text = value2
+                    LBLAMT.Text = RD.Item("nama_amt1")
+                    LBLPLATNO.Text = RD.Item("no_polis")
                     LBLKAPASTAS.Text = RD.Item("kapasitas")
                     LBLPRODUK.Text = RD.Item("produk")
                     LBLMEREK.Text = RD.Item("merk_type")
@@ -478,12 +471,14 @@ Public Class FormMenu
                 Dim value2 As Double = Double.Parse(myValues(1))
 
                 Call KoneksiKeDatabase()
-                CMD = New MySqlCommand("select * from `mt` where `no_polis`='" & value1 & "'", CONN)
+                CMD = New MySqlCommand("select * from `relasimtdanamt` where `no_polis`='" & value1 & "'", CONN)
                 RD = CMD.ExecuteReader
                 RD.Read()
                 If RD.HasRows = True Then
-                    LBLID1.Text = value1
-                    LBLJRKHOLE1.Text = value2
+                    LBLID2.Text = value1
+                    LBLJRKHOLE2.Text = value2
+                    LBLAMT.Text = RD.Item("nama_amt1")
+                    LBLPLATNO.Text = RD.Item("no_polis")
                     LBLKAPASTAS.Text = RD.Item("kapasitas")
                     LBLPRODUK.Text = RD.Item("produk")
                     LBLMEREK.Text = RD.Item("merk_type")

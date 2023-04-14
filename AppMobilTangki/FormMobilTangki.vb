@@ -804,12 +804,7 @@ Public Class FormMobilTangki
     Private Sub BTNEXCEL_Click(sender As Object, e As EventArgs) Handles BTNEXCEL.Click
         Dim exMessage As Integer = MessageBox.Show("Data Excel Harus Tutup", "Notfikasi", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information)
         If exMessage = DialogResult.Yes Then
-            'MessageBox.Show("User Select Yes")
             Dim ofd As New OpenFileDialog
-            'Dim con As OleDb.OleDbConnection
-            'Dim cmd As New OleDb.OleDbCommand
-
-
             Try
                 With ofd
                     .Filter = "Excel File|*.xlsx|Excel File|*.xls| All files(*.*)|*.*"
@@ -819,31 +814,6 @@ Public Class FormMobilTangki
                 If ofd.ShowDialog() = DialogResult.OK Then
 
                     lokasifile = ofd.FileName
-                    'BackgroundWorker1.RunWorkerAsync()
-
-                    'con = New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + lokasifile + ";Extended Properties=Excel 12.0;")
-                    'con.Open()
-                    'With cmd
-                    '    .Connection = con
-                    '    .CommandText = "SELECT * FROM [mt$a3:cb]"
-                    'End With
-
-
-                    'da.SelectCommand = cmd
-                    'Dim dt As New DataTable
-                    'da.Fill(dt)
-                    ''DTGridMT.DataSource = dt
-
-
-                    'con.Close()
-
-                    'Dim con As OleDb.OleDbConnection
-                    'con = New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + lokasifile + ";Extended Properties=Excel 12.0;")
-                    'Dim cmd As New OleDb.OleDbDataAdapter("Select * from [mt$a3:cb]", con)
-                    'cmd.TableMappings.Add("Table", "Table")
-                    'Dim dt As New DataSet
-                    'cmd.Fill(dt)
-                    'DTGridMT.DataSource = dt.Tables(0)
                     Dim con As OleDb.OleDbConnection
                     Dim cmd As OleDb.OleDbDataAdapter
                     Dim dt As New DataSet
@@ -856,10 +826,9 @@ Public Class FormMobilTangki
                         cmd = New OleDb.OleDbDataAdapter("SELECT * FROM [mt$A3:CB]", con)
                     Else
                         ' Handle unsupported file format
+                        MessageBox.Show("Import failder")
                         Exit Sub
                     End If
-
-                    'cmd.TableMappings.Add("Table", "Table")
                     cmd.Fill(dt)
                     DTGridMT.DataSource = dt.Tables(0)
 
@@ -870,8 +839,8 @@ Public Class FormMobilTangki
 
                 End If
             Catch ex As Exception
-            'MessageBox.Show("Sheet Pada Excel Harus MT", "EROR")
-            MessageBox.Show(ex.Message)
+                'MessageBox.Show("Sheet Pada Excel Harus MT", "EROR")
+                MessageBox.Show(ex.Message)
             End Try
 
         ElseIf exMessage = DialogResult.No Then
