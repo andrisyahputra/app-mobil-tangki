@@ -302,80 +302,90 @@ Public Class FormMenu
     End Sub
 
     Private Sub PD2_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PD2.PrintPage
-        'Try
-        '    Dim f8 As New Font("Calibri", 8, FontStyle.Regular)
-        '    Dim f10 As New Font("Calibri", 10, FontStyle.Regular)
-        '    Dim f10b As New Font("Calibri", 10, FontStyle.Bold)
-        '    Dim f14 As New Font("Calibri", 14, FontStyle.Bold)
+        Try
+            Dim f8 As New Font("Calibri", 8, FontStyle.Regular)
+            Dim f10 As New Font("Calibri", 10, FontStyle.Regular)
+            Dim f10b As New Font("Calibri", 10, FontStyle.Bold)
+            Dim f14 As New Font("Calibri", 14, FontStyle.Bold)
 
-        '    Dim leftmargin As Integer = PD2.DefaultPageSettings.Margins.Left
-        '    Dim centermargin As Integer = PD2.DefaultPageSettings.PaperSize.Width / 2
-        '    Dim rightmargin As Integer = PD2.DefaultPageSettings.PaperSize.Width
+            Dim leftmargin As Integer = PD2.DefaultPageSettings.Margins.Left
+            Dim centermargin As Integer = PD2.DefaultPageSettings.PaperSize.Width / 2
+            Dim rightmargin As Integer = PD2.DefaultPageSettings.PaperSize.Width
 
-        '    'font alignment
-        '    Dim right As New StringFormat
-        '    Dim center As New StringFormat
-        '    right.Alignment = StringAlignment.Far
-        '    center.Alignment = StringAlignment.Center
+            'font alignment
+            Dim right As New StringFormat
+            Dim center As New StringFormat
+            right.Alignment = StringAlignment.Far
+            center.Alignment = StringAlignment.Center
 
-        '    Dim line As String
-        '    line = "***************************************************************************"
-        '    'e.Graphics.DrawString("Coba Stroe", f14, Brushes.Black, centermargin, 5, center)
-        '    'Dim logo As Image = My.Resources.ResourceManager.GetObject("tanki") 'logo
-        '    'e.Graphics.DrawImage(logo, CInt((e.PageBounds.Width - 150) / 2), 5, 150, 35)
-        '    'e.Graphics.DrawString("New York", f10, Brushes.Black, centermargin, 40, center)
-        '    'e.Graphics.DrawString("TEL +1987", f8, Brushes.Black, centermargin, 55, center)
+            Dim line As String
+            line = "***************************************************************************"
+            'e.Graphics.DrawString("Coba Stroe", f14, Brushes.Black, centermargin, 5, center)
+            'Dim logo As Image = My.Resources.ResourceManager.GetObject("tanki") 'logo
+            'e.Graphics.DrawImage(logo, CInt((e.PageBounds.Width - 150) / 2), 5, 150, 35)
+            'e.Graphics.DrawString("New York", f10, Brushes.Black, centermargin, 40, center)
+            'e.Graphics.DrawString("TEL +1987", f8, Brushes.Black, centermargin, 55, center)
 
-        '    'e.Graphics.DrawString("Invoice ID", f8, Brushes.Black, 0, 75)
-        '    'e.Graphics.DrawString(":", f8, Brushes.Black, 50, 75)
-        '    'e.Graphics.DrawString("KFGS1654", f8, Brushes.Black, 70, 75)
+            'e.Graphics.DrawString("Invoice ID", f8, Brushes.Black, 0, 75)
+            'e.Graphics.DrawString(":", f8, Brushes.Black, 50, 75)
+            'e.Graphics.DrawString("KFGS1654", f8, Brushes.Black, 70, 75)
 
-        '    'e.Graphics.DrawString("Cashier", f8, Brushes.Black, 0, 85)
-        '    'e.Graphics.DrawString(":", f8, Brushes.Black, 50, 85)
-        '    'e.Graphics.DrawString("Andri", f8, Brushes.Black, 70, 85)
+            'e.Graphics.DrawString("Cashier", f8, Brushes.Black, 0, 85)
+            'e.Graphics.DrawString(":", f8, Brushes.Black, 50, 85)
+            'e.Graphics.DrawString("Andri", f8, Brushes.Black, 70, 85)
 
-        '    e.Graphics.DrawString(Today, f8, Brushes.Black, 0, 95)
+            e.Graphics.DrawString(Today, f8, Brushes.Black, 0, 95)
 
-        '    e.Graphics.DrawString(line, f8, Brushes.Black, 0, 125)
+            e.Graphics.DrawString(line, f8, Brushes.Black, 0, 125)
 
-        '    'Dim height As Integer
-        '    'Dim i As Long
-        '    'DataGridView1.AllowUserToAddRows = False
-        '    'For row As Integer = 0 To DataGridView1.RowCount - 1
-        '    '    height += 15
-        '    '    e.Graphics.DrawString(DataGridView1.Rows(row).Cells(1).Value.ToString, f10, Brushes.Black, 0, 115 + height)
-        '    '    e.Graphics.DrawString(DataGridView1.Rows(row).Cells(0).Value.ToString, f10, Brushes.Black, 25, 115 + height)
+            'Dim height As Integer
+            'Dim i As Long
+            'DataGridView1.AllowUserToAddRows = False
+            'For row As Integer = 0 To DataGridView1.RowCount - 1
+            '    height += 15
+            '    e.Graphics.DrawString(DataGridView1.Rows(row).Cells(1).Value.ToString, f10, Brushes.Black, 0, 115 + height)
+            '    e.Graphics.DrawString(DataGridView1.Rows(row).Cells(0).Value.ToString, f10, Brushes.Black, 25, 115 + height)
 
-        '    '    i = DataGridView1.Rows(row).Cells(2).Value
-        '    '    DataGridView1.Rows(row).Cells(2).Value = Format(i, "##,##0")
-        '    '    e.Graphics.DrawString(DataGridView1.Rows(row).Cells(2).Value.ToString, f10, Brushes.Black, rightmargin, 115 + height, right)
+            '    i = DataGridView1.Rows(row).Cells(2).Value
+            '    DataGridView1.Rows(row).Cells(2).Value = Format(i, "##,##0")
+            '    e.Graphics.DrawString(DataGridView1.Rows(row).Cells(2).Value.ToString, f10, Brushes.Black, rightmargin, 115 + height, right)
 
-        '    'Next
+            'Next
 
-        '    Dim height2 As Integer
-        '    'total()
+            Dim height2 As Integer
+            'total()
 
-        ''height2 = 140 + height
-        ''e.Graphics.DrawString(line, f8, Brushes.Black, 0, height2)
-        ''e.Graphics.DrawString("Total :" & Format(t_price, "##,##0"), f10b, Brushes.Black, rightmargin, 15 + height2, right)
-        ''e.Graphics.DrawString(t_qty, f10b, Brushes.Black, 0, 15 + height2)
+            'height2 = 140 + height
+            'e.Graphics.DrawString(line, f8, Brushes.Black, 0, height2)
+            'e.Graphics.DrawString("Total :" & Format(t_price, "##,##0"), f10b, Brushes.Black, rightmargin, 15 + height2, right)
+            'e.Graphics.DrawString(t_qty, f10b, Brushes.Black, 0, 15 + height2)
 
 
-        ''bercode
-        ''    Dim qrCode As New MessagingToolkit.QRCode.Codec.QRCodeEncoder
-        ''    Try
-        ''        Dim qrCodeImage As Image
-        ''        qrCodeImage = New Bitmap(qrCode.Encode("Jarak Hole 1: " & txtJMHole1.Text & vbCrLf & " Jarak Hole 2: " & txtJMHole2.Text))
-        ''        e.Graphics.DrawImage(qrCodeImage, CInt((e.PageBounds.Width - 60) / 2), 60 + height2, 60, 60)
+            'bercode
+                Dim qrCode As New MessagingToolkit.QRCode.Codec.QRCodeEncoder
+                Try
+                    Dim qrCodeImage As Image
+                qrCodeImage = New Bitmap(qrCode.Encode("1: " & LBLID1.Text & vbCrLf &
+                                                           "2: " & LBLID2.Text & vbCrLf &
+                                                           "3: " & LBLJRKHOLE1.Text & vbCrLf &
+                                                           "4: " & LBLJRKHOLE2.Text & vbCrLf &
+                                                           "5: " & LBLAMT.Text & vbCrLf &
+                                                           "6: " & LBLPLATNO.Text & vbCrLf &
+                                                           "7: " & LBLKAPASTAS.Text & vbCrLf &
+                                                           "8: " & LBLPRODUK.Text & vbCrLf &
+                                                           "9: " & LBLMEREK.Text & vbCrLf &
+                                                           "10: " & LBLOPERATOR.Text & vbCrLf &
+                                                           "11: " & LBLJAM.Text & " " & LBLTGL.Text))
+                e.Graphics.DrawImage(qrCodeImage, CInt((e.PageBounds.Width - 60) / 2), 60 + height2, 60, 60)
 
-        ''    Catch ex As Exception
-        ''        MsgBox(ex.Message, "EROR")
-        ''    End Try
-        ''    e.Graphics.DrawString("~~ TERIMAKASIH ~~", f10b, Brushes.Black, centermargin, 140 + height2, center)
-        ''    'e.Graphics.DrawString("~~ STORE ~~", f10b, Brushes.Black, centermargin, 135 + height2, center)
-        ''Catch ex As Exception
+                Catch ex As Exception
+                    MsgBox(ex.Message, "EROR")
+                End Try
+                e.Graphics.DrawString("~~ TERIMAKASIH ~~", f10b, Brushes.Black, centermargin, 140 + height2, center)
+                'e.Graphics.DrawString("~~ STORE ~~", f10b, Brushes.Black, centermargin, 135 + height2, center)
+            Catch ex As Exception
 
-        ''End Try
+        End Try
 
 
     End Sub
