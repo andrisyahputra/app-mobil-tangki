@@ -55,7 +55,7 @@ Public Class FormUser
 
         Try
 
-            QUERY = "Select * FROM tbl_user ORDER BY id"
+            QUERY = "Select * FROM tbl_user ORDER BY id ASC"
             DA = New MySqlDataAdapter(QUERY, CONN)
             DS = New DataSet
             DA.Fill(DS, "tbl_user")
@@ -204,7 +204,10 @@ Public Class FormUser
                         Call KoneksiKeDatabase()
                         CMD = New MySqlCommand
                         CMD.Connection = CONN
-                        QUERY = "INSERT INTO `tbl_user`(`id`, `nama_lengkap`, `jenis_kelamin`, `alamat`, `tanggal_lahir`, `user_name`, `pwd`, `lvl`, `no_hp`, `c`) VALUES ('','" & TxtNamaLengkap.Text & "','" & gender & "','" & TxtAlamat.Text & "','" & Format(DateTanggalLahir.Value, "yyyy-MM-dd") & "','" & TxtUsername.Text & "','" & TxtPassword.Text & "','" & CBLevel.Text & "','" & txtNoWa.Text & "','-')"
+                        QUERY = "INSERT INTO `tbl_user`(`id`, `nama_lengkap`, `jenis_kelamin`, `alamat`, `tanggal_lahir`" &
+                            ", `user_name`, `pwd`, `lvl`, `no_hp`, `c`) VALUES ('','" & TxtNamaLengkap.Text & "','" & gender & "','" & TxtAlamat.Text & "'" &
+                        ",'" & Format(DateTanggalLahir.Value, "yyyy-MM-dd") & "','" & TxtUsername.Text & "','" & TxtPassword.Text & "'," &
+                        "'" & CBLevel.Text & "','" & txtNoWa.Text & "','-')"
                         CMD.CommandText = QUERY
                         CMD.ExecuteNonQuery()
 

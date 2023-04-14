@@ -13,7 +13,93 @@ Public Class FormMobilTangki
     Dim imgUpdate As Bitmap
     Dim dataId%
 
+    Private Sub kosongidata()
+        TXTKRFID.Text = ""
+        TXTNOPOLIS.Text = ""
+        TXTKBLOKIR.Text = ""
+        TXTTITLE.Text = ""
+        TXTNPERUSAHAAN.Text = ""
+        TXTSTATUS.Text = ""
+        TXTMTYPE.Text = ""
+        TXTMODEL.Text = ""
+        DATETHNBUATAN.Value = Today
+        TXTKAPASITAS.Text = ""
+        TXTKOMPATEMENT.Text = ""
+        TXTPRODUK.Text = ""
+        TXTNOMESIN.Text = ""
+        TXTNRANGKA.Text = ""
+        TXTHUEMISI.Text = ""
+        DATEPASMASUK.Value = Today
+        DATESTNK.Value = Today
+        DATEKEUR.Value = Today
+        DATETERA.Value = Today
+        TXTIZBKHUSU.Text = ""
+        DATESKT.Value = Today
+        TXTNPAS.Text = ""
+        TXTSTATUS2.Text = ""
+        TXTKET.Text = ""
+        TXTTGLTERIMA.Text = ""
+        TXTNOSTERA.Text = ""
+        TXTKOMPT1.Text = ""
+        TXTKOMPT2.Text = ""
+        TXTKOMPT3.Text = ""
+        TXTKOMPKSONG.Text = ""
+        TXTKOMPK1.Text = ""
+        TXTKOMP2T1.Text = ""
+        TXTKOMP2T2.Text = ""
+        TXTKOMP2T3.Text = ""
+        TXTKOMP2RKSONG.Text = ""
+        TXTKOMP2K1.Text = ""
+        TXTMLAKUKIER.Text = ""
+        TXTNODOKEMISI.Text = ""
+        DATETERA2.Value = Today
+        TXTTHNBUATAN2.Text = ""
+        TXTNSTNK.Text = ""
+        DATEMLAKUSTNK.Value = Today
+        TXTNKEUR.Text = ""
+    End Sub
+
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
+        Try
+            Call KoneksiKeDatabase()
+            QUERY = "INSERT INTO `mt`(`id`, `no_urut`, `kode_rfid`, `no_polis`, `ket_blokir`, `title`," &
+                "`nama_perusahaan`, `sts`, `merk_type`, `model`, `thn_pembuatan`, `kapasitas`, `kompartemen`," &
+                " `produk`, `no_mesin`, `no_rangka`, `hsl_uji_emisi`, `pas_masuk`, `stnk`, `keur`, `tera`, `ijin_brg_khusus`" &
+                ", `skt`, `no_pas`, `status2`, `ksong`, `keterangan`, `tgl_penerima`, `no_surat_tera`, `komp1_t1`, `komp1_t2`," &
+                " `komp1_t3`, `komp1_ruang_ksg`, `komp1_k1`, `komp2_t1`, `komp2_t2`, `komp2_t3`, `komp2_ruang_ksg`, `komp2_k1`" &
+                ", `tera2`, `thn_pembuatan2`, `no_stnk`, `m_berlaku_stnk`, `no_keur`, `m_berlaku_kier`, `no_dok_uji_emisi`, " &
+                "`hasil_uji_emisi`, `m_berlaku_uji_emisi`, `no_spb_skt`, `m_berlaku_spb_mkt`, `no_z_m_terminal_bbm`, `no_izin_masuk`" &
+                ", `kode_area`, `area`, `kd_lokasi`, `lokasi`, `kd_kategori`, `kategori`, `delivery_point`, `sewa`, `tarif`, `agen`, " &
+                "`industri`, `angkutan_sendiri`, `umur`, `kat`, `produk2`, `engkel_tronton_semit`, `pabrikan_tangki`, `material_tangki`, " &
+                "`pembuatan_tangki`, `sts_armada`, `plat`, `asuransi`, `alamat`, `telepon`, `email`, `npwp`, `penanggung_jawab`, `jabatan`, " &
+                "`data_umur_mt`) VALUES " &
+                "('','4','" & TXTKRFID.Text & "','" & TXTNOPOLIS.Text & "','" & TXTKBLOKIR.Text & "','" & TXTTITLE.Text & "'," &
+                "'" & TXTNPERUSAHAAN.Text & "','" & TXTSTATUS.Text & "','" & TXTMTYPE.Text & "','" & TXTMODEL.Text & "','" & Format(DATETHNBUATAN.Value, "yyyy-MM-dd") & "'," &
+                "'" & TXTKAPASITAS.Text & "','" & TXTPRODUK.Text & "','" & TXTNOMESIN.Text & "','" & TXTNRANGKA.Text & "','" & TXTHUEMISI.Text & "'," &
+                "'" & Format(DATEPASMASUK.Value, "yyyy-MM-dd") & "','" & Format(DATESTNK.Value, "yyyy-MM-dd") & "','" & Format(DATEKEUR.Value, "yyyy-MM-dd") & "','" & Format(DATETERA.Value, "yyyy-MM-dd") & "','" & TXTIZBKHUSU.Text & "'," &
+                "'" & Format(DATESKT.Value, "yyyy-MM-dd") & "','" & TXTNPAS.Text & "','" & TXTSTATUS2.Text & "','" & TXTKET.Text & "','" & TXTTGLTERIMA.Text & "'," &
+                "'" & TXTNOSTERA.Text & "','" & TXTKOMPT1.Text & "','" & TXTKOMPT2.Text & "','" & TXTKOMPT3.Text & "','" & TXTKOMPKSONG.Text & "'," &
+                "'" & TXTKOMPK1.Text & "','" & TXTKOMP2T1.Text & "','" & TXTKOMP2T2.Text & "','" & TXTKOMP2T3.Text & "','" & TXTKOMP2RKSONG.Text & "'," &
+                "'" & TXTKOMP2K1.Text & "','" & TXTMLAKUKIER.Text & "','" & TXTNODOKEMISI.Text & "','" & Format(DATETERA2.Value, "yyyy-MM-dd") & "','" & TXTTHNBUATAN2.Text & "'," &
+                "'" & TXTNSTNK.Text & "','" & Format(DATEMLAKUSTNK.Value, "yyyy-MM-dd") & "','" & TXTNKEUR.Text & "','',''," &
+                "'','','','',''," &
+                "'','','','',''," &
+                "'','','','',''," &
+                "'','','','',''," &
+                "'','','','',''," &
+                "'','','','',''," &
+                "'','','','','')"
+            DA = New MySqlDataAdapter(QUERY, CONN)
+            DS = New DataSet
+            DA.Fill(DS)
+
+            kosongidata()
+            MessageBox.Show("Berhasil ditambah")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
         'Try
         '    If txtNPerusahaan.Text = "" Or
         '            txtPlatKendaraan.Text = "" Or

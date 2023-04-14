@@ -23,15 +23,35 @@ Partial Class FormMobilTangki
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.TXTKOMP2T1 = New System.Windows.Forms.TextBox()
+        Me.TXTKOMP2K1 = New System.Windows.Forms.TextBox()
+        Me.TXTKOMP2RKSONG = New System.Windows.Forms.TextBox()
+        Me.TXTKOMP2T3 = New System.Windows.Forms.TextBox()
+        Me.TXTKOMP2T2 = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.TXTKOMPT1 = New System.Windows.Forms.TextBox()
+        Me.TXTKOMPK1 = New System.Windows.Forms.TextBox()
+        Me.TXTKOMPKSONG = New System.Windows.Forms.TextBox()
+        Me.TXTKOMPT3 = New System.Windows.Forms.TextBox()
+        Me.TXTKOMPT2 = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.btnClear = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnHapus = New System.Windows.Forms.Label()
         Me.BtnEdit = New System.Windows.Forms.Label()
@@ -44,16 +64,13 @@ Partial Class FormMobilTangki
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -69,6 +86,31 @@ Partial Class FormMobilTangki
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.TXTNKEUR = New System.Windows.Forms.TextBox()
+        Me.TXTNSTNK = New System.Windows.Forms.TextBox()
+        Me.TXTTHNBUATAN2 = New System.Windows.Forms.TextBox()
+        Me.TXTNODOKEMISI = New System.Windows.Forms.TextBox()
+        Me.TXTMLAKUKIER = New System.Windows.Forms.TextBox()
+        Me.TXTHUEMISI = New System.Windows.Forms.TextBox()
+        Me.TXTNRANGKA = New System.Windows.Forms.TextBox()
+        Me.TXTNOMESIN = New System.Windows.Forms.TextBox()
+        Me.TXTPRODUK = New System.Windows.Forms.TextBox()
+        Me.TXTKOMPATEMENT = New System.Windows.Forms.TextBox()
+        Me.TXTNOSTERA = New System.Windows.Forms.TextBox()
+        Me.TXTKAPASITAS = New System.Windows.Forms.TextBox()
+        Me.TXTTGLTERIMA = New System.Windows.Forms.TextBox()
+        Me.TXTKET = New System.Windows.Forms.TextBox()
+        Me.TXTMODEL = New System.Windows.Forms.TextBox()
+        Me.TXTSTATUS2 = New System.Windows.Forms.TextBox()
+        Me.TXTMTYPE = New System.Windows.Forms.TextBox()
+        Me.TXTNPAS = New System.Windows.Forms.TextBox()
+        Me.TXTSTATUS = New System.Windows.Forms.TextBox()
+        Me.TXTNPERUSAHAAN = New System.Windows.Forms.TextBox()
+        Me.TXTIZBKHUSU = New System.Windows.Forms.TextBox()
+        Me.TXTTITLE = New System.Windows.Forms.TextBox()
+        Me.TXTKBLOKIR = New System.Windows.Forms.TextBox()
+        Me.TXTNOPOLIS = New System.Windows.Forms.TextBox()
+        Me.TXTKRFID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -80,65 +122,31 @@ Partial Class FormMobilTangki
         Me.DTGridMT = New System.Windows.Forms.DataGridView()
         Me.BTNEXPORT = New System.Windows.Forms.Button()
         Me.BTNEXCEL = New System.Windows.Forms.Button()
-        Me.TXTKRFID = New System.Windows.Forms.TextBox()
-        Me.TXTMLAKUKIER = New System.Windows.Forms.TextBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TXTKOMPT1 = New System.Windows.Forms.TextBox()
-        Me.TXTKOMPT2 = New System.Windows.Forms.TextBox()
-        Me.TXTKOMPT3 = New System.Windows.Forms.TextBox()
-        Me.TXTKOMPKSONG = New System.Windows.Forms.TextBox()
-        Me.TXTKOMPK1 = New System.Windows.Forms.TextBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.TXTKOMP2T1 = New System.Windows.Forms.TextBox()
-        Me.TXTKOMP2K1 = New System.Windows.Forms.TextBox()
-        Me.TXTKOMP2RKSONG = New System.Windows.Forms.TextBox()
-        Me.TXTKOMP2T3 = New System.Windows.Forms.TextBox()
-        Me.TXTKOMP2T2 = New System.Windows.Forms.TextBox()
-        Me.TXTNOPOLIS = New System.Windows.Forms.TextBox()
-        Me.TXTKBLOKIR = New System.Windows.Forms.TextBox()
-        Me.TXTTITLE = New System.Windows.Forms.TextBox()
-        Me.TXTNPERUSAHAAN = New System.Windows.Forms.TextBox()
-        Me.TXTSTATUS = New System.Windows.Forms.TextBox()
-        Me.TXTMTYPE = New System.Windows.Forms.TextBox()
-        Me.TXTMODEL = New System.Windows.Forms.TextBox()
-        Me.TXTTBUATAN = New System.Windows.Forms.TextBox()
-        Me.TXTKAPASITAS = New System.Windows.Forms.TextBox()
-        Me.TXTKOMPATEMENT = New System.Windows.Forms.TextBox()
-        Me.TXTPRODUK = New System.Windows.Forms.TextBox()
-        Me.TXTNOMESIN = New System.Windows.Forms.TextBox()
-        Me.TXTNRANGKA = New System.Windows.Forms.TextBox()
-        Me.TXTHUEMISI = New System.Windows.Forms.TextBox()
-        Me.TXTPMASUK = New System.Windows.Forms.TextBox()
-        Me.TXTSTNK = New System.Windows.Forms.TextBox()
-        Me.TXTKEUR = New System.Windows.Forms.TextBox()
-        Me.TXTTERA = New System.Windows.Forms.TextBox()
-        Me.TXTIZBKHUSU = New System.Windows.Forms.TextBox()
-        Me.TXTSKT = New System.Windows.Forms.TextBox()
-        Me.TXTNPAS = New System.Windows.Forms.TextBox()
-        Me.TXTSTATUS2 = New System.Windows.Forms.TextBox()
-        Me.TXTKET = New System.Windows.Forms.TextBox()
-        Me.TXTTGLTERIMA = New System.Windows.Forms.TextBox()
-        Me.TXTNOSTERA = New System.Windows.Forms.TextBox()
-        Me.TXTNODOKEMISI = New System.Windows.Forms.TextBox()
-        Me.TXTTERA2 = New System.Windows.Forms.TextBox()
-        Me.TXTTHNBUATAN2 = New System.Windows.Forms.TextBox()
-        Me.TXTNSTNK = New System.Windows.Forms.TextBox()
-        Me.TXTMLAKUSTNK = New System.Windows.Forms.TextBox()
-        Me.TXTNKEUR = New System.Windows.Forms.TextBox()
+        Me.DATETHNBUATAN = New System.Windows.Forms.DateTimePicker()
+        Me.DATEPASMASUK = New System.Windows.Forms.DateTimePicker()
+        Me.DATESTNK = New System.Windows.Forms.DateTimePicker()
+        Me.DATEKEUR = New System.Windows.Forms.DateTimePicker()
+        Me.DATETERA = New System.Windows.Forms.DateTimePicker()
+        Me.DATESKT = New System.Windows.Forms.DateTimePicker()
+        Me.DATETERA2 = New System.Windows.Forms.DateTimePicker()
+        Me.DATEMLAKUSTNK = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DTGridMT, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.DTGridMT, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.DATEPASMASUK)
+        Me.GroupBox1.Controls.Add(Me.DATEMLAKUSTNK)
+        Me.GroupBox1.Controls.Add(Me.DATETERA2)
+        Me.GroupBox1.Controls.Add(Me.DATESKT)
+        Me.GroupBox1.Controls.Add(Me.DATETERA)
+        Me.GroupBox1.Controls.Add(Me.DATEKEUR)
+        Me.GroupBox1.Controls.Add(Me.DATESTNK)
+        Me.GroupBox1.Controls.Add(Me.DATETHNBUATAN)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Label18)
@@ -179,13 +187,10 @@ Partial Class FormMobilTangki
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label17)
         Me.GroupBox1.Controls.Add(Me.TXTNKEUR)
-        Me.GroupBox1.Controls.Add(Me.TXTMLAKUSTNK)
         Me.GroupBox1.Controls.Add(Me.TXTNSTNK)
         Me.GroupBox1.Controls.Add(Me.TXTTHNBUATAN2)
-        Me.GroupBox1.Controls.Add(Me.TXTTERA2)
         Me.GroupBox1.Controls.Add(Me.TXTNODOKEMISI)
         Me.GroupBox1.Controls.Add(Me.TXTMLAKUKIER)
-        Me.GroupBox1.Controls.Add(Me.TXTPMASUK)
         Me.GroupBox1.Controls.Add(Me.TXTHUEMISI)
         Me.GroupBox1.Controls.Add(Me.TXTNRANGKA)
         Me.GroupBox1.Controls.Add(Me.TXTNOMESIN)
@@ -194,21 +199,16 @@ Partial Class FormMobilTangki
         Me.GroupBox1.Controls.Add(Me.TXTNOSTERA)
         Me.GroupBox1.Controls.Add(Me.TXTKAPASITAS)
         Me.GroupBox1.Controls.Add(Me.TXTTGLTERIMA)
-        Me.GroupBox1.Controls.Add(Me.TXTTBUATAN)
         Me.GroupBox1.Controls.Add(Me.TXTKET)
         Me.GroupBox1.Controls.Add(Me.TXTMODEL)
         Me.GroupBox1.Controls.Add(Me.TXTSTATUS2)
         Me.GroupBox1.Controls.Add(Me.TXTMTYPE)
         Me.GroupBox1.Controls.Add(Me.TXTNPAS)
         Me.GroupBox1.Controls.Add(Me.TXTSTATUS)
-        Me.GroupBox1.Controls.Add(Me.TXTSKT)
         Me.GroupBox1.Controls.Add(Me.TXTNPERUSAHAAN)
         Me.GroupBox1.Controls.Add(Me.TXTIZBKHUSU)
         Me.GroupBox1.Controls.Add(Me.TXTTITLE)
-        Me.GroupBox1.Controls.Add(Me.TXTTERA)
-        Me.GroupBox1.Controls.Add(Me.TXTKEUR)
         Me.GroupBox1.Controls.Add(Me.TXTKBLOKIR)
-        Me.GroupBox1.Controls.Add(Me.TXTSTNK)
         Me.GroupBox1.Controls.Add(Me.TXTNOPOLIS)
         Me.GroupBox1.Controls.Add(Me.TXTKRFID)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -223,6 +223,160 @@ Partial Class FormMobilTangki
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "KENDARAAN MOBIL TANGKI"
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label29)
+        Me.GroupBox3.Controls.Add(Me.Label31)
+        Me.GroupBox3.Controls.Add(Me.Label36)
+        Me.GroupBox3.Controls.Add(Me.Label37)
+        Me.GroupBox3.Controls.Add(Me.Label42)
+        Me.GroupBox3.Controls.Add(Me.TXTKOMP2T1)
+        Me.GroupBox3.Controls.Add(Me.TXTKOMP2K1)
+        Me.GroupBox3.Controls.Add(Me.TXTKOMP2RKSONG)
+        Me.GroupBox3.Controls.Add(Me.TXTKOMP2T3)
+        Me.GroupBox3.Controls.Add(Me.TXTKOMP2T2)
+        Me.GroupBox3.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.GroupBox3.ForeColor = System.Drawing.Color.White
+        Me.GroupBox3.Location = New System.Drawing.Point(609, 24)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(280, 146)
+        Me.GroupBox3.TabIndex = 113
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "KOMPATEMEN 2"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.BackColor = System.Drawing.Color.Transparent
+        Me.Label29.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(6, 25)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(21, 14)
+        Me.Label29.TabIndex = 94
+        Me.Label29.Text = "T1"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.BackColor = System.Drawing.Color.Transparent
+        Me.Label31.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(6, 121)
+        Me.Label31.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(21, 14)
+        Me.Label31.TabIndex = 95
+        Me.Label31.Text = "K1"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.BackColor = System.Drawing.Color.Transparent
+        Me.Label36.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.Location = New System.Drawing.Point(6, 97)
+        Me.Label36.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(92, 14)
+        Me.Label36.TabIndex = 94
+        Me.Label36.Text = "RUANG KOSONG"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.BackColor = System.Drawing.Color.Transparent
+        Me.Label37.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(6, 73)
+        Me.Label37.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(21, 14)
+        Me.Label37.TabIndex = 93
+        Me.Label37.Text = "T3"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.BackColor = System.Drawing.Color.Transparent
+        Me.Label42.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.Location = New System.Drawing.Point(6, 49)
+        Me.Label42.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(21, 14)
+        Me.Label42.TabIndex = 95
+        Me.Label42.Text = "T2"
+        '
+        'TXTKOMP2T1
+        '
+        Me.TXTKOMP2T1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKOMP2T1.Location = New System.Drawing.Point(128, 22)
+        Me.TXTKOMP2T1.Name = "TXTKOMP2T1"
+        Me.TXTKOMP2T1.Size = New System.Drawing.Size(135, 20)
+        Me.TXTKOMP2T1.TabIndex = 69
+        '
+        'TXTKOMP2K1
+        '
+        Me.TXTKOMP2K1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKOMP2K1.Location = New System.Drawing.Point(128, 118)
+        Me.TXTKOMP2K1.Name = "TXTKOMP2K1"
+        Me.TXTKOMP2K1.Size = New System.Drawing.Size(135, 20)
+        Me.TXTKOMP2K1.TabIndex = 69
+        '
+        'TXTKOMP2RKSONG
+        '
+        Me.TXTKOMP2RKSONG.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKOMP2RKSONG.Location = New System.Drawing.Point(128, 94)
+        Me.TXTKOMP2RKSONG.Name = "TXTKOMP2RKSONG"
+        Me.TXTKOMP2RKSONG.Size = New System.Drawing.Size(135, 20)
+        Me.TXTKOMP2RKSONG.TabIndex = 69
+        '
+        'TXTKOMP2T3
+        '
+        Me.TXTKOMP2T3.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKOMP2T3.Location = New System.Drawing.Point(128, 70)
+        Me.TXTKOMP2T3.Name = "TXTKOMP2T3"
+        Me.TXTKOMP2T3.Size = New System.Drawing.Size(135, 20)
+        Me.TXTKOMP2T3.TabIndex = 69
+        '
+        'TXTKOMP2T2
+        '
+        Me.TXTKOMP2T2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKOMP2T2.Location = New System.Drawing.Point(128, 46)
+        Me.TXTKOMP2T2.Name = "TXTKOMP2T2"
+        Me.TXTKOMP2T2.Size = New System.Drawing.Size(135, 20)
+        Me.TXTKOMP2T2.TabIndex = 69
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label25)
+        Me.GroupBox2.Controls.Add(Me.Label35)
+        Me.GroupBox2.Controls.Add(Me.Label27)
+        Me.GroupBox2.Controls.Add(Me.Label30)
+        Me.GroupBox2.Controls.Add(Me.Label34)
+        Me.GroupBox2.Controls.Add(Me.TXTKOMPT1)
+        Me.GroupBox2.Controls.Add(Me.TXTKOMPK1)
+        Me.GroupBox2.Controls.Add(Me.TXTKOMPKSONG)
+        Me.GroupBox2.Controls.Add(Me.TXTKOMPT3)
+        Me.GroupBox2.Controls.Add(Me.TXTKOMPT2)
+        Me.GroupBox2.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.GroupBox2.ForeColor = System.Drawing.Color.White
+        Me.GroupBox2.Location = New System.Drawing.Point(302, 263)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(284, 146)
+        Me.GroupBox2.TabIndex = 112
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "KOMPATEMEN 1"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.BackColor = System.Drawing.Color.Transparent
+        Me.Label25.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(6, 25)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(21, 14)
+        Me.Label25.TabIndex = 94
+        Me.Label25.Text = "T1"
+        '
         'Label35
         '
         Me.Label35.AutoSize = True
@@ -234,6 +388,82 @@ Partial Class FormMobilTangki
         Me.Label35.Size = New System.Drawing.Size(21, 14)
         Me.Label35.TabIndex = 95
         Me.Label35.Text = "K1"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.BackColor = System.Drawing.Color.Transparent
+        Me.Label27.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(6, 97)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(92, 14)
+        Me.Label27.TabIndex = 94
+        Me.Label27.Text = "RUANG KOSONG"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.BackColor = System.Drawing.Color.Transparent
+        Me.Label30.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(6, 73)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(21, 14)
+        Me.Label30.TabIndex = 93
+        Me.Label30.Text = "T3"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.BackColor = System.Drawing.Color.Transparent
+        Me.Label34.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(6, 49)
+        Me.Label34.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(21, 14)
+        Me.Label34.TabIndex = 95
+        Me.Label34.Text = "T2"
+        '
+        'TXTKOMPT1
+        '
+        Me.TXTKOMPT1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKOMPT1.Location = New System.Drawing.Point(134, 22)
+        Me.TXTKOMPT1.Name = "TXTKOMPT1"
+        Me.TXTKOMPT1.Size = New System.Drawing.Size(130, 20)
+        Me.TXTKOMPT1.TabIndex = 69
+        '
+        'TXTKOMPK1
+        '
+        Me.TXTKOMPK1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKOMPK1.Location = New System.Drawing.Point(134, 118)
+        Me.TXTKOMPK1.Name = "TXTKOMPK1"
+        Me.TXTKOMPK1.Size = New System.Drawing.Size(130, 20)
+        Me.TXTKOMPK1.TabIndex = 69
+        '
+        'TXTKOMPKSONG
+        '
+        Me.TXTKOMPKSONG.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKOMPKSONG.Location = New System.Drawing.Point(134, 94)
+        Me.TXTKOMPKSONG.Name = "TXTKOMPKSONG"
+        Me.TXTKOMPKSONG.Size = New System.Drawing.Size(130, 20)
+        Me.TXTKOMPKSONG.TabIndex = 69
+        '
+        'TXTKOMPT3
+        '
+        Me.TXTKOMPT3.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKOMPT3.Location = New System.Drawing.Point(134, 70)
+        Me.TXTKOMPT3.Name = "TXTKOMPT3"
+        Me.TXTKOMPT3.Size = New System.Drawing.Size(130, 20)
+        Me.TXTKOMPT3.TabIndex = 69
+        '
+        'TXTKOMPT2
+        '
+        Me.TXTKOMPT2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKOMPT2.Location = New System.Drawing.Point(134, 46)
+        Me.TXTKOMPT2.Name = "TXTKOMPT2"
+        Me.TXTKOMPT2.Size = New System.Drawing.Size(130, 20)
+        Me.TXTKOMPT2.TabIndex = 69
         '
         'Label18
         '
@@ -266,18 +496,6 @@ Partial Class FormMobilTangki
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(69, 70)
         Me.btnClear.TabIndex = 111
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.BackColor = System.Drawing.Color.Transparent
-        Me.Label34.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(6, 49)
-        Me.Label34.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(21, 14)
-        Me.Label34.TabIndex = 95
-        Me.Label34.Text = "T2"
         '
         'Label9
         '
@@ -357,9 +575,9 @@ Partial Class FormMobilTangki
         Me.LblKode.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LblKode.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblKode.Image = Global.AppMobilTangki.My.Resources.Resources.search
-        Me.LblKode.Location = New System.Drawing.Point(430, 412)
+        Me.LblKode.Location = New System.Drawing.Point(426, 412)
         Me.LblKode.Name = "LblKode"
-        Me.LblKode.Size = New System.Drawing.Size(40, 44)
+        Me.LblKode.Size = New System.Drawing.Size(38, 30)
         Me.LblKode.TabIndex = 104
         '
         'Label14
@@ -422,18 +640,6 @@ Partial Class FormMobilTangki
         Me.Label4.TabIndex = 95
         Me.Label4.Text = "STATUS"
         '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.BackColor = System.Drawing.Color.Transparent
-        Me.Label30.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(6, 73)
-        Me.Label30.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(21, 14)
-        Me.Label30.TabIndex = 93
-        Me.Label30.Text = "T3"
-        '
         'Label20
         '
         Me.Label20.AutoSize = True
@@ -482,18 +688,6 @@ Partial Class FormMobilTangki
         Me.Label19.TabIndex = 94
         Me.Label19.Text = "STNK"
         '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.BackColor = System.Drawing.Color.Transparent
-        Me.Label27.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(6, 97)
-        Me.Label27.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(92, 14)
-        Me.Label27.TabIndex = 94
-        Me.Label27.Text = "RUANG KOSONG"
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -529,18 +723,6 @@ Partial Class FormMobilTangki
         Me.Label15.Size = New System.Drawing.Size(72, 14)
         Me.Label15.TabIndex = 94
         Me.Label15.Text = "NO RANGKA"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.BackColor = System.Drawing.Color.Transparent
-        Me.Label25.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(6, 25)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(21, 14)
-        Me.Label25.TabIndex = 94
-        Me.Label25.Text = "T1"
         '
         'Label8
         '
@@ -722,6 +904,206 @@ Partial Class FormMobilTangki
         Me.Label17.TabIndex = 67
         Me.Label17.Text = "KEUR"
         '
+        'TXTNKEUR
+        '
+        Me.TXTNKEUR.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTNKEUR.Location = New System.Drawing.Point(737, 323)
+        Me.TXTNKEUR.Name = "TXTNKEUR"
+        Me.TXTNKEUR.Size = New System.Drawing.Size(152, 20)
+        Me.TXTNKEUR.TabIndex = 69
+        '
+        'TXTNSTNK
+        '
+        Me.TXTNSTNK.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTNSTNK.Location = New System.Drawing.Point(737, 275)
+        Me.TXTNSTNK.Name = "TXTNSTNK"
+        Me.TXTNSTNK.Size = New System.Drawing.Size(152, 20)
+        Me.TXTNSTNK.TabIndex = 69
+        '
+        'TXTTHNBUATAN2
+        '
+        Me.TXTTHNBUATAN2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTTHNBUATAN2.Location = New System.Drawing.Point(737, 251)
+        Me.TXTTHNBUATAN2.Name = "TXTTHNBUATAN2"
+        Me.TXTTHNBUATAN2.Size = New System.Drawing.Size(152, 20)
+        Me.TXTTHNBUATAN2.TabIndex = 69
+        '
+        'TXTNODOKEMISI
+        '
+        Me.TXTNODOKEMISI.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTNODOKEMISI.Location = New System.Drawing.Point(737, 203)
+        Me.TXTNODOKEMISI.Name = "TXTNODOKEMISI"
+        Me.TXTNODOKEMISI.Size = New System.Drawing.Size(152, 20)
+        Me.TXTNODOKEMISI.TabIndex = 69
+        '
+        'TXTMLAKUKIER
+        '
+        Me.TXTMLAKUKIER.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTMLAKUKIER.Location = New System.Drawing.Point(737, 179)
+        Me.TXTMLAKUKIER.Name = "TXTMLAKUKIER"
+        Me.TXTMLAKUKIER.Size = New System.Drawing.Size(152, 20)
+        Me.TXTMLAKUKIER.TabIndex = 69
+        '
+        'TXTHUEMISI
+        '
+        Me.TXTHUEMISI.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTHUEMISI.Location = New System.Drawing.Point(129, 357)
+        Me.TXTHUEMISI.Name = "TXTHUEMISI"
+        Me.TXTHUEMISI.Size = New System.Drawing.Size(167, 20)
+        Me.TXTHUEMISI.TabIndex = 69
+        '
+        'TXTNRANGKA
+        '
+        Me.TXTNRANGKA.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTNRANGKA.Location = New System.Drawing.Point(129, 333)
+        Me.TXTNRANGKA.Name = "TXTNRANGKA"
+        Me.TXTNRANGKA.Size = New System.Drawing.Size(167, 20)
+        Me.TXTNRANGKA.TabIndex = 69
+        '
+        'TXTNOMESIN
+        '
+        Me.TXTNOMESIN.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTNOMESIN.Location = New System.Drawing.Point(129, 309)
+        Me.TXTNOMESIN.Name = "TXTNOMESIN"
+        Me.TXTNOMESIN.Size = New System.Drawing.Size(167, 20)
+        Me.TXTNOMESIN.TabIndex = 69
+        '
+        'TXTPRODUK
+        '
+        Me.TXTPRODUK.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTPRODUK.Location = New System.Drawing.Point(129, 285)
+        Me.TXTPRODUK.Name = "TXTPRODUK"
+        Me.TXTPRODUK.Size = New System.Drawing.Size(167, 20)
+        Me.TXTPRODUK.TabIndex = 69
+        '
+        'TXTKOMPATEMENT
+        '
+        Me.TXTKOMPATEMENT.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKOMPATEMENT.Location = New System.Drawing.Point(129, 261)
+        Me.TXTKOMPATEMENT.Name = "TXTKOMPATEMENT"
+        Me.TXTKOMPATEMENT.Size = New System.Drawing.Size(167, 20)
+        Me.TXTKOMPATEMENT.TabIndex = 69
+        '
+        'TXTNOSTERA
+        '
+        Me.TXTNOSTERA.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTNOSTERA.Location = New System.Drawing.Point(436, 239)
+        Me.TXTNOSTERA.Name = "TXTNOSTERA"
+        Me.TXTNOSTERA.Size = New System.Drawing.Size(150, 20)
+        Me.TXTNOSTERA.TabIndex = 69
+        '
+        'TXTKAPASITAS
+        '
+        Me.TXTKAPASITAS.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKAPASITAS.Location = New System.Drawing.Point(129, 237)
+        Me.TXTKAPASITAS.Name = "TXTKAPASITAS"
+        Me.TXTKAPASITAS.Size = New System.Drawing.Size(167, 20)
+        Me.TXTKAPASITAS.TabIndex = 69
+        '
+        'TXTTGLTERIMA
+        '
+        Me.TXTTGLTERIMA.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTTGLTERIMA.Location = New System.Drawing.Point(436, 215)
+        Me.TXTTGLTERIMA.Name = "TXTTGLTERIMA"
+        Me.TXTTGLTERIMA.Size = New System.Drawing.Size(150, 20)
+        Me.TXTTGLTERIMA.TabIndex = 69
+        '
+        'TXTKET
+        '
+        Me.TXTKET.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKET.Location = New System.Drawing.Point(436, 191)
+        Me.TXTKET.Name = "TXTKET"
+        Me.TXTKET.Size = New System.Drawing.Size(150, 20)
+        Me.TXTKET.TabIndex = 69
+        '
+        'TXTMODEL
+        '
+        Me.TXTMODEL.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTMODEL.Location = New System.Drawing.Point(129, 189)
+        Me.TXTMODEL.Name = "TXTMODEL"
+        Me.TXTMODEL.Size = New System.Drawing.Size(167, 20)
+        Me.TXTMODEL.TabIndex = 69
+        '
+        'TXTSTATUS2
+        '
+        Me.TXTSTATUS2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTSTATUS2.Location = New System.Drawing.Point(436, 167)
+        Me.TXTSTATUS2.Name = "TXTSTATUS2"
+        Me.TXTSTATUS2.Size = New System.Drawing.Size(150, 20)
+        Me.TXTSTATUS2.TabIndex = 69
+        '
+        'TXTMTYPE
+        '
+        Me.TXTMTYPE.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTMTYPE.Location = New System.Drawing.Point(129, 165)
+        Me.TXTMTYPE.Name = "TXTMTYPE"
+        Me.TXTMTYPE.Size = New System.Drawing.Size(167, 20)
+        Me.TXTMTYPE.TabIndex = 69
+        '
+        'TXTNPAS
+        '
+        Me.TXTNPAS.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTNPAS.Location = New System.Drawing.Point(436, 143)
+        Me.TXTNPAS.Name = "TXTNPAS"
+        Me.TXTNPAS.Size = New System.Drawing.Size(150, 20)
+        Me.TXTNPAS.TabIndex = 69
+        '
+        'TXTSTATUS
+        '
+        Me.TXTSTATUS.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTSTATUS.Location = New System.Drawing.Point(129, 141)
+        Me.TXTSTATUS.Name = "TXTSTATUS"
+        Me.TXTSTATUS.Size = New System.Drawing.Size(167, 20)
+        Me.TXTSTATUS.TabIndex = 69
+        '
+        'TXTNPERUSAHAAN
+        '
+        Me.TXTNPERUSAHAAN.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTNPERUSAHAAN.Location = New System.Drawing.Point(129, 117)
+        Me.TXTNPERUSAHAAN.Name = "TXTNPERUSAHAAN"
+        Me.TXTNPERUSAHAAN.Size = New System.Drawing.Size(167, 20)
+        Me.TXTNPERUSAHAAN.TabIndex = 69
+        '
+        'TXTIZBKHUSU
+        '
+        Me.TXTIZBKHUSU.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTIZBKHUSU.Location = New System.Drawing.Point(436, 96)
+        Me.TXTIZBKHUSU.Name = "TXTIZBKHUSU"
+        Me.TXTIZBKHUSU.Size = New System.Drawing.Size(150, 20)
+        Me.TXTIZBKHUSU.TabIndex = 69
+        '
+        'TXTTITLE
+        '
+        Me.TXTTITLE.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTTITLE.Location = New System.Drawing.Point(129, 93)
+        Me.TXTTITLE.Name = "TXTTITLE"
+        Me.TXTTITLE.Size = New System.Drawing.Size(167, 20)
+        Me.TXTTITLE.TabIndex = 69
+        '
+        'TXTKBLOKIR
+        '
+        Me.TXTKBLOKIR.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKBLOKIR.Location = New System.Drawing.Point(129, 69)
+        Me.TXTKBLOKIR.Name = "TXTKBLOKIR"
+        Me.TXTKBLOKIR.Size = New System.Drawing.Size(167, 20)
+        Me.TXTKBLOKIR.TabIndex = 69
+        '
+        'TXTNOPOLIS
+        '
+        Me.TXTNOPOLIS.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTNOPOLIS.Location = New System.Drawing.Point(129, 45)
+        Me.TXTNOPOLIS.Name = "TXTNOPOLIS"
+        Me.TXTNOPOLIS.Size = New System.Drawing.Size(167, 20)
+        Me.TXTNOPOLIS.TabIndex = 69
+        '
+        'TXTKRFID
+        '
+        Me.TXTKRFID.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKRFID.Location = New System.Drawing.Point(129, 21)
+        Me.TXTKRFID.Name = "TXTKRFID"
+        Me.TXTKRFID.Size = New System.Drawing.Size(167, 20)
+        Me.TXTKRFID.TabIndex = 69
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -803,27 +1185,27 @@ Partial Class FormMobilTangki
         '
         Me.DTGridMT.AllowUserToAddRows = False
         Me.DTGridMT.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DTGridMT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DTGridMT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DTGridMT.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTGridMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTGridMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DTGridMT.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTGridMT.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTGridMT.DefaultCellStyle = DataGridViewCellStyle6
         Me.DTGridMT.GridColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.DTGridMT.Location = New System.Drawing.Point(25, 528)
         Me.DTGridMT.Name = "DTGridMT"
@@ -862,451 +1244,85 @@ Partial Class FormMobilTangki
         Me.BTNEXCEL.Text = "IMPORT EXCEL"
         Me.BTNEXCEL.UseVisualStyleBackColor = False
         '
-        'TXTKRFID
-        '
-        Me.TXTKRFID.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKRFID.Location = New System.Drawing.Point(129, 21)
-        Me.TXTKRFID.Name = "TXTKRFID"
-        Me.TXTKRFID.Size = New System.Drawing.Size(167, 20)
-        Me.TXTKRFID.TabIndex = 69
-        '
-        'TXTMLAKUKIER
-        '
-        Me.TXTMLAKUKIER.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTMLAKUKIER.Location = New System.Drawing.Point(737, 179)
-        Me.TXTMLAKUKIER.Name = "TXTMLAKUKIER"
-        Me.TXTMLAKUKIER.Size = New System.Drawing.Size(152, 20)
-        Me.TXTMLAKUKIER.TabIndex = 69
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Label25)
-        Me.GroupBox2.Controls.Add(Me.Label35)
-        Me.GroupBox2.Controls.Add(Me.Label27)
-        Me.GroupBox2.Controls.Add(Me.Label30)
-        Me.GroupBox2.Controls.Add(Me.Label34)
-        Me.GroupBox2.Controls.Add(Me.TXTKOMPT1)
-        Me.GroupBox2.Controls.Add(Me.TXTKOMPK1)
-        Me.GroupBox2.Controls.Add(Me.TXTKOMPKSONG)
-        Me.GroupBox2.Controls.Add(Me.TXTKOMPT3)
-        Me.GroupBox2.Controls.Add(Me.TXTKOMPT2)
-        Me.GroupBox2.Font = New System.Drawing.Font("Times New Roman", 8.25!)
-        Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(302, 263)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(284, 146)
-        Me.GroupBox2.TabIndex = 112
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "KOMPATEMEN 1"
-        '
-        'TXTKOMPT1
-        '
-        Me.TXTKOMPT1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMPT1.Location = New System.Drawing.Point(134, 22)
-        Me.TXTKOMPT1.Name = "TXTKOMPT1"
-        Me.TXTKOMPT1.Size = New System.Drawing.Size(130, 20)
-        Me.TXTKOMPT1.TabIndex = 69
-        '
-        'TXTKOMPT2
-        '
-        Me.TXTKOMPT2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMPT2.Location = New System.Drawing.Point(134, 46)
-        Me.TXTKOMPT2.Name = "TXTKOMPT2"
-        Me.TXTKOMPT2.Size = New System.Drawing.Size(130, 20)
-        Me.TXTKOMPT2.TabIndex = 69
-        '
-        'TXTKOMPT3
-        '
-        Me.TXTKOMPT3.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMPT3.Location = New System.Drawing.Point(134, 70)
-        Me.TXTKOMPT3.Name = "TXTKOMPT3"
-        Me.TXTKOMPT3.Size = New System.Drawing.Size(130, 20)
-        Me.TXTKOMPT3.TabIndex = 69
-        '
-        'TXTKOMPKSONG
-        '
-        Me.TXTKOMPKSONG.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMPKSONG.Location = New System.Drawing.Point(134, 94)
-        Me.TXTKOMPKSONG.Name = "TXTKOMPKSONG"
-        Me.TXTKOMPKSONG.Size = New System.Drawing.Size(130, 20)
-        Me.TXTKOMPKSONG.TabIndex = 69
-        '
-        'TXTKOMPK1
-        '
-        Me.TXTKOMPK1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMPK1.Location = New System.Drawing.Point(134, 118)
-        Me.TXTKOMPK1.Name = "TXTKOMPK1"
-        Me.TXTKOMPK1.Size = New System.Drawing.Size(130, 20)
-        Me.TXTKOMPK1.TabIndex = 69
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.Label29)
-        Me.GroupBox3.Controls.Add(Me.Label31)
-        Me.GroupBox3.Controls.Add(Me.Label36)
-        Me.GroupBox3.Controls.Add(Me.Label37)
-        Me.GroupBox3.Controls.Add(Me.Label42)
-        Me.GroupBox3.Controls.Add(Me.TXTKOMP2T1)
-        Me.GroupBox3.Controls.Add(Me.TXTKOMP2K1)
-        Me.GroupBox3.Controls.Add(Me.TXTKOMP2RKSONG)
-        Me.GroupBox3.Controls.Add(Me.TXTKOMP2T3)
-        Me.GroupBox3.Controls.Add(Me.TXTKOMP2T2)
-        Me.GroupBox3.Font = New System.Drawing.Font("Times New Roman", 8.25!)
-        Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(609, 24)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(280, 146)
-        Me.GroupBox3.TabIndex = 113
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "KOMPATEMEN 2"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.BackColor = System.Drawing.Color.Transparent
-        Me.Label29.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(6, 25)
-        Me.Label29.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(21, 14)
-        Me.Label29.TabIndex = 94
-        Me.Label29.Text = "T1"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.BackColor = System.Drawing.Color.Transparent
-        Me.Label31.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(6, 121)
-        Me.Label31.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(21, 14)
-        Me.Label31.TabIndex = 95
-        Me.Label31.Text = "K1"
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.BackColor = System.Drawing.Color.Transparent
-        Me.Label36.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(6, 97)
-        Me.Label36.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(92, 14)
-        Me.Label36.TabIndex = 94
-        Me.Label36.Text = "RUANG KOSONG"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.BackColor = System.Drawing.Color.Transparent
-        Me.Label37.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(6, 73)
-        Me.Label37.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(21, 14)
-        Me.Label37.TabIndex = 93
-        Me.Label37.Text = "T3"
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.BackColor = System.Drawing.Color.Transparent
-        Me.Label42.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.Location = New System.Drawing.Point(6, 49)
-        Me.Label42.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(21, 14)
-        Me.Label42.TabIndex = 95
-        Me.Label42.Text = "T2"
-        '
-        'TXTKOMP2T1
-        '
-        Me.TXTKOMP2T1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMP2T1.Location = New System.Drawing.Point(128, 22)
-        Me.TXTKOMP2T1.Name = "TXTKOMP2T1"
-        Me.TXTKOMP2T1.Size = New System.Drawing.Size(135, 20)
-        Me.TXTKOMP2T1.TabIndex = 69
-        '
-        'TXTKOMP2K1
-        '
-        Me.TXTKOMP2K1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMP2K1.Location = New System.Drawing.Point(128, 118)
-        Me.TXTKOMP2K1.Name = "TXTKOMP2K1"
-        Me.TXTKOMP2K1.Size = New System.Drawing.Size(135, 20)
-        Me.TXTKOMP2K1.TabIndex = 69
-        '
-        'TXTKOMP2RKSONG
-        '
-        Me.TXTKOMP2RKSONG.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMP2RKSONG.Location = New System.Drawing.Point(128, 94)
-        Me.TXTKOMP2RKSONG.Name = "TXTKOMP2RKSONG"
-        Me.TXTKOMP2RKSONG.Size = New System.Drawing.Size(135, 20)
-        Me.TXTKOMP2RKSONG.TabIndex = 69
-        '
-        'TXTKOMP2T3
-        '
-        Me.TXTKOMP2T3.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMP2T3.Location = New System.Drawing.Point(128, 70)
-        Me.TXTKOMP2T3.Name = "TXTKOMP2T3"
-        Me.TXTKOMP2T3.Size = New System.Drawing.Size(135, 20)
-        Me.TXTKOMP2T3.TabIndex = 69
-        '
-        'TXTKOMP2T2
-        '
-        Me.TXTKOMP2T2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMP2T2.Location = New System.Drawing.Point(128, 46)
-        Me.TXTKOMP2T2.Name = "TXTKOMP2T2"
-        Me.TXTKOMP2T2.Size = New System.Drawing.Size(135, 20)
-        Me.TXTKOMP2T2.TabIndex = 69
-        '
-        'TXTNOPOLIS
-        '
-        Me.TXTNOPOLIS.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNOPOLIS.Location = New System.Drawing.Point(129, 45)
-        Me.TXTNOPOLIS.Name = "TXTNOPOLIS"
-        Me.TXTNOPOLIS.Size = New System.Drawing.Size(167, 20)
-        Me.TXTNOPOLIS.TabIndex = 69
-        '
-        'TXTKBLOKIR
-        '
-        Me.TXTKBLOKIR.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKBLOKIR.Location = New System.Drawing.Point(129, 69)
-        Me.TXTKBLOKIR.Name = "TXTKBLOKIR"
-        Me.TXTKBLOKIR.Size = New System.Drawing.Size(167, 20)
-        Me.TXTKBLOKIR.TabIndex = 69
-        '
-        'TXTTITLE
-        '
-        Me.TXTTITLE.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTTITLE.Location = New System.Drawing.Point(129, 93)
-        Me.TXTTITLE.Name = "TXTTITLE"
-        Me.TXTTITLE.Size = New System.Drawing.Size(167, 20)
-        Me.TXTTITLE.TabIndex = 69
-        '
-        'TXTNPERUSAHAAN
-        '
-        Me.TXTNPERUSAHAAN.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNPERUSAHAAN.Location = New System.Drawing.Point(129, 117)
-        Me.TXTNPERUSAHAAN.Name = "TXTNPERUSAHAAN"
-        Me.TXTNPERUSAHAAN.Size = New System.Drawing.Size(167, 20)
-        Me.TXTNPERUSAHAAN.TabIndex = 69
-        '
-        'TXTSTATUS
-        '
-        Me.TXTSTATUS.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTSTATUS.Location = New System.Drawing.Point(129, 141)
-        Me.TXTSTATUS.Name = "TXTSTATUS"
-        Me.TXTSTATUS.Size = New System.Drawing.Size(167, 20)
-        Me.TXTSTATUS.TabIndex = 69
-        '
-        'TXTMTYPE
-        '
-        Me.TXTMTYPE.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTMTYPE.Location = New System.Drawing.Point(129, 165)
-        Me.TXTMTYPE.Name = "TXTMTYPE"
-        Me.TXTMTYPE.Size = New System.Drawing.Size(167, 20)
-        Me.TXTMTYPE.TabIndex = 69
-        '
-        'TXTMODEL
-        '
-        Me.TXTMODEL.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTMODEL.Location = New System.Drawing.Point(129, 189)
-        Me.TXTMODEL.Name = "TXTMODEL"
-        Me.TXTMODEL.Size = New System.Drawing.Size(167, 20)
-        Me.TXTMODEL.TabIndex = 69
-        '
-        'TXTTBUATAN
-        '
-        Me.TXTTBUATAN.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTTBUATAN.Location = New System.Drawing.Point(129, 213)
-        Me.TXTTBUATAN.Name = "TXTTBUATAN"
-        Me.TXTTBUATAN.Size = New System.Drawing.Size(167, 20)
-        Me.TXTTBUATAN.TabIndex = 69
-        '
-        'TXTKAPASITAS
-        '
-        Me.TXTKAPASITAS.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKAPASITAS.Location = New System.Drawing.Point(129, 237)
-        Me.TXTKAPASITAS.Name = "TXTKAPASITAS"
-        Me.TXTKAPASITAS.Size = New System.Drawing.Size(167, 20)
-        Me.TXTKAPASITAS.TabIndex = 69
-        '
-        'TXTKOMPATEMENT
-        '
-        Me.TXTKOMPATEMENT.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMPATEMENT.Location = New System.Drawing.Point(129, 261)
-        Me.TXTKOMPATEMENT.Name = "TXTKOMPATEMENT"
-        Me.TXTKOMPATEMENT.Size = New System.Drawing.Size(167, 20)
-        Me.TXTKOMPATEMENT.TabIndex = 69
-        '
-        'TXTPRODUK
-        '
-        Me.TXTPRODUK.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTPRODUK.Location = New System.Drawing.Point(129, 285)
-        Me.TXTPRODUK.Name = "TXTPRODUK"
-        Me.TXTPRODUK.Size = New System.Drawing.Size(167, 20)
-        Me.TXTPRODUK.TabIndex = 69
-        '
-        'TXTNOMESIN
-        '
-        Me.TXTNOMESIN.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNOMESIN.Location = New System.Drawing.Point(129, 309)
-        Me.TXTNOMESIN.Name = "TXTNOMESIN"
-        Me.TXTNOMESIN.Size = New System.Drawing.Size(167, 20)
-        Me.TXTNOMESIN.TabIndex = 69
-        '
-        'TXTNRANGKA
-        '
-        Me.TXTNRANGKA.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNRANGKA.Location = New System.Drawing.Point(129, 333)
-        Me.TXTNRANGKA.Name = "TXTNRANGKA"
-        Me.TXTNRANGKA.Size = New System.Drawing.Size(167, 20)
-        Me.TXTNRANGKA.TabIndex = 69
-        '
-        'TXTHUEMISI
-        '
-        Me.TXTHUEMISI.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTHUEMISI.Location = New System.Drawing.Point(129, 357)
-        Me.TXTHUEMISI.Name = "TXTHUEMISI"
-        Me.TXTHUEMISI.Size = New System.Drawing.Size(167, 20)
-        Me.TXTHUEMISI.TabIndex = 69
-        '
-        'TXTPMASUK
-        '
-        Me.TXTPMASUK.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTPMASUK.Location = New System.Drawing.Point(129, 381)
-        Me.TXTPMASUK.Name = "TXTPMASUK"
-        Me.TXTPMASUK.Size = New System.Drawing.Size(167, 20)
-        Me.TXTPMASUK.TabIndex = 69
-        '
-        'TXTSTNK
-        '
-        Me.TXTSTNK.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTSTNK.Location = New System.Drawing.Point(436, 24)
-        Me.TXTSTNK.Name = "TXTSTNK"
-        Me.TXTSTNK.Size = New System.Drawing.Size(150, 20)
-        Me.TXTSTNK.TabIndex = 69
-        '
-        'TXTKEUR
-        '
-        Me.TXTKEUR.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKEUR.Location = New System.Drawing.Point(436, 48)
-        Me.TXTKEUR.Name = "TXTKEUR"
-        Me.TXTKEUR.Size = New System.Drawing.Size(150, 20)
-        Me.TXTKEUR.TabIndex = 69
-        '
-        'TXTTERA
-        '
-        Me.TXTTERA.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTTERA.Location = New System.Drawing.Point(436, 72)
-        Me.TXTTERA.Name = "TXTTERA"
-        Me.TXTTERA.Size = New System.Drawing.Size(150, 20)
-        Me.TXTTERA.TabIndex = 69
-        '
-        'TXTIZBKHUSU
-        '
-        Me.TXTIZBKHUSU.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTIZBKHUSU.Location = New System.Drawing.Point(436, 96)
-        Me.TXTIZBKHUSU.Name = "TXTIZBKHUSU"
-        Me.TXTIZBKHUSU.Size = New System.Drawing.Size(150, 20)
-        Me.TXTIZBKHUSU.TabIndex = 69
-        '
-        'TXTSKT
-        '
-        Me.TXTSKT.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTSKT.Location = New System.Drawing.Point(436, 120)
-        Me.TXTSKT.Name = "TXTSKT"
-        Me.TXTSKT.Size = New System.Drawing.Size(150, 20)
-        Me.TXTSKT.TabIndex = 69
-        '
-        'TXTNPAS
-        '
-        Me.TXTNPAS.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNPAS.Location = New System.Drawing.Point(436, 143)
-        Me.TXTNPAS.Name = "TXTNPAS"
-        Me.TXTNPAS.Size = New System.Drawing.Size(150, 20)
-        Me.TXTNPAS.TabIndex = 69
-        '
-        'TXTSTATUS2
-        '
-        Me.TXTSTATUS2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTSTATUS2.Location = New System.Drawing.Point(436, 167)
-        Me.TXTSTATUS2.Name = "TXTSTATUS2"
-        Me.TXTSTATUS2.Size = New System.Drawing.Size(150, 20)
-        Me.TXTSTATUS2.TabIndex = 69
-        '
-        'TXTKET
-        '
-        Me.TXTKET.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKET.Location = New System.Drawing.Point(436, 191)
-        Me.TXTKET.Name = "TXTKET"
-        Me.TXTKET.Size = New System.Drawing.Size(150, 20)
-        Me.TXTKET.TabIndex = 69
-        '
-        'TXTTGLTERIMA
-        '
-        Me.TXTTGLTERIMA.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTTGLTERIMA.Location = New System.Drawing.Point(436, 215)
-        Me.TXTTGLTERIMA.Name = "TXTTGLTERIMA"
-        Me.TXTTGLTERIMA.Size = New System.Drawing.Size(150, 20)
-        Me.TXTTGLTERIMA.TabIndex = 69
-        '
-        'TXTNOSTERA
-        '
-        Me.TXTNOSTERA.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNOSTERA.Location = New System.Drawing.Point(436, 239)
-        Me.TXTNOSTERA.Name = "TXTNOSTERA"
-        Me.TXTNOSTERA.Size = New System.Drawing.Size(150, 20)
-        Me.TXTNOSTERA.TabIndex = 69
-        '
-        'TXTNODOKEMISI
-        '
-        Me.TXTNODOKEMISI.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNODOKEMISI.Location = New System.Drawing.Point(737, 203)
-        Me.TXTNODOKEMISI.Name = "TXTNODOKEMISI"
-        Me.TXTNODOKEMISI.Size = New System.Drawing.Size(152, 20)
-        Me.TXTNODOKEMISI.TabIndex = 69
-        '
-        'TXTTERA2
-        '
-        Me.TXTTERA2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTTERA2.Location = New System.Drawing.Point(737, 227)
-        Me.TXTTERA2.Name = "TXTTERA2"
-        Me.TXTTERA2.Size = New System.Drawing.Size(152, 20)
-        Me.TXTTERA2.TabIndex = 69
-        '
-        'TXTTHNBUATAN2
-        '
-        Me.TXTTHNBUATAN2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTTHNBUATAN2.Location = New System.Drawing.Point(737, 251)
-        Me.TXTTHNBUATAN2.Name = "TXTTHNBUATAN2"
-        Me.TXTTHNBUATAN2.Size = New System.Drawing.Size(152, 20)
-        Me.TXTTHNBUATAN2.TabIndex = 69
-        '
-        'TXTNSTNK
-        '
-        Me.TXTNSTNK.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNSTNK.Location = New System.Drawing.Point(737, 275)
-        Me.TXTNSTNK.Name = "TXTNSTNK"
-        Me.TXTNSTNK.Size = New System.Drawing.Size(152, 20)
-        Me.TXTNSTNK.TabIndex = 69
-        '
-        'TXTMLAKUSTNK
-        '
-        Me.TXTMLAKUSTNK.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTMLAKUSTNK.Location = New System.Drawing.Point(737, 299)
-        Me.TXTMLAKUSTNK.Name = "TXTMLAKUSTNK"
-        Me.TXTMLAKUSTNK.Size = New System.Drawing.Size(152, 20)
-        Me.TXTMLAKUSTNK.TabIndex = 69
-        '
-        'TXTNKEUR
-        '
-        Me.TXTNKEUR.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNKEUR.Location = New System.Drawing.Point(737, 323)
-        Me.TXTNKEUR.Name = "TXTNKEUR"
-        Me.TXTNKEUR.Size = New System.Drawing.Size(152, 20)
-        Me.TXTNKEUR.TabIndex = 69
+        'DATETHNBUATAN
+        '
+        Me.DATETHNBUATAN.CustomFormat = "dd MMMM yyyy"
+        Me.DATETHNBUATAN.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.DATETHNBUATAN.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DATETHNBUATAN.Location = New System.Drawing.Point(129, 213)
+        Me.DATETHNBUATAN.Name = "DATETHNBUATAN"
+        Me.DATETHNBUATAN.Size = New System.Drawing.Size(167, 20)
+        Me.DATETHNBUATAN.TabIndex = 114
+        '
+        'DATEPASMASUK
+        '
+        Me.DATEPASMASUK.CustomFormat = "dd MMMM yyyy"
+        Me.DATEPASMASUK.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.DATEPASMASUK.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DATEPASMASUK.Location = New System.Drawing.Point(129, 381)
+        Me.DATEPASMASUK.Name = "DATEPASMASUK"
+        Me.DATEPASMASUK.Size = New System.Drawing.Size(167, 20)
+        Me.DATEPASMASUK.TabIndex = 114
+        '
+        'DATESTNK
+        '
+        Me.DATESTNK.CustomFormat = "dd MMMM yyyy"
+        Me.DATESTNK.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.DATESTNK.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DATESTNK.Location = New System.Drawing.Point(436, 24)
+        Me.DATESTNK.Name = "DATESTNK"
+        Me.DATESTNK.Size = New System.Drawing.Size(150, 20)
+        Me.DATESTNK.TabIndex = 114
+        '
+        'DATEKEUR
+        '
+        Me.DATEKEUR.CustomFormat = "dd MMMM yyyy"
+        Me.DATEKEUR.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.DATEKEUR.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DATEKEUR.Location = New System.Drawing.Point(436, 48)
+        Me.DATEKEUR.Name = "DATEKEUR"
+        Me.DATEKEUR.Size = New System.Drawing.Size(150, 20)
+        Me.DATEKEUR.TabIndex = 114
+        '
+        'DATETERA
+        '
+        Me.DATETERA.CustomFormat = "dd MMMM yyyy"
+        Me.DATETERA.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.DATETERA.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DATETERA.Location = New System.Drawing.Point(436, 72)
+        Me.DATETERA.Name = "DATETERA"
+        Me.DATETERA.Size = New System.Drawing.Size(150, 20)
+        Me.DATETERA.TabIndex = 114
+        '
+        'DATESKT
+        '
+        Me.DATESKT.CustomFormat = "dd MMMM yyyy"
+        Me.DATESKT.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.DATESKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DATESKT.Location = New System.Drawing.Point(436, 120)
+        Me.DATESKT.Name = "DATESKT"
+        Me.DATESKT.Size = New System.Drawing.Size(150, 20)
+        Me.DATESKT.TabIndex = 114
+        '
+        'DATETERA2
+        '
+        Me.DATETERA2.CustomFormat = "dd MMMM yyyy"
+        Me.DATETERA2.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.DATETERA2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DATETERA2.Location = New System.Drawing.Point(739, 227)
+        Me.DATETERA2.Name = "DATETERA2"
+        Me.DATETERA2.Size = New System.Drawing.Size(150, 20)
+        Me.DATETERA2.TabIndex = 114
+        '
+        'DATEMLAKUSTNK
+        '
+        Me.DATEMLAKUSTNK.CustomFormat = "dd MMMM yyyy"
+        Me.DATEMLAKUSTNK.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.DATEMLAKUSTNK.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DATEMLAKUSTNK.Location = New System.Drawing.Point(737, 299)
+        Me.DATEMLAKUSTNK.Name = "DATEMLAKUSTNK"
+        Me.DATEMLAKUSTNK.Size = New System.Drawing.Size(150, 20)
+        Me.DATEMLAKUSTNK.TabIndex = 114
         '
         'FormMobilTangki
         '
@@ -1327,11 +1343,11 @@ Partial Class FormMobilTangki
         Me.Text = "FormMobilTangki"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DTGridMT, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.DTGridMT, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1410,12 +1426,9 @@ Partial Class FormMobilTangki
     Friend WithEvents TXTKOMPT3 As TextBox
     Friend WithEvents TXTKOMPT2 As TextBox
     Friend WithEvents TXTNKEUR As TextBox
-    Friend WithEvents TXTMLAKUSTNK As TextBox
     Friend WithEvents TXTNSTNK As TextBox
     Friend WithEvents TXTTHNBUATAN2 As TextBox
-    Friend WithEvents TXTTERA2 As TextBox
     Friend WithEvents TXTNODOKEMISI As TextBox
-    Friend WithEvents TXTPMASUK As TextBox
     Friend WithEvents TXTHUEMISI As TextBox
     Friend WithEvents TXTNRANGKA As TextBox
     Friend WithEvents TXTNOMESIN As TextBox
@@ -1424,20 +1437,23 @@ Partial Class FormMobilTangki
     Friend WithEvents TXTNOSTERA As TextBox
     Friend WithEvents TXTKAPASITAS As TextBox
     Friend WithEvents TXTTGLTERIMA As TextBox
-    Friend WithEvents TXTTBUATAN As TextBox
     Friend WithEvents TXTKET As TextBox
     Friend WithEvents TXTMODEL As TextBox
     Friend WithEvents TXTSTATUS2 As TextBox
     Friend WithEvents TXTMTYPE As TextBox
     Friend WithEvents TXTNPAS As TextBox
     Friend WithEvents TXTSTATUS As TextBox
-    Friend WithEvents TXTSKT As TextBox
     Friend WithEvents TXTNPERUSAHAAN As TextBox
     Friend WithEvents TXTIZBKHUSU As TextBox
     Friend WithEvents TXTTITLE As TextBox
-    Friend WithEvents TXTTERA As TextBox
-    Friend WithEvents TXTKEUR As TextBox
     Friend WithEvents TXTKBLOKIR As TextBox
-    Friend WithEvents TXTSTNK As TextBox
     Friend WithEvents TXTNOPOLIS As TextBox
+    Friend WithEvents DATEPASMASUK As DateTimePicker
+    Friend WithEvents DATEMLAKUSTNK As DateTimePicker
+    Friend WithEvents DATETERA2 As DateTimePicker
+    Friend WithEvents DATESKT As DateTimePicker
+    Friend WithEvents DATETERA As DateTimePicker
+    Friend WithEvents DATEKEUR As DateTimePicker
+    Friend WithEvents DATESTNK As DateTimePicker
+    Friend WithEvents DATETHNBUATAN As DateTimePicker
 End Class
