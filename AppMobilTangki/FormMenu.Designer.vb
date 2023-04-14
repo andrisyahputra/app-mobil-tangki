@@ -65,7 +65,7 @@ Partial Class FormMenu
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.LBLID1 = New System.Windows.Forms.Label()
-        Me.LBLTGLJAM = New System.Windows.Forms.Label()
+        Me.LBLTGL = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
@@ -75,6 +75,7 @@ Partial Class FormMenu
         Me.lblatas = New System.Windows.Forms.Label()
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.LBLJAM = New System.Windows.Forms.Label()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -362,6 +363,7 @@ Partial Class FormMenu
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.LBLJAM)
         Me.GroupBox1.Controls.Add(Me.LBLJRKHOLE2)
         Me.GroupBox1.Controls.Add(Me.LBLJRKHOLE1)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
@@ -380,7 +382,7 @@ Partial Class FormMenu
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.LBLID1)
-        Me.GroupBox1.Controls.Add(Me.LBLTGLJAM)
+        Me.GroupBox1.Controls.Add(Me.LBLTGL)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label23)
         Me.GroupBox1.Controls.Add(Me.Label22)
@@ -401,8 +403,9 @@ Partial Class FormMenu
         Me.LBLJRKHOLE2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLJRKHOLE2.Location = New System.Drawing.Point(331, 144)
         Me.LBLJRKHOLE2.Name = "LBLJRKHOLE2"
-        Me.LBLJRKHOLE2.Size = New System.Drawing.Size(0, 27)
+        Me.LBLJRKHOLE2.Size = New System.Drawing.Size(18, 27)
         Me.LBLJRKHOLE2.TabIndex = 108
+        Me.LBLJRKHOLE2.Text = "."
         '
         'LBLJRKHOLE1
         '
@@ -412,8 +415,9 @@ Partial Class FormMenu
         Me.LBLJRKHOLE1.Location = New System.Drawing.Point(331, 107)
         Me.LBLJRKHOLE1.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.LBLJRKHOLE1.Name = "LBLJRKHOLE1"
-        Me.LBLJRKHOLE1.Size = New System.Drawing.Size(0, 27)
+        Me.LBLJRKHOLE1.Size = New System.Drawing.Size(18, 27)
         Me.LBLJRKHOLE1.TabIndex = 108
+        Me.LBLJRKHOLE1.Text = "."
         '
         'TextBox2
         '
@@ -438,8 +442,9 @@ Partial Class FormMenu
         Me.LBLOPERATOR.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLOPERATOR.Location = New System.Drawing.Point(291, 366)
         Me.LBLOPERATOR.Name = "LBLOPERATOR"
-        Me.LBLOPERATOR.Size = New System.Drawing.Size(0, 27)
+        Me.LBLOPERATOR.Size = New System.Drawing.Size(18, 27)
         Me.LBLOPERATOR.TabIndex = 105
+        Me.LBLOPERATOR.Text = "."
         '
         'LBLMEREK
         '
@@ -448,8 +453,9 @@ Partial Class FormMenu
         Me.LBLMEREK.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLMEREK.Location = New System.Drawing.Point(323, 329)
         Me.LBLMEREK.Name = "LBLMEREK"
-        Me.LBLMEREK.Size = New System.Drawing.Size(0, 27)
+        Me.LBLMEREK.Size = New System.Drawing.Size(18, 27)
         Me.LBLMEREK.TabIndex = 105
+        Me.LBLMEREK.Text = "."
         '
         'LBLPRODUK
         '
@@ -458,8 +464,9 @@ Partial Class FormMenu
         Me.LBLPRODUK.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLPRODUK.Location = New System.Drawing.Point(251, 292)
         Me.LBLPRODUK.Name = "LBLPRODUK"
-        Me.LBLPRODUK.Size = New System.Drawing.Size(0, 27)
+        Me.LBLPRODUK.Size = New System.Drawing.Size(18, 27)
         Me.LBLPRODUK.TabIndex = 104
+        Me.LBLPRODUK.Text = "."
         '
         'LBLKAPASTAS
         '
@@ -468,8 +475,9 @@ Partial Class FormMenu
         Me.LBLKAPASTAS.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLKAPASTAS.Location = New System.Drawing.Point(272, 255)
         Me.LBLKAPASTAS.Name = "LBLKAPASTAS"
-        Me.LBLKAPASTAS.Size = New System.Drawing.Size(0, 27)
+        Me.LBLKAPASTAS.Size = New System.Drawing.Size(18, 27)
         Me.LBLKAPASTAS.TabIndex = 103
+        Me.LBLKAPASTAS.Text = "."
         '
         'LBLAMT
         '
@@ -478,8 +486,9 @@ Partial Class FormMenu
         Me.LBLAMT.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLAMT.Location = New System.Drawing.Point(206, 181)
         Me.LBLAMT.Name = "LBLAMT"
-        Me.LBLAMT.Size = New System.Drawing.Size(0, 27)
+        Me.LBLAMT.Size = New System.Drawing.Size(18, 27)
         Me.LBLAMT.TabIndex = 102
+        Me.LBLAMT.Text = "."
         '
         'LBLID2
         '
@@ -488,8 +497,9 @@ Partial Class FormMenu
         Me.LBLID2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLID2.Location = New System.Drawing.Point(267, 70)
         Me.LBLID2.Name = "LBLID2"
-        Me.LBLID2.Size = New System.Drawing.Size(0, 27)
+        Me.LBLID2.Size = New System.Drawing.Size(18, 27)
         Me.LBLID2.TabIndex = 101
+        Me.LBLID2.Text = "."
         '
         'Label13
         '
@@ -546,8 +556,9 @@ Partial Class FormMenu
         Me.LBLPLATNO.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLPLATNO.Location = New System.Drawing.Point(251, 218)
         Me.LBLPLATNO.Name = "LBLPLATNO"
-        Me.LBLPLATNO.Size = New System.Drawing.Size(0, 27)
+        Me.LBLPLATNO.Size = New System.Drawing.Size(18, 27)
         Me.LBLPLATNO.TabIndex = 99
+        Me.LBLPLATNO.Text = "."
         '
         'Label8
         '
@@ -580,19 +591,20 @@ Partial Class FormMenu
         Me.LBLID1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLID1.Location = New System.Drawing.Point(267, 33)
         Me.LBLID1.Name = "LBLID1"
-        Me.LBLID1.Size = New System.Drawing.Size(0, 27)
+        Me.LBLID1.Size = New System.Drawing.Size(18, 27)
         Me.LBLID1.TabIndex = 100
+        Me.LBLID1.Text = "."
         '
-        'LBLTGLJAM
+        'LBLTGL
         '
-        Me.LBLTGLJAM.AutoSize = True
-        Me.LBLTGLJAM.BackColor = System.Drawing.Color.Transparent
-        Me.LBLTGLJAM.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLTGLJAM.Location = New System.Drawing.Point(427, 403)
-        Me.LBLTGLJAM.Name = "LBLTGLJAM"
-        Me.LBLTGLJAM.Size = New System.Drawing.Size(47, 27)
-        Me.LBLTGLJAM.TabIndex = 98
-        Me.LBLTGLJAM.Text = "jam"
+        Me.LBLTGL.AutoSize = True
+        Me.LBLTGL.BackColor = System.Drawing.Color.Transparent
+        Me.LBLTGL.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLTGL.Location = New System.Drawing.Point(537, 403)
+        Me.LBLTGL.Name = "LBLTGL"
+        Me.LBLTGL.Size = New System.Drawing.Size(81, 27)
+        Me.LBLTGL.TabIndex = 98
+        Me.LBLTGL.Text = "tanggal"
         '
         'Label4
         '
@@ -684,6 +696,17 @@ Partial Class FormMenu
         'Timer1
         '
         '
+        'LBLJAM
+        '
+        Me.LBLJAM.AutoSize = True
+        Me.LBLJAM.BackColor = System.Drawing.Color.Transparent
+        Me.LBLJAM.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLJAM.Location = New System.Drawing.Point(427, 403)
+        Me.LBLJAM.Name = "LBLJAM"
+        Me.LBLJAM.Size = New System.Drawing.Size(47, 27)
+        Me.LBLJAM.TabIndex = 109
+        Me.LBLJAM.Text = "jam"
+        '
         'FormMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -735,7 +758,7 @@ Partial Class FormMenu
     Friend WithEvents Label9 As Label
     Friend WithEvents BtnEdit As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents LBLTGLJAM As Label
+    Friend WithEvents LBLTGL As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label1 As Label
@@ -760,4 +783,5 @@ Partial Class FormMenu
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label23 As Label
     Friend WithEvents Label22 As Label
+    Friend WithEvents LBLJAM As Label
 End Class

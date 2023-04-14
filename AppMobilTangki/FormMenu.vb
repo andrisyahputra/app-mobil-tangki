@@ -222,8 +222,9 @@ Public Class FormMenu
 
     Private Sub FormMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
         TextBox1.Focus()
-        KoneksiKeDatabase()
+        'KoneksiKeDatabase()
         'kondisiawal()
+        kosongidata()
         Timer1.Start()
 
         If lbl_level.Text = "Admin" Then
@@ -240,7 +241,8 @@ Public Class FormMenu
 
     Dim tglsekarang As Date
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        LBLTGLJAM.Text = DateTime.Now.ToString()
+        LBLTGL.Text = DateTime.Now.ToString("dd-MMMM-yyyy")
+        LBLJAM.Text = DateTime.Now.ToString("HH:mm:ss")
         tglsekarang = Today
     End Sub
 
@@ -412,40 +414,81 @@ Public Class FormMenu
 
     End Sub
 
+    Private Sub kosongidata()
+        LBLID1.Text = ""
+        LBLID2.Text = ""
+        LBLJRKHOLE1.Text = ""
+        LBLJRKHOLE2.Text = ""
+        LBLKAPASTAS.Text = ""
+        LBLMEREK.Text = ""
+        LBLPLATNO.Text = ""
+        LBLAMT.Text = ""
+        LBLOPERATOR.Text = ""
+    End Sub
+
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
         Try
             If e.KeyChar = Chr(13) Then
                 Dim myVariable As String = TextBox1.Text
                 Dim myValues() As String = myVariable.Trim("*"c, "#"c).Split(","c)
 
-                Dim value1 As Integer = Integer.Parse(myValues(0))
+                Dim value1 As String = myValues(0)
                 Dim value2 As Double = Double.Parse(myValues(1))
 
-                LBLID1.Text = value1
-                LBLJRKHOLE1.Text = value2
+                Call KoneksiKeDatabase()
+                CMD = New MySqlCommand("select * from `mt` where `no_polis`='" & value1 & "'", CONN)
+                RD = CMD.ExecuteReader
+                RD.Read()
+                If RD.HasRows = True Then
+                    LBLID1.Text = value1
+                    LBLJRKHOLE1.Text = value2
+                    LBLKAPASTAS.Text = RD.Item("kapasitas")
+                    LBLPRODUK.Text = RD.Item("produk")
+                    LBLMEREK.Text = RD.Item("merk_type")
+                    LBLOPERATOR.Text = lblNLengkap.Text
+                Else
+                    kosongidata()
+                    MessageBox.Show("GAGAL DITEMUKAN", "GAGAL ORDER")
+                    Exit Sub
+                End If
                 MessageBox.Show("Berhasil ditambah", "SUKSES")
             End If
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "EROR")
+            MsgBox("Input Format Salah", MsgBoxStyle.Exclamation, "EROR")
         End Try
     End Sub
-
 
     Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
         Try
             If e.KeyChar = Chr(13) Then
-                Dim myVariable As String = TextBox1.Text
+                Dim myVariable As String = TextBox2.Text
                 Dim myValues() As String = myVariable.Trim("*"c, "#"c).Split(","c)
 
-                Dim value1 As Integer = Integer.Parse(myValues(0))
+                Dim value1 As String = myValues(0)
                 Dim value2 As Double = Double.Parse(myValues(1))
 
-                LBLID1.Text = value1
-                LBLJRKHOLE1.Text = value2
+                Call KoneksiKeDatabase()
+                CMD = New MySqlCommand("select * from `mt` where `no_polis`='" & value1 & "'", CONN)
+                RD = CMD.ExecuteReader
+                RD.Read()
+                If RD.HasRows = True Then
+                    LBLID1.Text = value1
+                    LBLJRKHOLE1.Text = value2
+                    LBLKAPASTAS.Text = RD.Item("kapasitas")
+                    LBLPRODUK.Text = RD.Item("produk")
+                    LBLMEREK.Text = RD.Item("merk_type")
+                    LBLOPERATOR.Text = lblNLengkap.Text
+                Else
+                    kosongidata()
+                    MessageBox.Show("GAGAL DITEMUKAN", "GAGAL ORDER")
+                    Exit Sub
+                End If
                 MessageBox.Show("Berhasil ditambah", "SUKSES")
             End If
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "EROR")
+            MsgBox("Input Format Salah", MsgBoxStyle.Exclamation, "EROR")
         End Try
     End Sub
+
+
 End Class
