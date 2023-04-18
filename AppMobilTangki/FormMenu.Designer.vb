@@ -23,9 +23,9 @@ Partial Class FormMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTangki = New System.Windows.Forms.Label()
         Me.btnMTangki = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -47,6 +47,7 @@ Partial Class FormMenu
         Me.Label9 = New System.Windows.Forms.Label()
         Me.BtnEdit = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.LBLJAM = New System.Windows.Forms.Label()
         Me.LBLJRKHOLE2 = New System.Windows.Forms.Label()
         Me.LBLJRKHOLE1 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -75,7 +76,6 @@ Partial Class FormMenu
         Me.lblatas = New System.Windows.Forms.Label()
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.LBLJAM = New System.Windows.Forms.Label()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -260,27 +260,27 @@ Partial Class FormMenu
         '
         Me.DataGridTranksaksi.AllowUserToAddRows = False
         Me.DataGridTranksaksi.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DataGridTranksaksi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridTranksaksi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridTranksaksi.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridTranksaksi.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridTranksaksi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridTranksaksi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridTranksaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridTranksaksi.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DataGridTranksaksi.GridColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.DataGridTranksaksi.Location = New System.Drawing.Point(414, 629)
         Me.DataGridTranksaksi.Name = "DataGridTranksaksi"
         Me.DataGridTranksaksi.ReadOnly = True
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DataGridTranksaksi.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridTranksaksi.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridTranksaksi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridTranksaksi.Size = New System.Drawing.Size(924, 108)
         Me.DataGridTranksaksi.TabIndex = 140
@@ -396,6 +396,17 @@ Partial Class FormMenu
         Me.GroupBox1.TabIndex = 132
         Me.GroupBox1.TabStop = False
         '
+        'LBLJAM
+        '
+        Me.LBLJAM.AutoSize = True
+        Me.LBLJAM.BackColor = System.Drawing.Color.Transparent
+        Me.LBLJAM.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLJAM.Location = New System.Drawing.Point(427, 403)
+        Me.LBLJAM.Name = "LBLJAM"
+        Me.LBLJAM.Size = New System.Drawing.Size(47, 27)
+        Me.LBLJAM.TabIndex = 109
+        Me.LBLJAM.Text = "jam"
+        '
         'LBLJRKHOLE2
         '
         Me.LBLJRKHOLE2.AutoSize = True
@@ -422,7 +433,7 @@ Partial Class FormMenu
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(542, 70)
+        Me.TextBox2.Location = New System.Drawing.Point(687, 65)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(229, 32)
         Me.TextBox2.TabIndex = 2
@@ -430,7 +441,7 @@ Partial Class FormMenu
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(542, 33)
+        Me.TextBox1.Location = New System.Drawing.Point(687, 28)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(229, 32)
         Me.TextBox1.TabIndex = 1
@@ -695,17 +706,6 @@ Partial Class FormMenu
         '
         'Timer1
         '
-        '
-        'LBLJAM
-        '
-        Me.LBLJAM.AutoSize = True
-        Me.LBLJAM.BackColor = System.Drawing.Color.Transparent
-        Me.LBLJAM.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLJAM.Location = New System.Drawing.Point(427, 403)
-        Me.LBLJAM.Name = "LBLJAM"
-        Me.LBLJAM.Size = New System.Drawing.Size(47, 27)
-        Me.LBLJAM.TabIndex = 109
-        Me.LBLJAM.Text = "jam"
         '
         'FormMenu
         '
