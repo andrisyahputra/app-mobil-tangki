@@ -23,10 +23,11 @@ Partial Class FormMobilTangki
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DATEMLAKUKIER = New System.Windows.Forms.DateTimePicker()
         Me.DATEPASMASUK = New System.Windows.Forms.DateTimePicker()
         Me.DATEMLAKUSTNK = New System.Windows.Forms.DateTimePicker()
         Me.DATETERA2 = New System.Windows.Forms.DateTimePicker()
@@ -98,7 +99,6 @@ Partial Class FormMobilTangki
         Me.TXTNSTNK = New System.Windows.Forms.TextBox()
         Me.TXTTHNBUATAN2 = New System.Windows.Forms.TextBox()
         Me.TXTNODOKEMISI = New System.Windows.Forms.TextBox()
-        Me.TXTMLAKUKIER = New System.Windows.Forms.TextBox()
         Me.TXTHUEMISI = New System.Windows.Forms.TextBox()
         Me.TXTNRANGKA = New System.Windows.Forms.TextBox()
         Me.TXTNOMESIN = New System.Windows.Forms.TextBox()
@@ -141,6 +141,7 @@ Partial Class FormMobilTangki
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.DATEMLAKUKIER)
         Me.GroupBox1.Controls.Add(Me.DATEPASMASUK)
         Me.GroupBox1.Controls.Add(Me.DATEMLAKUSTNK)
         Me.GroupBox1.Controls.Add(Me.DATETERA2)
@@ -192,7 +193,6 @@ Partial Class FormMobilTangki
         Me.GroupBox1.Controls.Add(Me.TXTNSTNK)
         Me.GroupBox1.Controls.Add(Me.TXTTHNBUATAN2)
         Me.GroupBox1.Controls.Add(Me.TXTNODOKEMISI)
-        Me.GroupBox1.Controls.Add(Me.TXTMLAKUKIER)
         Me.GroupBox1.Controls.Add(Me.TXTHUEMISI)
         Me.GroupBox1.Controls.Add(Me.TXTNRANGKA)
         Me.GroupBox1.Controls.Add(Me.TXTNOMESIN)
@@ -228,6 +228,16 @@ Partial Class FormMobilTangki
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "KENDARAAN MOBIL TANGKI"
         '
+        'DATEMLAKUKIER
+        '
+        Me.DATEMLAKUKIER.CustomFormat = "dd MMMM yyyy"
+        Me.DATEMLAKUKIER.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.DATEMLAKUKIER.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DATEMLAKUKIER.Location = New System.Drawing.Point(738, 298)
+        Me.DATEMLAKUKIER.Name = "DATEMLAKUKIER"
+        Me.DATEMLAKUKIER.Size = New System.Drawing.Size(150, 20)
+        Me.DATEMLAKUKIER.TabIndex = 43
+        '
         'DATEPASMASUK
         '
         Me.DATEPASMASUK.CustomFormat = "dd MMMM yyyy"
@@ -236,27 +246,27 @@ Partial Class FormMobilTangki
         Me.DATEPASMASUK.Location = New System.Drawing.Point(128, 406)
         Me.DATEPASMASUK.Name = "DATEPASMASUK"
         Me.DATEPASMASUK.Size = New System.Drawing.Size(167, 20)
-        Me.DATEPASMASUK.TabIndex = 114
+        Me.DATEPASMASUK.TabIndex = 17
         '
         'DATEMLAKUSTNK
         '
         Me.DATEMLAKUSTNK.CustomFormat = "dd MMMM yyyy"
         Me.DATEMLAKUSTNK.Font = New System.Drawing.Font("Times New Roman", 8.25!)
         Me.DATEMLAKUSTNK.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DATEMLAKUSTNK.Location = New System.Drawing.Point(738, 271)
+        Me.DATEMLAKUSTNK.Location = New System.Drawing.Point(738, 250)
         Me.DATEMLAKUSTNK.Name = "DATEMLAKUSTNK"
         Me.DATEMLAKUSTNK.Size = New System.Drawing.Size(150, 20)
-        Me.DATEMLAKUSTNK.TabIndex = 114
+        Me.DATEMLAKUSTNK.TabIndex = 41
         '
         'DATETERA2
         '
         Me.DATETERA2.CustomFormat = "dd MMMM yyyy"
         Me.DATETERA2.Font = New System.Drawing.Font("Times New Roman", 8.25!)
         Me.DATETERA2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DATETERA2.Location = New System.Drawing.Point(740, 199)
+        Me.DATETERA2.Location = New System.Drawing.Point(740, 178)
         Me.DATETERA2.Name = "DATETERA2"
         Me.DATETERA2.Size = New System.Drawing.Size(150, 20)
-        Me.DATETERA2.TabIndex = 114
+        Me.DATETERA2.TabIndex = 38
         '
         'DATESKT
         '
@@ -266,7 +276,7 @@ Partial Class FormMobilTangki
         Me.DATESKT.Location = New System.Drawing.Point(436, 134)
         Me.DATESKT.Name = "DATESKT"
         Me.DATESKT.Size = New System.Drawing.Size(150, 20)
-        Me.DATESKT.TabIndex = 114
+        Me.DATESKT.TabIndex = 22
         '
         'DATETERA
         '
@@ -276,7 +286,7 @@ Partial Class FormMobilTangki
         Me.DATETERA.Location = New System.Drawing.Point(436, 86)
         Me.DATETERA.Name = "DATETERA"
         Me.DATETERA.Size = New System.Drawing.Size(150, 20)
-        Me.DATETERA.TabIndex = 114
+        Me.DATETERA.TabIndex = 20
         '
         'DATEKEUR
         '
@@ -286,7 +296,7 @@ Partial Class FormMobilTangki
         Me.DATEKEUR.Location = New System.Drawing.Point(436, 62)
         Me.DATEKEUR.Name = "DATEKEUR"
         Me.DATEKEUR.Size = New System.Drawing.Size(150, 20)
-        Me.DATEKEUR.TabIndex = 114
+        Me.DATEKEUR.TabIndex = 19
         '
         'DATESTNK
         '
@@ -296,7 +306,7 @@ Partial Class FormMobilTangki
         Me.DATESTNK.Location = New System.Drawing.Point(436, 38)
         Me.DATESTNK.Name = "DATESTNK"
         Me.DATESTNK.Size = New System.Drawing.Size(150, 20)
-        Me.DATESTNK.TabIndex = 114
+        Me.DATESTNK.TabIndex = 18
         '
         'DATETHNBUATAN
         '
@@ -306,7 +316,7 @@ Partial Class FormMobilTangki
         Me.DATETHNBUATAN.Location = New System.Drawing.Point(128, 238)
         Me.DATETHNBUATAN.Name = "DATETHNBUATAN"
         Me.DATETHNBUATAN.Size = New System.Drawing.Size(167, 20)
-        Me.DATETHNBUATAN.TabIndex = 114
+        Me.DATETHNBUATAN.TabIndex = 10
         '
         'GroupBox3
         '
@@ -395,7 +405,7 @@ Partial Class FormMobilTangki
         Me.TXTKOMP2T1.Location = New System.Drawing.Point(128, 22)
         Me.TXTKOMP2T1.Name = "TXTKOMP2T1"
         Me.TXTKOMP2T1.Size = New System.Drawing.Size(135, 20)
-        Me.TXTKOMP2T1.TabIndex = 69
+        Me.TXTKOMP2T1.TabIndex = 33
         '
         'TXTKOMP2K1
         '
@@ -403,7 +413,7 @@ Partial Class FormMobilTangki
         Me.TXTKOMP2K1.Location = New System.Drawing.Point(128, 118)
         Me.TXTKOMP2K1.Name = "TXTKOMP2K1"
         Me.TXTKOMP2K1.Size = New System.Drawing.Size(135, 20)
-        Me.TXTKOMP2K1.TabIndex = 69
+        Me.TXTKOMP2K1.TabIndex = 37
         '
         'TXTKOMP2RKSONG
         '
@@ -411,7 +421,7 @@ Partial Class FormMobilTangki
         Me.TXTKOMP2RKSONG.Location = New System.Drawing.Point(128, 94)
         Me.TXTKOMP2RKSONG.Name = "TXTKOMP2RKSONG"
         Me.TXTKOMP2RKSONG.Size = New System.Drawing.Size(135, 20)
-        Me.TXTKOMP2RKSONG.TabIndex = 69
+        Me.TXTKOMP2RKSONG.TabIndex = 36
         '
         'TXTKOMP2T3
         '
@@ -419,7 +429,7 @@ Partial Class FormMobilTangki
         Me.TXTKOMP2T3.Location = New System.Drawing.Point(128, 70)
         Me.TXTKOMP2T3.Name = "TXTKOMP2T3"
         Me.TXTKOMP2T3.Size = New System.Drawing.Size(135, 20)
-        Me.TXTKOMP2T3.TabIndex = 69
+        Me.TXTKOMP2T3.TabIndex = 35
         '
         'TXTKOMP2T2
         '
@@ -427,7 +437,7 @@ Partial Class FormMobilTangki
         Me.TXTKOMP2T2.Location = New System.Drawing.Point(128, 46)
         Me.TXTKOMP2T2.Name = "TXTKOMP2T2"
         Me.TXTKOMP2T2.Size = New System.Drawing.Size(135, 20)
-        Me.TXTKOMP2T2.TabIndex = 69
+        Me.TXTKOMP2T2.TabIndex = 34
         '
         'GroupBox2
         '
@@ -443,10 +453,10 @@ Partial Class FormMobilTangki
         Me.GroupBox2.Controls.Add(Me.TXTKOMPT2)
         Me.GroupBox2.Font = New System.Drawing.Font("Times New Roman", 8.25!)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(302, 277)
+        Me.GroupBox2.Location = New System.Drawing.Point(302, 289)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(284, 146)
-        Me.GroupBox2.TabIndex = 112
+        Me.GroupBox2.Size = New System.Drawing.Size(284, 134)
+        Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "KOMPATEMEN 1"
         '
@@ -455,7 +465,7 @@ Partial Class FormMobilTangki
         Me.Label25.AutoSize = True
         Me.Label25.BackColor = System.Drawing.Color.Transparent
         Me.Label25.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(6, 25)
+        Me.Label25.Location = New System.Drawing.Point(6, 15)
         Me.Label25.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(21, 14)
@@ -467,7 +477,7 @@ Partial Class FormMobilTangki
         Me.Label35.AutoSize = True
         Me.Label35.BackColor = System.Drawing.Color.Transparent
         Me.Label35.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(6, 121)
+        Me.Label35.Location = New System.Drawing.Point(6, 111)
         Me.Label35.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(21, 14)
@@ -479,7 +489,7 @@ Partial Class FormMobilTangki
         Me.Label27.AutoSize = True
         Me.Label27.BackColor = System.Drawing.Color.Transparent
         Me.Label27.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(6, 97)
+        Me.Label27.Location = New System.Drawing.Point(6, 87)
         Me.Label27.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(92, 14)
@@ -491,7 +501,7 @@ Partial Class FormMobilTangki
         Me.Label30.AutoSize = True
         Me.Label30.BackColor = System.Drawing.Color.Transparent
         Me.Label30.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(6, 73)
+        Me.Label30.Location = New System.Drawing.Point(6, 63)
         Me.Label30.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(21, 14)
@@ -503,7 +513,7 @@ Partial Class FormMobilTangki
         Me.Label34.AutoSize = True
         Me.Label34.BackColor = System.Drawing.Color.Transparent
         Me.Label34.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(6, 49)
+        Me.Label34.Location = New System.Drawing.Point(6, 39)
         Me.Label34.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(21, 14)
@@ -513,42 +523,42 @@ Partial Class FormMobilTangki
         'TXTKOMPT1
         '
         Me.TXTKOMPT1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMPT1.Location = New System.Drawing.Point(134, 22)
+        Me.TXTKOMPT1.Location = New System.Drawing.Point(134, 12)
         Me.TXTKOMPT1.Name = "TXTKOMPT1"
         Me.TXTKOMPT1.Size = New System.Drawing.Size(130, 20)
-        Me.TXTKOMPT1.TabIndex = 69
+        Me.TXTKOMPT1.TabIndex = 28
         '
         'TXTKOMPK1
         '
         Me.TXTKOMPK1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMPK1.Location = New System.Drawing.Point(134, 118)
+        Me.TXTKOMPK1.Location = New System.Drawing.Point(134, 108)
         Me.TXTKOMPK1.Name = "TXTKOMPK1"
         Me.TXTKOMPK1.Size = New System.Drawing.Size(130, 20)
-        Me.TXTKOMPK1.TabIndex = 69
+        Me.TXTKOMPK1.TabIndex = 32
         '
         'TXTKOMPKSONG
         '
         Me.TXTKOMPKSONG.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMPKSONG.Location = New System.Drawing.Point(134, 94)
+        Me.TXTKOMPKSONG.Location = New System.Drawing.Point(134, 84)
         Me.TXTKOMPKSONG.Name = "TXTKOMPKSONG"
         Me.TXTKOMPKSONG.Size = New System.Drawing.Size(130, 20)
-        Me.TXTKOMPKSONG.TabIndex = 69
+        Me.TXTKOMPKSONG.TabIndex = 31
         '
         'TXTKOMPT3
         '
         Me.TXTKOMPT3.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMPT3.Location = New System.Drawing.Point(134, 70)
+        Me.TXTKOMPT3.Location = New System.Drawing.Point(134, 60)
         Me.TXTKOMPT3.Name = "TXTKOMPT3"
         Me.TXTKOMPT3.Size = New System.Drawing.Size(130, 20)
-        Me.TXTKOMPT3.TabIndex = 69
+        Me.TXTKOMPT3.TabIndex = 30
         '
         'TXTKOMPT2
         '
         Me.TXTKOMPT2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTKOMPT2.Location = New System.Drawing.Point(134, 46)
+        Me.TXTKOMPT2.Location = New System.Drawing.Point(134, 36)
         Me.TXTKOMPT2.Name = "TXTKOMPT2"
         Me.TXTKOMPT2.Size = New System.Drawing.Size(130, 20)
-        Me.TXTKOMPT2.TabIndex = 69
+        Me.TXTKOMPT2.TabIndex = 29
         '
         'Label18
         '
@@ -575,12 +585,12 @@ Partial Class FormMobilTangki
         Me.btnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!)
-        Me.btnClear.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnClear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.btnClear.Image = Global.AppMobilTangki.My.Resources.Resources.clear
         Me.btnClear.Location = New System.Drawing.Point(704, 359)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(69, 70)
-        Me.btnClear.TabIndex = 111
+        Me.btnClear.TabIndex = 46
         '
         'Label9
         '
@@ -599,31 +609,31 @@ Partial Class FormMobilTangki
         Me.btnHapus.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnHapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!)
-        Me.btnHapus.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnHapus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.btnHapus.Image = Global.AppMobilTangki.My.Resources.Resources.sampah
         Me.btnHapus.Location = New System.Drawing.Point(854, 359)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(69, 70)
-        Me.btnHapus.TabIndex = 107
+        Me.btnHapus.TabIndex = 48
         '
         'BtnEdit
         '
         Me.BtnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.BtnEdit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEdit.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BtnEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.BtnEdit.Image = Global.AppMobilTangki.My.Resources.Resources.update
         Me.BtnEdit.Location = New System.Drawing.Point(779, 360)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(69, 70)
-        Me.BtnEdit.TabIndex = 106
+        Me.BtnEdit.TabIndex = 47
         '
         'Label50
         '
         Me.Label50.AutoSize = True
         Me.Label50.BackColor = System.Drawing.Color.Transparent
         Me.Label50.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label50.Location = New System.Drawing.Point(606, 178)
+        Me.Label50.Location = New System.Drawing.Point(606, 325)
         Me.Label50.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(102, 14)
@@ -635,12 +645,12 @@ Partial Class FormMobilTangki
         Me.BtnTambah.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.BtnTambah.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 1.5!)
-        Me.BtnTambah.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BtnTambah.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.BtnTambah.Image = Global.AppMobilTangki.My.Resources.Resources.save
         Me.BtnTambah.Location = New System.Drawing.Point(629, 362)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(69, 70)
-        Me.BtnTambah.TabIndex = 105
+        Me.BtnTambah.TabIndex = 45
         '
         'Label33
         '
@@ -682,7 +692,7 @@ Partial Class FormMobilTangki
         Me.Label49.AutoSize = True
         Me.Label49.BackColor = System.Drawing.Color.Transparent
         Me.Label49.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(606, 274)
+        Me.Label49.Location = New System.Drawing.Point(606, 253)
         Me.Label49.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(124, 14)
@@ -790,7 +800,7 @@ Partial Class FormMobilTangki
         Me.Label43.AutoSize = True
         Me.Label43.BackColor = System.Drawing.Color.Transparent
         Me.Label43.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(605, 298)
+        Me.Label43.Location = New System.Drawing.Point(606, 277)
         Me.Label43.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(56, 14)
@@ -826,7 +836,7 @@ Partial Class FormMobilTangki
         Me.Label41.AutoSize = True
         Me.Label41.BackColor = System.Drawing.Color.Transparent
         Me.Label41.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(607, 322)
+        Me.Label41.Location = New System.Drawing.Point(606, 301)
         Me.Label41.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(121, 14)
@@ -862,7 +872,7 @@ Partial Class FormMobilTangki
         Me.Label40.AutoSize = True
         Me.Label40.BackColor = System.Drawing.Color.Transparent
         Me.Label40.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(607, 226)
+        Me.Label40.Location = New System.Drawing.Point(606, 205)
         Me.Label40.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(127, 14)
@@ -898,7 +908,7 @@ Partial Class FormMobilTangki
         Me.Label39.AutoSize = True
         Me.Label39.BackColor = System.Drawing.Color.Transparent
         Me.Label39.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(606, 250)
+        Me.Label39.Location = New System.Drawing.Point(606, 229)
         Me.Label39.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(55, 14)
@@ -946,7 +956,7 @@ Partial Class FormMobilTangki
         Me.Label38.AutoSize = True
         Me.Label38.BackColor = System.Drawing.Color.Transparent
         Me.Label38.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(607, 202)
+        Me.Label38.Location = New System.Drawing.Point(606, 181)
         Me.Label38.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(45, 14)
@@ -992,42 +1002,34 @@ Partial Class FormMobilTangki
         'TXTNKEUR
         '
         Me.TXTNKEUR.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNKEUR.Location = New System.Drawing.Point(738, 295)
+        Me.TXTNKEUR.Location = New System.Drawing.Point(738, 274)
         Me.TXTNKEUR.Name = "TXTNKEUR"
         Me.TXTNKEUR.Size = New System.Drawing.Size(152, 20)
-        Me.TXTNKEUR.TabIndex = 69
+        Me.TXTNKEUR.TabIndex = 42
         '
         'TXTNSTNK
         '
         Me.TXTNSTNK.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNSTNK.Location = New System.Drawing.Point(738, 247)
+        Me.TXTNSTNK.Location = New System.Drawing.Point(738, 226)
         Me.TXTNSTNK.Name = "TXTNSTNK"
         Me.TXTNSTNK.Size = New System.Drawing.Size(152, 20)
-        Me.TXTNSTNK.TabIndex = 69
+        Me.TXTNSTNK.TabIndex = 40
         '
         'TXTTHNBUATAN2
         '
         Me.TXTTHNBUATAN2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTTHNBUATAN2.Location = New System.Drawing.Point(738, 223)
+        Me.TXTTHNBUATAN2.Location = New System.Drawing.Point(738, 202)
         Me.TXTTHNBUATAN2.Name = "TXTTHNBUATAN2"
         Me.TXTTHNBUATAN2.Size = New System.Drawing.Size(152, 20)
-        Me.TXTTHNBUATAN2.TabIndex = 69
+        Me.TXTTHNBUATAN2.TabIndex = 39
         '
         'TXTNODOKEMISI
         '
         Me.TXTNODOKEMISI.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNODOKEMISI.Location = New System.Drawing.Point(738, 175)
+        Me.TXTNODOKEMISI.Location = New System.Drawing.Point(738, 322)
         Me.TXTNODOKEMISI.Name = "TXTNODOKEMISI"
         Me.TXTNODOKEMISI.Size = New System.Drawing.Size(152, 20)
-        Me.TXTNODOKEMISI.TabIndex = 69
-        '
-        'TXTMLAKUKIER
-        '
-        Me.TXTMLAKUKIER.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTMLAKUKIER.Location = New System.Drawing.Point(738, 319)
-        Me.TXTMLAKUKIER.Name = "TXTMLAKUKIER"
-        Me.TXTMLAKUKIER.Size = New System.Drawing.Size(152, 20)
-        Me.TXTMLAKUKIER.TabIndex = 69
+        Me.TXTNODOKEMISI.TabIndex = 44
         '
         'TXTHUEMISI
         '
@@ -1035,7 +1037,7 @@ Partial Class FormMobilTangki
         Me.TXTHUEMISI.Location = New System.Drawing.Point(128, 382)
         Me.TXTHUEMISI.Name = "TXTHUEMISI"
         Me.TXTHUEMISI.Size = New System.Drawing.Size(167, 20)
-        Me.TXTHUEMISI.TabIndex = 69
+        Me.TXTHUEMISI.TabIndex = 16
         '
         'TXTNRANGKA
         '
@@ -1043,7 +1045,7 @@ Partial Class FormMobilTangki
         Me.TXTNRANGKA.Location = New System.Drawing.Point(128, 358)
         Me.TXTNRANGKA.Name = "TXTNRANGKA"
         Me.TXTNRANGKA.Size = New System.Drawing.Size(167, 20)
-        Me.TXTNRANGKA.TabIndex = 69
+        Me.TXTNRANGKA.TabIndex = 15
         '
         'TXTNOMESIN
         '
@@ -1051,7 +1053,7 @@ Partial Class FormMobilTangki
         Me.TXTNOMESIN.Location = New System.Drawing.Point(128, 334)
         Me.TXTNOMESIN.Name = "TXTNOMESIN"
         Me.TXTNOMESIN.Size = New System.Drawing.Size(167, 20)
-        Me.TXTNOMESIN.TabIndex = 69
+        Me.TXTNOMESIN.TabIndex = 14
         '
         'TXTPRODUK
         '
@@ -1059,7 +1061,7 @@ Partial Class FormMobilTangki
         Me.TXTPRODUK.Location = New System.Drawing.Point(128, 310)
         Me.TXTPRODUK.Name = "TXTPRODUK"
         Me.TXTPRODUK.Size = New System.Drawing.Size(167, 20)
-        Me.TXTPRODUK.TabIndex = 69
+        Me.TXTPRODUK.TabIndex = 13
         '
         'TXTKOMPATEMENT
         '
@@ -1067,15 +1069,16 @@ Partial Class FormMobilTangki
         Me.TXTKOMPATEMENT.Location = New System.Drawing.Point(128, 286)
         Me.TXTKOMPATEMENT.Name = "TXTKOMPATEMENT"
         Me.TXTKOMPATEMENT.Size = New System.Drawing.Size(167, 20)
-        Me.TXTKOMPATEMENT.TabIndex = 69
+        Me.TXTKOMPATEMENT.TabIndex = 12
         '
         'TXTNOSTERA
         '
         Me.TXTNOSTERA.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTNOSTERA.Location = New System.Drawing.Point(436, 253)
+        Me.TXTNOSTERA.Multiline = True
         Me.TXTNOSTERA.Name = "TXTNOSTERA"
-        Me.TXTNOSTERA.Size = New System.Drawing.Size(150, 20)
-        Me.TXTNOSTERA.TabIndex = 69
+        Me.TXTNOSTERA.Size = New System.Drawing.Size(150, 35)
+        Me.TXTNOSTERA.TabIndex = 27
         '
         'TXTKAPASITAS
         '
@@ -1083,7 +1086,7 @@ Partial Class FormMobilTangki
         Me.TXTKAPASITAS.Location = New System.Drawing.Point(128, 262)
         Me.TXTKAPASITAS.Name = "TXTKAPASITAS"
         Me.TXTKAPASITAS.Size = New System.Drawing.Size(167, 20)
-        Me.TXTKAPASITAS.TabIndex = 69
+        Me.TXTKAPASITAS.TabIndex = 11
         '
         'TXTTGLTERIMA
         '
@@ -1091,7 +1094,7 @@ Partial Class FormMobilTangki
         Me.TXTTGLTERIMA.Location = New System.Drawing.Point(436, 229)
         Me.TXTTGLTERIMA.Name = "TXTTGLTERIMA"
         Me.TXTTGLTERIMA.Size = New System.Drawing.Size(150, 20)
-        Me.TXTTGLTERIMA.TabIndex = 69
+        Me.TXTTGLTERIMA.TabIndex = 26
         '
         'TXTKET
         '
@@ -1099,7 +1102,7 @@ Partial Class FormMobilTangki
         Me.TXTKET.Location = New System.Drawing.Point(436, 205)
         Me.TXTKET.Name = "TXTKET"
         Me.TXTKET.Size = New System.Drawing.Size(150, 20)
-        Me.TXTKET.TabIndex = 69
+        Me.TXTKET.TabIndex = 25
         '
         'TXTMODEL
         '
@@ -1107,7 +1110,7 @@ Partial Class FormMobilTangki
         Me.TXTMODEL.Location = New System.Drawing.Point(128, 214)
         Me.TXTMODEL.Name = "TXTMODEL"
         Me.TXTMODEL.Size = New System.Drawing.Size(167, 20)
-        Me.TXTMODEL.TabIndex = 69
+        Me.TXTMODEL.TabIndex = 9
         '
         'TXTSTATUS2
         '
@@ -1115,7 +1118,7 @@ Partial Class FormMobilTangki
         Me.TXTSTATUS2.Location = New System.Drawing.Point(436, 181)
         Me.TXTSTATUS2.Name = "TXTSTATUS2"
         Me.TXTSTATUS2.Size = New System.Drawing.Size(150, 20)
-        Me.TXTSTATUS2.TabIndex = 69
+        Me.TXTSTATUS2.TabIndex = 24
         '
         'TXTMTYPE
         '
@@ -1123,7 +1126,7 @@ Partial Class FormMobilTangki
         Me.TXTMTYPE.Location = New System.Drawing.Point(128, 190)
         Me.TXTMTYPE.Name = "TXTMTYPE"
         Me.TXTMTYPE.Size = New System.Drawing.Size(167, 20)
-        Me.TXTMTYPE.TabIndex = 69
+        Me.TXTMTYPE.TabIndex = 8
         '
         'TXTNPAS
         '
@@ -1131,7 +1134,7 @@ Partial Class FormMobilTangki
         Me.TXTNPAS.Location = New System.Drawing.Point(436, 157)
         Me.TXTNPAS.Name = "TXTNPAS"
         Me.TXTNPAS.Size = New System.Drawing.Size(150, 20)
-        Me.TXTNPAS.TabIndex = 69
+        Me.TXTNPAS.TabIndex = 23
         '
         'TXTSTATUS
         '
@@ -1139,7 +1142,7 @@ Partial Class FormMobilTangki
         Me.TXTSTATUS.Location = New System.Drawing.Point(128, 166)
         Me.TXTSTATUS.Name = "TXTSTATUS"
         Me.TXTSTATUS.Size = New System.Drawing.Size(167, 20)
-        Me.TXTSTATUS.TabIndex = 69
+        Me.TXTSTATUS.TabIndex = 7
         '
         'TXTNPERUSAHAAN
         '
@@ -1147,7 +1150,7 @@ Partial Class FormMobilTangki
         Me.TXTNPERUSAHAAN.Location = New System.Drawing.Point(128, 142)
         Me.TXTNPERUSAHAAN.Name = "TXTNPERUSAHAAN"
         Me.TXTNPERUSAHAAN.Size = New System.Drawing.Size(167, 20)
-        Me.TXTNPERUSAHAAN.TabIndex = 69
+        Me.TXTNPERUSAHAAN.TabIndex = 6
         '
         'TXTIZBKHUSU
         '
@@ -1155,7 +1158,7 @@ Partial Class FormMobilTangki
         Me.TXTIZBKHUSU.Location = New System.Drawing.Point(436, 110)
         Me.TXTIZBKHUSU.Name = "TXTIZBKHUSU"
         Me.TXTIZBKHUSU.Size = New System.Drawing.Size(150, 20)
-        Me.TXTIZBKHUSU.TabIndex = 69
+        Me.TXTIZBKHUSU.TabIndex = 21
         '
         'TXTTITLE
         '
@@ -1163,7 +1166,7 @@ Partial Class FormMobilTangki
         Me.TXTTITLE.Location = New System.Drawing.Point(128, 118)
         Me.TXTTITLE.Name = "TXTTITLE"
         Me.TXTTITLE.Size = New System.Drawing.Size(167, 20)
-        Me.TXTTITLE.TabIndex = 69
+        Me.TXTTITLE.TabIndex = 5
         '
         'TXTKBLOKIR
         '
@@ -1171,7 +1174,7 @@ Partial Class FormMobilTangki
         Me.TXTKBLOKIR.Location = New System.Drawing.Point(128, 94)
         Me.TXTKBLOKIR.Name = "TXTKBLOKIR"
         Me.TXTKBLOKIR.Size = New System.Drawing.Size(167, 20)
-        Me.TXTKBLOKIR.TabIndex = 69
+        Me.TXTKBLOKIR.TabIndex = 4
         '
         'TXTNOPOLIS
         '
@@ -1179,7 +1182,7 @@ Partial Class FormMobilTangki
         Me.TXTNOPOLIS.Location = New System.Drawing.Point(128, 70)
         Me.TXTNOPOLIS.Name = "TXTNOPOLIS"
         Me.TXTNOPOLIS.Size = New System.Drawing.Size(167, 20)
-        Me.TXTNOPOLIS.TabIndex = 69
+        Me.TXTNOPOLIS.TabIndex = 3
         '
         'TXTKRFID2
         '
@@ -1187,7 +1190,7 @@ Partial Class FormMobilTangki
         Me.TXTKRFID2.Location = New System.Drawing.Point(128, 45)
         Me.TXTKRFID2.Name = "TXTKRFID2"
         Me.TXTKRFID2.Size = New System.Drawing.Size(167, 20)
-        Me.TXTKRFID2.TabIndex = 69
+        Me.TXTKRFID2.TabIndex = 2
         '
         'TXTKRFID
         '
@@ -1195,7 +1198,7 @@ Partial Class FormMobilTangki
         Me.TXTKRFID.Location = New System.Drawing.Point(129, 21)
         Me.TXTKRFID.Name = "TXTKRFID"
         Me.TXTKRFID.Size = New System.Drawing.Size(167, 20)
-        Me.TXTKRFID.TabIndex = 69
+        Me.TXTKRFID.TabIndex = 1
         '
         'Label26
         '
@@ -1266,7 +1269,7 @@ Partial Class FormMobilTangki
         Me.btnUploud.Location = New System.Drawing.Point(757, 480)
         Me.btnUploud.Name = "btnUploud"
         Me.btnUploud.Size = New System.Drawing.Size(213, 33)
-        Me.btnUploud.TabIndex = 115
+        Me.btnUploud.TabIndex = 51
         Me.btnUploud.Text = "UPLOUD"
         Me.btnUploud.UseVisualStyleBackColor = False
         '
@@ -1290,27 +1293,27 @@ Partial Class FormMobilTangki
         '
         Me.DTGridMT.AllowUserToAddRows = False
         Me.DTGridMT.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DTGridMT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DTGridMT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DTGridMT.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTGridMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTGridMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DTGridMT.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTGridMT.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTGridMT.DefaultCellStyle = DataGridViewCellStyle6
         Me.DTGridMT.GridColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.DTGridMT.Location = New System.Drawing.Point(25, 528)
         Me.DTGridMT.Name = "DTGridMT"
@@ -1330,7 +1333,7 @@ Partial Class FormMobilTangki
         Me.BTNEXPORT.Location = New System.Drawing.Point(149, 480)
         Me.BTNEXPORT.Name = "BTNEXPORT"
         Me.BTNEXPORT.Size = New System.Drawing.Size(125, 33)
-        Me.BTNEXPORT.TabIndex = 126
+        Me.BTNEXPORT.TabIndex = 50
         Me.BTNEXPORT.Text = "EXPORT EXCEL"
         Me.BTNEXPORT.UseVisualStyleBackColor = False
         '
@@ -1345,7 +1348,7 @@ Partial Class FormMobilTangki
         Me.BTNEXCEL.Location = New System.Drawing.Point(18, 480)
         Me.BTNEXCEL.Name = "BTNEXCEL"
         Me.BTNEXCEL.Size = New System.Drawing.Size(125, 33)
-        Me.BTNEXCEL.TabIndex = 113
+        Me.BTNEXCEL.TabIndex = 49
         Me.BTNEXCEL.Text = "IMPORT EXCEL"
         Me.BTNEXCEL.UseVisualStyleBackColor = False
         '
@@ -1431,7 +1434,6 @@ Partial Class FormMobilTangki
     Friend WithEvents Label21 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TXTMLAKUKIER As TextBox
     Friend WithEvents TXTKRFID As TextBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Label29 As Label
@@ -1483,4 +1485,5 @@ Partial Class FormMobilTangki
     Friend WithEvents DATETHNBUATAN As DateTimePicker
     Friend WithEvents TXTKRFID2 As TextBox
     Friend WithEvents Label26 As Label
+    Friend WithEvents DATEMLAKUKIER As DateTimePicker
 End Class
