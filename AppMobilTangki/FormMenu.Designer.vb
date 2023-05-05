@@ -47,7 +47,7 @@ Partial Class FormMenu
         Me.Label9 = New System.Windows.Forms.Label()
         Me.BtnEdit = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.LBLJAM = New System.Windows.Forms.Label()
+        Me.LBLDATE = New System.Windows.Forms.Label()
         Me.LBLJRKHOLE2 = New System.Windows.Forms.Label()
         Me.LBLJRKHOLE1 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -66,7 +66,6 @@ Partial Class FormMenu
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.LBLID1 = New System.Windows.Forms.Label()
-        Me.LBLTGL = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
@@ -363,7 +362,7 @@ Partial Class FormMenu
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.GroupBox1.Controls.Add(Me.LBLJAM)
+        Me.GroupBox1.Controls.Add(Me.LBLDATE)
         Me.GroupBox1.Controls.Add(Me.LBLJRKHOLE2)
         Me.GroupBox1.Controls.Add(Me.LBLJRKHOLE1)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
@@ -382,7 +381,6 @@ Partial Class FormMenu
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.LBLID1)
-        Me.GroupBox1.Controls.Add(Me.LBLTGL)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label23)
         Me.GroupBox1.Controls.Add(Me.Label22)
@@ -396,16 +394,16 @@ Partial Class FormMenu
         Me.GroupBox1.TabIndex = 132
         Me.GroupBox1.TabStop = False
         '
-        'LBLJAM
+        'LBLDATE
         '
-        Me.LBLJAM.AutoSize = True
-        Me.LBLJAM.BackColor = System.Drawing.Color.Transparent
-        Me.LBLJAM.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLJAM.Location = New System.Drawing.Point(427, 403)
-        Me.LBLJAM.Name = "LBLJAM"
-        Me.LBLJAM.Size = New System.Drawing.Size(47, 27)
-        Me.LBLJAM.TabIndex = 109
-        Me.LBLJAM.Text = "jam"
+        Me.LBLDATE.AutoSize = True
+        Me.LBLDATE.BackColor = System.Drawing.Color.Transparent
+        Me.LBLDATE.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLDATE.Location = New System.Drawing.Point(427, 403)
+        Me.LBLDATE.Name = "LBLDATE"
+        Me.LBLDATE.Size = New System.Drawing.Size(47, 27)
+        Me.LBLDATE.TabIndex = 109
+        Me.LBLDATE.Text = "jam"
         '
         'LBLJRKHOLE2
         '
@@ -606,17 +604,6 @@ Partial Class FormMenu
         Me.LBLID1.TabIndex = 100
         Me.LBLID1.Text = "."
         '
-        'LBLTGL
-        '
-        Me.LBLTGL.AutoSize = True
-        Me.LBLTGL.BackColor = System.Drawing.Color.Transparent
-        Me.LBLTGL.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLTGL.Location = New System.Drawing.Point(537, 403)
-        Me.LBLTGL.Name = "LBLTGL"
-        Me.LBLTGL.Size = New System.Drawing.Size(81, 27)
-        Me.LBLTGL.TabIndex = 98
-        Me.LBLTGL.Text = "tanggal"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -758,7 +745,6 @@ Partial Class FormMenu
     Friend WithEvents Label9 As Label
     Friend WithEvents BtnEdit As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents LBLTGL As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label1 As Label
@@ -783,5 +769,5 @@ Partial Class FormMenu
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label23 As Label
     Friend WithEvents Label22 As Label
-    Friend WithEvents LBLJAM As Label
+    Friend WithEvents LBLDATE As Label
 End Class

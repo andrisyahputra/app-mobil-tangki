@@ -96,134 +96,100 @@ Public Class FormMenu
         switchPanel(FormAMT)
     End Sub
 
-    'Private Sub kondisiawal()
-    '    Try
-    '        KosongkanData()
+    Private Sub kondisiawal()
+        Try
+            KosongkanData()
 
-    '        'txtJMHole2.Enabled = True
-    '        'txtJMHole1.Enabled = True
-    '        'txtDATEJUkur.Enabled = True
+            ImgInput = AppMobilTangki.My.Resources.Resources.save
+            ImgEdit = AppMobilTangki.My.Resources.Resources.update
+            ImgHapus = AppMobilTangki.My.Resources.Resources.sampah
+            ImgClear = AppMobilTangki.My.Resources.Resources.clear
+            imgBatal = AppMobilTangki.My.Resources.Resources.batal
+            imgSimpan = AppMobilTangki.My.Resources.Resources.simpan
+            imgUpdate = AppMobilTangki.My.Resources.Resources.edit
 
-    '        'txtId.ReadOnly = True
-    '        'CBIDUnit.Enabled = False
-    '        'CBIDKamar.Enabled = False
-    '        'txtKTemen2.ReadOnly = True
-    '        'txtKTemen1.ReadOnly = True
-    '        'txtMTangki.Enabled = False
-    '        'CBIDKamar.Enabled = False
-    '        'txtPlatKendaraan.Enabled = False
-    '        'DateKendaraan.Enabled = False
-    '        'CBBayar.Enabled = False
-    '        'DateBayar.Enabled = False
-    '        'DateJTempo.Enabled = False
-    '        'txtTanggal.Enabled = False
-    '        'txtKasir.Enabled = False
-    '        'txtJam.Enabled = False
-    '        'DateJTempo.Enabled = False
-    '        'txtTempo.Enabled = False
-    '        'txtHargaSw.MaxLength = 20
-    '        txtJMHole1.Focus()
+            BtnTambah.Text = "INPUT"
+            BtnTambah.Image = ImgInput
+            BtnEdit.Text = "EDIT"
+            BtnEdit.Image = ImgEdit
+            btnHapus.Text = "HAPUS"
+            btnHapus.Image = ImgHapus
+            btnClear.Text = "CLEAR"
+            btnClear.Image = ImgClear
 
-    '        ImgInput = AppMobilTangki.My.Resources.Resources.save
-    '        ImgEdit = AppMobilTangki.My.Resources.Resources.update
-    '        ImgHapus = AppMobilTangki.My.Resources.Resources.sampah
-    '        ImgClear = AppMobilTangki.My.Resources.Resources.clear
-    '        imgBatal = AppMobilTangki.My.Resources.Resources.batal
-    '        imgSimpan = AppMobilTangki.My.Resources.Resources.simpan
-    '        imgUpdate = AppMobilTangki.My.Resources.Resources.edit
-
-    '        BtnTambah.Text = "INPUT"
-    '        BtnTambah.Image = ImgInput
-    '        BtnEdit.Text = "EDIT"
-    '        BtnEdit.Image = ImgEdit
-    '        btnHapus.Text = "HAPUS"
-    '        btnHapus.Image = ImgHapus
-    '        btnClear.Text = "CLEAR"
-    '        btnClear.Image = ImgClear
-
-    '        BtnTambah.Enabled = True
-    '        btnHapus.Enabled = False
-    '        BtnEdit.Enabled = False
+            BtnTambah.Enabled = True
+            btnHapus.Enabled = False
+            BtnEdit.Enabled = False
 
 
-    '        KoneksiKeDatabase()
-    '        QUERY = "Select * FROM tbl_transaksi order by id"
-    '        DA = New MySqlDataAdapter(QUERY, CONN)
-    '        DS = New DataSet
-    '        DA.Fill(DS, "tbl_transaksi")
-    '        DataGridTranksaksi.DataSource = DS.Tables("tbl_transaksi")
+            KoneksiKeDatabase()
+            QUERY = "Select * FROM tbl_order order by id"
+            DA = New MySqlDataAdapter(QUERY, CONN)
+            DS = New DataSet
+            DA.Fill(DS, "tbl_order")
+            DataGridTranksaksi.DataSource = DS.Tables("tbl_order")
 
-    '        With DataGridTranksaksi
-    '            '    '.Columns(0).Width = 200
-    '            '    .Columns(1).Width = 200
-    '            '    .Columns(2).Width = 80
-    '            '    .Columns(3).Width = 100
-    '            '    .Columns(4).Width = 100
-    '            '    .Columns(5).Width = 100
-    '            '    .Columns(6).Width = 90
-    '            '    .Columns(7).Width = 90
-    '            '    .Columns(8).Width = 120
-
-    '            '.Columns(0).DataPropertyName = "id"
-    '            '.Columns(1).DataPropertyName = "nama_perusahaan"
-    '            '.Columns(2).DataPropertyName = "no_plat_mobil"
-    '            '.Columns(3).DataPropertyName = "mobil_tangki"
-    '            '.Columns(4).DataPropertyName = "id_kompartemen1"
-    '            '.Columns(5).DataPropertyName = "id_kompartemen2"
-    '            '.Columns(6).DataPropertyName = "jrk_m_hole1"
-    '            '.Columns(7).DataPropertyName = "jrk_m_hole2"
-    '            '.Columns(8).DataPropertyName = "tgl_jam_ukur"
+            With DataGridTranksaksi
+                '    '.Columns(0).Width = 200
+                '    .Columns(1).Width = 200
+                '    .Columns(2).Width = 80
+                '    .Columns(3).Width = 100
+                '    .Columns(4).Width = 100
+                '    .Columns(5).Width = 100
+                '    .Columns(6).Width = 90
+                '    .Columns(7).Width = 90
+                '    .Columns(8).Width = 120
 
 
-    '            .Columns(0).Visible = False
-    '            .Columns(1).HeaderText = "Jarak Meter Hole 1"
-    '            .Columns(2).HeaderText = "Jarak Meter Hole 2"
-    '            .Columns(3).HeaderText = "Tanggal Pengukuran"
+                .Columns(1).HeaderText = "ID HOLE 1"
+                .Columns(2).HeaderText = "ID HOLE 2"
+                .Columns(3).HeaderText = "Jarak Meter Hole 1"
+                .Columns(4).HeaderText = "Jarak Meter Hole 2"
+                .Columns(5).HeaderText = "Nama AMT"
+                .Columns(6).HeaderText = "Plat No"
+                .Columns(7).HeaderText = "Kapasitas"
+                .Columns(8).HeaderText = "Produk"
+                .Columns(9).HeaderText = "Merek/Type"
+                .Columns(10).HeaderText = "Operator"
+                .Columns(11).HeaderText = "Jam Ukur"
+                .Columns(11).HeaderText = ""
 
-    '            .Columns(4).Visible = False
-    '            .Columns(5).Visible = False
-    '            .Columns(6).Visible = False
-    '            .Columns(7).Visible = False
-    '            .Columns(8).Visible = False
-    '            '.Columns(9).Visible = False
-    '            '.Columns(10).Visible = False
-    '            '.Columns(11).HeaderText = "NIK AMT"
-    '            '.Columns(12).HeaderText = "Nama AMT"
-    '            '.Columns(13).HeaderText = "Tempat Lahir"
-    '            '.Columns(14).HeaderText = "Tanggal Lahir"
-    '            '.Columns(15).HeaderText = "USIA"
-    '            '.Columns(16).HeaderText = "NIK AMT"
-    '            '.Columns(17).HeaderText = "Nama AMT"
-    '            '.Columns(18).HeaderText = "Tempat Lahir"
-    '            '.Columns(19).HeaderText = "Tanggal Lahir"
-    '            '.Columns(20).HeaderText = "USIA"
-    '            '.Columns(21).HeaderText = "Transportir"
+                .Columns(0).DataPropertyName = "id"
+                .Columns(1).DataPropertyName = "id_hole1"
+                .Columns(2).DataPropertyName = "id_hole2"
+                .Columns(3).DataPropertyName = "jrk_main_hole1"
+                .Columns(4).DataPropertyName = "jrk_main_hole2"
+                .Columns(5).DataPropertyName = "amt"
+                .Columns(6).DataPropertyName = "platno"
+                .Columns(7).DataPropertyName = "kapasitas"
+                .Columns(8).DataPropertyName = "produk"
+                .Columns(9).DataPropertyName = "merek_type"
+                .Columns(10).DataPropertyName = "operator"
+                .Columns(11).DataPropertyName = "jam_ukur"
+                .Columns(12).DataPropertyName = "tgl_ukur"
 
-    '            '.Columns(0).Visible = False
+                .Columns(0).Visible = False
 
-    '            '.Columns(9).Visible = False
-    '            '.Columns(10).Visible = False
-
-    '            '.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-    '            '    .EnableHeadersVisualStyles = False
-    '            '    '.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue
-    '            '    '.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
-    '            '    .ColumnHeadersDefaultCellStyle.Font = New Font(DataGridView.DefaultFont, FontStyle.Bold)
-    '            '    '.DefaultCellStyle.ForeColor = Color.DarkRed
-    '            '    '.RowsDefaultCellStyle.BackColor = Color.PaleGreen
-    '            '    '.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkGreen
-    '            '    '.AlternatingRowsDefaultCellStyle.ForeColor = Color.White
-    '            '    '.GridColor = Color.DarkRed
-    '        End With
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message)
-    '    End Try
-    'End Sub
+                '.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                '    .EnableHeadersVisualStyles = False
+                '    '.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue
+                '    '.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+                '    .ColumnHeadersDefaultCellStyle.Font = New Font(DataGridView.DefaultFont, FontStyle.Bold)
+                '    '.DefaultCellStyle.ForeColor = Color.DarkRed
+                '    '.RowsDefaultCellStyle.BackColor = Color.PaleGreen
+                '    '.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkGreen
+                '    '.AlternatingRowsDefaultCellStyle.ForeColor = Color.White
+                '    '.GridColor = Color.DarkRed
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 
     Private Sub FormMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
         TextBox1.Focus()
-        'KoneksiKeDatabase()
-        'kondisiawal()
+        KoneksiKeDatabase()
+        kondisiawal()
         kosongidata()
         Timer1.Start()
 
@@ -241,8 +207,8 @@ Public Class FormMenu
 
     Dim tglsekarang As Date
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        LBLTGL.Text = DateTime.Now.ToString("dd-MMMM-yyyy")
-        LBLJAM.Text = DateTime.Now.ToString("HH:mm:ss")
+        'LBLTGL.Text = DateTime.Now.ToString("dd-MMMM-yyyy")
+        LBLDATE.Text = DateTime.Now.ToString("dd-MMMM-yyyy HH:mm:ss")
         tglsekarang = Today
     End Sub
 
@@ -258,17 +224,11 @@ Public Class FormMenu
     Dim Longpaper As Integer
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-        'Try
-        'If txtJMHole1.Text = "" Or
-        '        txtJMHole2.Text = "" Then
-        '    MsgBox("Silahkan Isi Semua Data")
-        'Else
-        '    Call KoneksiKeDatabase()
-        '        'QUERY = "INSERT INTO tbl_transaksi values ('','" & txtJMHole1.Text & "','" & txtJMHole2.Text & "','" & Format(tglsekarang, "yyyy-MM-dd") & "','-','-','-','-','-')"
-        '        QUERY = "INSERT INTO `tbl_transaksi`(`id`, `jrk_m_hole1`, `jrk_m_hole2`, `tgl_jam_ukur`, `a`, `b`, `c`, `d`, `e`) VALUES ('','" & txtJMHole1.Text & "','" & txtJMHole2.Text & "','" & Format(tglsekarang, "yyyy-MM-dd") & "','-','-','-','-','-')"
-        '        DA = New MySqlDataAdapter(QUERY, CONN)
-        '        DS = New DataSet
-        '        DA.Fill(DS)
+        Call KoneksiKeDatabase()
+        QUERY = "INSERT INTO `tbl_order`(`id`, `id_hole1`, `id_hole2`, `jrk_main_hole1`, `jrk_main_hole2`, `amt`, `platno`, `kapasitas`, `produk`, `merek_type`, `operator`, `jam_ukur`, `tgl_ukur`) VALUES ('','" & LBLID1.Text & "','" & LBLID2.Text & "','" & LBLJRKHOLE1.Text & "','" & LBLJRKHOLE2.Text & "','" & LBLAMT.Text & "','" & LBLKAPASTAS.Text & "','" & LBLPRODUK.Text & "','" & LBLMEREK.Text & "','" & LBLOPERATOR.Text & "','" & Format(LBLDATE.Text, "HH:mm:ss") & "','" & Format(LBLDATE.Text, "yyyy-MM-dd") & "')"
+        DA = New MySqlDataAdapter(QUERY, CONN)
+        DS = New DataSet
+        DA.Fill(DS)
 
         Dim A As String = MsgBox("PRINT QRCODE...?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "PRINT QRCODE")
         Select Case A
@@ -278,20 +238,16 @@ Public Class FormMenu
                 Call KosongkanData()
                 Exit Sub
             Case vbOK
-                'MsgBox("Print QRCODE")
+
                 changelongpaper()
                 PPD.Document = PD2
                 PPD.ShowDialog()
-                'Print barcode
+
+                FormMenu_Load(sender, e)
+                MsgBox("Berhasil Ditambah", MsgBoxStyle.OkOnly, "SUKSES")
+                Call KosongkanData()
+
         End Select
-
-
-        '        FormMenu_Load(sender, e)
-        '        Call KosongkanData()
-        '    End If
-        'Catch ex As Exception
-        '    MsgBox("Gagal Di tambah")
-        'End Try
     End Sub
 
     Private Sub PD2_BeginPrint(sender As Object, e As Printing.PrintEventArgs) Handles PD2.BeginPrint

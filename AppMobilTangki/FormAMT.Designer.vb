@@ -23,9 +23,9 @@ Partial Class FormAMT
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.LBLCARIDATA = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -72,7 +72,9 @@ Partial Class FormAMT
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TXTPERUSAHAAN = New System.Windows.Forms.TextBox()
         Me.TXTNOPOLIS = New System.Windows.Forms.TextBox()
+        Me.TXTKRFID2 = New System.Windows.Forms.TextBox()
         Me.TXTKRFID = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridAMT = New System.Windows.Forms.DataGridView()
@@ -89,8 +91,6 @@ Partial Class FormAMT
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.BTNEXPORT = New System.Windows.Forms.Button()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -131,7 +131,7 @@ Partial Class FormAMT
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.TXTPERUSAHAAN)
         Me.GroupBox1.Controls.Add(Me.TXTNOPOLIS)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.TXTKRFID2)
         Me.GroupBox1.Controls.Add(Me.TXTKRFID)
         Me.GroupBox1.Controls.Add(Me.Label17)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -152,7 +152,7 @@ Partial Class FormAMT
         Me.TXTTRANSPORTASI.Multiline = True
         Me.TXTTRANSPORTASI.Name = "TXTTRANSPORTASI"
         Me.TXTTRANSPORTASI.Size = New System.Drawing.Size(207, 43)
-        Me.TXTTRANSPORTASI.TabIndex = 115
+        Me.TXTTRANSPORTASI.TabIndex = 7
         '
         'TXTLOKASI
         '
@@ -160,7 +160,7 @@ Partial Class FormAMT
         Me.TXTLOKASI.Location = New System.Drawing.Point(588, 47)
         Me.TXTLOKASI.Name = "TXTLOKASI"
         Me.TXTLOKASI.Size = New System.Drawing.Size(207, 20)
-        Me.TXTLOKASI.TabIndex = 115
+        Me.TXTLOKASI.TabIndex = 5
         '
         'GroupBox4
         '
@@ -180,7 +180,7 @@ Partial Class FormAMT
         Me.GroupBox4.Location = New System.Drawing.Point(623, 130)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(294, 227)
-        Me.GroupBox4.TabIndex = 114
+        Me.GroupBox4.TabIndex = 19
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "AWAK MOBIL TANGKI CADANGAN"
         '
@@ -190,7 +190,7 @@ Partial Class FormAMT
         Me.TXTAMT3USIA.Location = New System.Drawing.Point(128, 186)
         Me.TXTAMT3USIA.Name = "TXTAMT3USIA"
         Me.TXTAMT3USIA.Size = New System.Drawing.Size(59, 20)
-        Me.TXTAMT3USIA.TabIndex = 117
+        Me.TXTAMT3USIA.TabIndex = 25
         '
         'Label10
         '
@@ -212,7 +212,7 @@ Partial Class FormAMT
         Me.DATEAMT3TLAHIR.Location = New System.Drawing.Point(128, 160)
         Me.DATEAMT3TLAHIR.Name = "DATEAMT3TLAHIR"
         Me.DATEAMT3TLAHIR.Size = New System.Drawing.Size(155, 20)
-        Me.DATEAMT3TLAHIR.TabIndex = 115
+        Me.DATEAMT3TLAHIR.TabIndex = 24
         '
         'Label11
         '
@@ -268,7 +268,7 @@ Partial Class FormAMT
         Me.TXTAMT3NIK.Location = New System.Drawing.Point(128, 22)
         Me.TXTAMT3NIK.Name = "TXTAMT3NIK"
         Me.TXTAMT3NIK.Size = New System.Drawing.Size(155, 20)
-        Me.TXTAMT3NIK.TabIndex = 69
+        Me.TXTAMT3NIK.TabIndex = 20
         '
         'TXTAMT3TLAHIR
         '
@@ -276,7 +276,7 @@ Partial Class FormAMT
         Me.TXTAMT3TLAHIR.Location = New System.Drawing.Point(128, 133)
         Me.TXTAMT3TLAHIR.Name = "TXTAMT3TLAHIR"
         Me.TXTAMT3TLAHIR.Size = New System.Drawing.Size(155, 20)
-        Me.TXTAMT3TLAHIR.TabIndex = 69
+        Me.TXTAMT3TLAHIR.TabIndex = 23
         '
         'TXTAMT3KSONG
         '
@@ -285,7 +285,7 @@ Partial Class FormAMT
         Me.TXTAMT3KSONG.Multiline = True
         Me.TXTAMT3KSONG.Name = "TXTAMT3KSONG"
         Me.TXTAMT3KSONG.Size = New System.Drawing.Size(155, 57)
-        Me.TXTAMT3KSONG.TabIndex = 69
+        Me.TXTAMT3KSONG.TabIndex = 22
         '
         'TXTAMT3NAMA
         '
@@ -293,7 +293,7 @@ Partial Class FormAMT
         Me.TXTAMT3NAMA.Location = New System.Drawing.Point(128, 46)
         Me.TXTAMT3NAMA.Name = "TXTAMT3NAMA"
         Me.TXTAMT3NAMA.Size = New System.Drawing.Size(155, 20)
-        Me.TXTAMT3NAMA.TabIndex = 69
+        Me.TXTAMT3NAMA.TabIndex = 21
         '
         'GroupBox2
         '
@@ -313,7 +313,7 @@ Partial Class FormAMT
         Me.GroupBox2.Location = New System.Drawing.Point(317, 130)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(299, 227)
-        Me.GroupBox2.TabIndex = 114
+        Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "AWAK MOBIL TANGKI 2"
         '
@@ -323,7 +323,7 @@ Partial Class FormAMT
         Me.TXTAMT2USIA.Location = New System.Drawing.Point(128, 181)
         Me.TXTAMT2USIA.Name = "TXTAMT2USIA"
         Me.TXTAMT2USIA.Size = New System.Drawing.Size(59, 20)
-        Me.TXTAMT2USIA.TabIndex = 117
+        Me.TXTAMT2USIA.TabIndex = 19
         '
         'Label5
         '
@@ -345,7 +345,7 @@ Partial Class FormAMT
         Me.DATEAMT2TLAHIR.Location = New System.Drawing.Point(128, 157)
         Me.DATEAMT2TLAHIR.Name = "DATEAMT2TLAHIR"
         Me.DATEAMT2TLAHIR.Size = New System.Drawing.Size(155, 20)
-        Me.DATEAMT2TLAHIR.TabIndex = 115
+        Me.DATEAMT2TLAHIR.TabIndex = 18
         '
         'Label6
         '
@@ -401,7 +401,7 @@ Partial Class FormAMT
         Me.TXTAMT2NIK.Location = New System.Drawing.Point(128, 22)
         Me.TXTAMT2NIK.Name = "TXTAMT2NIK"
         Me.TXTAMT2NIK.Size = New System.Drawing.Size(155, 20)
-        Me.TXTAMT2NIK.TabIndex = 69
+        Me.TXTAMT2NIK.TabIndex = 14
         '
         'TXTAMT2TLAHIR
         '
@@ -409,7 +409,7 @@ Partial Class FormAMT
         Me.TXTAMT2TLAHIR.Location = New System.Drawing.Point(128, 133)
         Me.TXTAMT2TLAHIR.Name = "TXTAMT2TLAHIR"
         Me.TXTAMT2TLAHIR.Size = New System.Drawing.Size(155, 20)
-        Me.TXTAMT2TLAHIR.TabIndex = 69
+        Me.TXTAMT2TLAHIR.TabIndex = 17
         '
         'TXTAMT2KSONG
         '
@@ -418,7 +418,7 @@ Partial Class FormAMT
         Me.TXTAMT2KSONG.Multiline = True
         Me.TXTAMT2KSONG.Name = "TXTAMT2KSONG"
         Me.TXTAMT2KSONG.Size = New System.Drawing.Size(155, 57)
-        Me.TXTAMT2KSONG.TabIndex = 69
+        Me.TXTAMT2KSONG.TabIndex = 16
         '
         'TXTAMT2NAMA
         '
@@ -426,7 +426,7 @@ Partial Class FormAMT
         Me.TXTAMT2NAMA.Location = New System.Drawing.Point(128, 46)
         Me.TXTAMT2NAMA.Name = "TXTAMT2NAMA"
         Me.TXTAMT2NAMA.Size = New System.Drawing.Size(155, 20)
-        Me.TXTAMT2NAMA.TabIndex = 69
+        Me.TXTAMT2NAMA.TabIndex = 15
         '
         'Label16
         '
@@ -458,7 +458,7 @@ Partial Class FormAMT
         Me.GroupBox3.Location = New System.Drawing.Point(12, 130)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(299, 227)
-        Me.GroupBox3.TabIndex = 114
+        Me.GroupBox3.TabIndex = 8
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "AWAK MOBIL TANGKI 1"
         '
@@ -468,7 +468,7 @@ Partial Class FormAMT
         Me.TXTAMT1USIA.Location = New System.Drawing.Point(128, 181)
         Me.TXTAMT1USIA.Name = "TXTAMT1USIA"
         Me.TXTAMT1USIA.Size = New System.Drawing.Size(59, 20)
-        Me.TXTAMT1USIA.TabIndex = 117
+        Me.TXTAMT1USIA.TabIndex = 13
         '
         'Label4
         '
@@ -490,7 +490,7 @@ Partial Class FormAMT
         Me.DATEAMT1TLAHIR.Location = New System.Drawing.Point(128, 157)
         Me.DATEAMT1TLAHIR.Name = "DATEAMT1TLAHIR"
         Me.DATEAMT1TLAHIR.Size = New System.Drawing.Size(155, 20)
-        Me.DATEAMT1TLAHIR.TabIndex = 115
+        Me.DATEAMT1TLAHIR.TabIndex = 12
         '
         'Label29
         '
@@ -546,7 +546,7 @@ Partial Class FormAMT
         Me.TXTAMT1NIK.Location = New System.Drawing.Point(128, 22)
         Me.TXTAMT1NIK.Name = "TXTAMT1NIK"
         Me.TXTAMT1NIK.Size = New System.Drawing.Size(155, 20)
-        Me.TXTAMT1NIK.TabIndex = 69
+        Me.TXTAMT1NIK.TabIndex = 8
         '
         'TXTAMT1TLAHIR
         '
@@ -554,7 +554,7 @@ Partial Class FormAMT
         Me.TXTAMT1TLAHIR.Location = New System.Drawing.Point(128, 133)
         Me.TXTAMT1TLAHIR.Name = "TXTAMT1TLAHIR"
         Me.TXTAMT1TLAHIR.Size = New System.Drawing.Size(155, 20)
-        Me.TXTAMT1TLAHIR.TabIndex = 69
+        Me.TXTAMT1TLAHIR.TabIndex = 11
         '
         'TXTAMT1KSONG
         '
@@ -563,7 +563,7 @@ Partial Class FormAMT
         Me.TXTAMT1KSONG.Multiline = True
         Me.TXTAMT1KSONG.Name = "TXTAMT1KSONG"
         Me.TXTAMT1KSONG.Size = New System.Drawing.Size(155, 57)
-        Me.TXTAMT1KSONG.TabIndex = 69
+        Me.TXTAMT1KSONG.TabIndex = 10
         '
         'TXTAMT1NAMA
         '
@@ -571,7 +571,7 @@ Partial Class FormAMT
         Me.TXTAMT1NAMA.Location = New System.Drawing.Point(128, 46)
         Me.TXTAMT1NAMA.Name = "TXTAMT1NAMA"
         Me.TXTAMT1NAMA.Size = New System.Drawing.Size(155, 20)
-        Me.TXTAMT1NAMA.TabIndex = 69
+        Me.TXTAMT1NAMA.TabIndex = 9
         '
         'Label1
         '
@@ -603,7 +603,7 @@ Partial Class FormAMT
         Me.TXTPERUSAHAAN.Location = New System.Drawing.Point(588, 23)
         Me.TXTPERUSAHAAN.Name = "TXTPERUSAHAAN"
         Me.TXTPERUSAHAAN.Size = New System.Drawing.Size(207, 20)
-        Me.TXTPERUSAHAAN.TabIndex = 77
+        Me.TXTPERUSAHAAN.TabIndex = 4
         '
         'TXTNOPOLIS
         '
@@ -611,7 +611,15 @@ Partial Class FormAMT
         Me.TXTNOPOLIS.Location = New System.Drawing.Point(277, 71)
         Me.TXTNOPOLIS.Name = "TXTNOPOLIS"
         Me.TXTNOPOLIS.Size = New System.Drawing.Size(167, 20)
-        Me.TXTNOPOLIS.TabIndex = 78
+        Me.TXTNOPOLIS.TabIndex = 3
+        '
+        'TXTKRFID2
+        '
+        Me.TXTKRFID2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTKRFID2.Location = New System.Drawing.Point(277, 47)
+        Me.TXTKRFID2.Name = "TXTKRFID2"
+        Me.TXTKRFID2.Size = New System.Drawing.Size(167, 20)
+        Me.TXTKRFID2.TabIndex = 2
         '
         'TXTKRFID
         '
@@ -619,7 +627,19 @@ Partial Class FormAMT
         Me.TXTKRFID.Location = New System.Drawing.Point(277, 23)
         Me.TXTKRFID.Name = "TXTKRFID"
         Me.TXTKRFID.Size = New System.Drawing.Size(167, 20)
-        Me.TXTKRFID.TabIndex = 79
+        Me.TXTKRFID.TabIndex = 1
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.BackColor = System.Drawing.Color.Transparent
+        Me.Label17.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(158, 50)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(75, 14)
+        Me.Label17.TabIndex = 75
+        Me.Label17.Text = "KODE RFID 2"
         '
         'Label2
         '
@@ -629,9 +649,9 @@ Partial Class FormAMT
         Me.Label2.Location = New System.Drawing.Point(158, 26)
         Me.Label2.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 14)
+        Me.Label2.Size = New System.Drawing.Size(75, 14)
         Me.Label2.TabIndex = 75
-        Me.Label2.Text = "KODE RFID"
+        Me.Label2.Text = "KODE RFID 1"
         '
         'Label3
         '
@@ -649,27 +669,27 @@ Partial Class FormAMT
         '
         Me.DataGridAMT.AllowUserToAddRows = False
         Me.DataGridAMT.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DataGridAMT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridAMT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridAMT.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridAMT.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridAMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridAMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridAMT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridAMT.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DataGridAMT.GridColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.DataGridAMT.Location = New System.Drawing.Point(43, 498)
         Me.DataGridAMT.Name = "DataGridAMT"
         Me.DataGridAMT.ReadOnly = True
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DataGridAMT.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridAMT.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridAMT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridAMT.Size = New System.Drawing.Size(924, 229)
         Me.DataGridAMT.TabIndex = 121
@@ -800,26 +820,6 @@ Partial Class FormAMT
         Me.BTNEXPORT.Text = "EXPORT EXCEL"
         Me.BTNEXPORT.UseVisualStyleBackColor = False
         '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.BackColor = System.Drawing.Color.Transparent
-        Me.Label17.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(158, 50)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(3, 0, 3, 10)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(75, 14)
-        Me.Label17.TabIndex = 75
-        Me.Label17.Text = "KODE RFID 1"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(277, 47)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(167, 20)
-        Me.TextBox1.TabIndex = 79
-        '
         'FormAMT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -920,6 +920,6 @@ Partial Class FormAMT
     Friend WithEvents DATEAMT1TLAHIR As DateTimePicker
     Friend WithEvents TXTTRANSPORTASI As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TXTKRFID2 As TextBox
     Friend WithEvents Label17 As Label
 End Class

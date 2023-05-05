@@ -10,9 +10,62 @@ Public Class FormAMT
     Dim imgBatal As Bitmap
     Dim imgSimpan As Bitmap
     Dim imgUpdate As Bitmap
-    'Dim dataId%
+    Dim dataId%
     Dim tglsekarang As Date
 
+    Private Sub Enabledfield()
+        TXTKRFID.Enabled = False
+        TXTKRFID2.Enabled = False
+        TXTNOPOLIS.Enabled = False
+        TXTPERUSAHAAN.Enabled = False
+        TXTLOKASI.Enabled = False
+        TXTTRANSPORTASI.Enabled = False
+        TXTAMT1NIK.Enabled = False
+        TXTAMT1NAMA.Enabled = False
+        TXTAMT1KSONG.Enabled = False
+        TXTAMT1TLAHIR.Enabled = False
+        DATEAMT1TLAHIR.Enabled = False
+        TXTAMT1USIA.Enabled = False
+        TXTAMT2NIK.Enabled = False
+        TXTAMT2NAMA.Enabled = False
+        TXTAMT2KSONG.Enabled = False
+        TXTAMT2TLAHIR.Enabled = False
+        DATEAMT2TLAHIR.Enabled = False
+        TXTAMT2USIA.Enabled = False
+        TXTAMT3NIK.Enabled = False
+        TXTAMT3NAMA.Enabled = False
+        TXTAMT3KSONG.Enabled = False
+        TXTAMT3TLAHIR.Enabled = False
+        DATEAMT3TLAHIR.Enabled = False
+        TXTAMT3USIA.Enabled = False
+
+    End Sub
+    Private Sub aktifField()
+        TXTKRFID.Enabled = True
+        TXTKRFID2.Enabled = True
+        TXTNOPOLIS.Enabled = True
+        TXTPERUSAHAAN.Enabled = True
+        TXTLOKASI.Enabled = True
+        TXTTRANSPORTASI.Enabled = True
+        TXTAMT1NIK.Enabled = True
+        TXTAMT1NAMA.Enabled = True
+        TXTAMT1KSONG.Enabled = True
+        TXTAMT1TLAHIR.Enabled = True
+        DATEAMT1TLAHIR.Enabled = True
+        TXTAMT1USIA.Enabled = True
+        TXTAMT2NIK.Enabled = True
+        TXTAMT2NAMA.Enabled = True
+        TXTAMT2KSONG.Enabled = True
+        TXTAMT2TLAHIR.Enabled = True
+        DATEAMT2TLAHIR.Enabled = True
+        TXTAMT2USIA.Enabled = True
+        TXTAMT3NIK.Enabled = True
+        TXTAMT3NAMA.Enabled = True
+        TXTAMT3KSONG.Enabled = True
+        TXTAMT3TLAHIR.Enabled = True
+        DATEAMT3TLAHIR.Enabled = True
+        TXTAMT3USIA.Enabled = True
+    End Sub
     'Private Sub AturGridTransaksi()
 
     'With DataGridTranksaksi
@@ -65,13 +118,12 @@ Public Class FormAMT
 
 
     Private Sub KosongkanData()
-        'txtCari.Text = ""
-        'txtJMHole1.Text = ""
-        'txtJMHole2.Text = ""
-        ''txtDATEJUkur.Text = ""
         TXTKRFID.Text = ""
+        TXTKRFID2.Text = ""
         TXTNOPOLIS.Text = ""
         TXTPERUSAHAAN.Text = ""
+        TXTLOKASI.Text = ""
+        TXTTRANSPORTASI.Text = ""
         TXTAMT1NIK.Text = ""
         TXTAMT1NAMA.Text = ""
         TXTAMT1KSONG.Text = ""
@@ -103,32 +155,6 @@ Public Class FormAMT
 
     Private Sub kondisiawal()
         Try
-            'KosongkanData()
-
-            'txtJMHole2.Enabled = True
-            'txtJMHole1.Enabled = True
-            ''txtDATEJUkur.Enabled = True
-
-            ''txtId.ReadOnly = True
-            ''CBIDUnit.Enabled = False
-            ''CBIDKamar.Enabled = False
-            ''txtKTemen2.ReadOnly = True
-            ''txtKTemen1.ReadOnly = True
-            ''txtMTangki.Enabled = False
-            ''CBIDKamar.Enabled = False
-            ''txtPlatKendaraan.Enabled = False
-            ''DateKendaraan.Enabled = False
-            ''CBBayar.Enabled = False
-            ''DateBayar.Enabled = False
-            ''DateJTempo.Enabled = False
-            ''txtTanggal.Enabled = False
-            ''txtKasir.Enabled = False
-            ''txtJam.Enabled = False
-            ''DateJTempo.Enabled = False
-            ''txtTempo.Enabled = False
-            ''txtHargaSw.MaxLength = 20
-            'txtJMHole1.Focus()
-
             ImgInput = AppMobilTangki.My.Resources.Resources.save
             ImgEdit = AppMobilTangki.My.Resources.Resources.update
             ImgHapus = AppMobilTangki.My.Resources.Resources.sampah
@@ -169,40 +195,62 @@ Public Class FormAMT
                 '    .Columns(7).Width = 90
                 '    .Columns(8).Width = 120
 
-                '.Columns(0).DataPropertyName = "id"
-                '.Columns(1).DataPropertyName = "nama_perusahaan"
-                '.Columns(2).DataPropertyName = "no_plat_mobil"
-                '.Columns(3).DataPropertyName = "mobil_tangki"
-                '.Columns(4).DataPropertyName = "id_kompartemen1"
-                '.Columns(5).DataPropertyName = "id_kompartemen2"
-                '.Columns(6).DataPropertyName = "jrk_m_hole1"
-                '.Columns(7).DataPropertyName = "jrk_m_hole2"
-                '.Columns(8).DataPropertyName = "tgl_jam_ukur"
-
-
-                .Columns(0).Visible = False
 
                 .Columns(1).HeaderText = "No Urut"
-                .Columns(2).HeaderText = "No. RFID"
-                .Columns(3).HeaderText = "NOPOL"
-                .Columns(4).HeaderText = "Perusahaan"
-                .Columns(5).HeaderText = "Lokasi"
-                .Columns(6).HeaderText = "NIK AMT"
-                .Columns(7).HeaderText = "Nama AMT"
-                .Columns(8).HeaderText = "Tempat Lahir"
-                .Columns(9).HeaderText = "Tanggal Lahir"
-                .Columns(10).HeaderText = "USIA"
-                .Columns(11).HeaderText = "NIK AMT"
-                .Columns(12).HeaderText = "Nama AMT"
-                .Columns(13).HeaderText = "Tempat Lahir"
-                .Columns(14).HeaderText = "Tanggal Lahir"
-                .Columns(15).HeaderText = "USIA"
-                .Columns(16).HeaderText = "NIK AMT"
-                .Columns(17).HeaderText = "Nama AMT"
-                .Columns(18).HeaderText = "Tempat Lahir"
-                .Columns(19).HeaderText = "Tanggal Lahir"
-                .Columns(20).HeaderText = "USIA"
-                .Columns(21).HeaderText = "Transportir"
+                .Columns(2).HeaderText = "No. RFID 1"
+                .Columns(3).HeaderText = "No. RFID 2"
+                .Columns(4).HeaderText = "NOPOL"
+                .Columns(5).HeaderText = "Perusahaan"
+                .Columns(6).HeaderText = "Lokasi"
+                .Columns(7).HeaderText = "NIK AMT"
+                .Columns(8).HeaderText = "Nama AMT"
+                .Columns(9).HeaderText = "Keterangan AMT 1"
+                .Columns(10).HeaderText = "Tempat Lahir"
+                .Columns(11).HeaderText = "Tanggal Lahir"
+                .Columns(12).HeaderText = "USIA"
+                .Columns(13).HeaderText = "NIK AMT 2"
+                .Columns(14).HeaderText = "Nama AMT 2"
+                .Columns(15).HeaderText = "Keterangan AMT 2"
+                .Columns(16).HeaderText = "Tempat Lahir AMT 2"
+                .Columns(17).HeaderText = "Tanggal Lahir AMT 2"
+                .Columns(18).HeaderText = "USIA AMT 2"
+                .Columns(19).HeaderText = "NIK AMT Cadangan"
+                .Columns(20).HeaderText = "Nama AMT Cadangan"
+                .Columns(21).HeaderText = "Keterangan AMT Cadangan"
+                .Columns(22).HeaderText = "Tempat Lahir AMT Cadangan"
+                .Columns(23).HeaderText = "Tanggal Lahir AMT Cadangan"
+                .Columns(24).HeaderText = "USIA AMT Cadangan"
+                .Columns(25).HeaderText = "Transportir"
+
+
+                .Columns(0).DataPropertyName = "id"
+                .Columns(1).DataPropertyName = "no_urut"
+                .Columns(2).DataPropertyName = "kode_rfid"
+                .Columns(3).DataPropertyName = "kode_rfid2"
+                .Columns(4).DataPropertyName = "no_polis"
+                .Columns(5).DataPropertyName = "perusahaan"
+                .Columns(6).DataPropertyName = "lokasiamt"
+                .Columns(7).DataPropertyName = "nik_amt1"
+                .Columns(8).DataPropertyName = "nama_amt1"
+                .Columns(9).DataPropertyName = "ksong1"
+                .Columns(10).DataPropertyName = "tempat_lahir1"
+                .Columns(11).DataPropertyName = "tgl_lahir1"
+                .Columns(12).DataPropertyName = "usia1"
+                .Columns(13).DataPropertyName = "nik_amt2"
+                .Columns(14).DataPropertyName = "nama_amt2"
+                .Columns(15).DataPropertyName = "ksong2"
+                .Columns(16).DataPropertyName = "tempat_lahir2"
+                .Columns(17).DataPropertyName = "tgl_lahir2"
+                .Columns(18).DataPropertyName = "usia2"
+                .Columns(19).DataPropertyName = "nik_amt3"
+                .Columns(20).DataPropertyName = "nama_amt3"
+                .Columns(21).DataPropertyName = "ksong3"
+                .Columns(22).DataPropertyName = "tempat_lahir3"
+                .Columns(23).DataPropertyName = "tgl_lahir3"
+                .Columns(24).DataPropertyName = "usia3"
+                .Columns(25).DataPropertyName = "transportir"
+
+                .Columns(0).Visible = False
 
                 '.Columns(0).Visible = False
 
@@ -220,6 +268,9 @@ Public Class FormAMT
                 '    '.AlternatingRowsDefaultCellStyle.ForeColor = Color.White
                 '    '.GridColor = Color.DarkRed
             End With
+
+            KosongkanData()
+            btnUploud.Enabled = False
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -239,139 +290,148 @@ Public Class FormAMT
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-        'Try
-        '    If txtJMHole1.Text = "" Or
-        '            txtJMHole2.Text = "" Then
-        '        MsgBox("Silahkan Isi Semua Data")
-        '    Else
-        '        Call KoneksiKeDatabase()
-        '        QUERY = "INSERT INTO tbl_transaksi values ('','" & lblIDPlat.Text & "','" & txtJMHole1.Text & "','" & txtJMHole2.Text & "','" & Format(tglsekarang, "yyyy-MM-dd") & "','-','-','-','-','-')"
-        '        DA = New MySqlDataAdapter(QUERY, CONN)
-        '        DS = New DataSet
-        '        DA.Fill(DS)
-
-        '        Dim A As String = MsgBox("PRINT QRCODE...?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "PRINT QRCODE")
-        '        Select Case A
-        '            Case vbCancel
-        '                FormAMT_Load(sender, e)
-        '                MsgBox("Berhasil Ditambah", MsgBoxStyle.OkOnly, "SUKSES")
-        '                Call KosongkanData()
-        '                Exit Sub
-        '            Case vbOK
-        '                FormMenu.clearMenu()
-
-        '                'FormMenu.switchPanel(FormQRCODE)
-        '                'AmbilDatakeTransakasi()
-        '                Me.Close()
-        '        End Select
+        Try
+            Call KoneksiKeDatabase()
+            QUERY = "INSERT INTO `amt`(`id`, `no_urut`, `kode_rfid`, `kode_rfid2`, `no_polis`, `perusahaan`, `lokasiamt`, `nik_amt1`, `nama_amt1`, `ksong1`, `tempat_lahir1`, `tgl_lahir1`, `usia1`, `nik_amt2`, `nama_amt2`, `ksong2`, `tempat_lahir2`, `tgl_lahir2`, `usia2`, `nik_amt3`, `nama_amt3`, `ksong3`, `tempat_lahir3`, `tgl_lahir3`, `usia3`, `transportir`) VALUES ('','1','" & TXTKRFID.Text & "','" & TXTKRFID2.Text & "','" & TXTNOPOLIS.Text & "','" & TXTPERUSAHAAN.Text & "','" & TXTLOKASI.Text & "','" & TXTAMT1NIK.Text & "','" & TXTAMT1NAMA.Text & "','" & TXTAMT1KSONG.Text & "','" & TXTAMT1TLAHIR.Text & "','" & Format(DATEAMT1TLAHIR.Value, "yyyy-MM-dd") & "','" & TXTAMT1USIA.Text & "','" & TXTAMT2NIK.Text & "','" & TXTAMT2NAMA.Text & "','" & TXTAMT2KSONG.Text & "','" & TXTAMT2TLAHIR.Text & "','" & Format(DATEAMT2TLAHIR.Value, "yyyy-MM-dd") & "','" & TXTAMT2USIA.Text & "','" & TXTAMT3NIK.Text & "','" & TXTAMT3NAMA.Text & "','" & TXTAMT3KSONG.Text & "','" & TXTAMT3TLAHIR.Text & "','" & Format(DATEAMT3TLAHIR.Value, "yyyy-MM-dd") & "','" & TXTAMT3USIA.Text & "','" & TXTTRANSPORTASI.Text & "')"
+            DA = New MySqlDataAdapter(QUERY, CONN)
+            DS = New DataSet
+            DA.Fill(DS)
 
 
-        '        FormAMT_Load(sender, e)
-        '        Call KosongkanData()
-        '    End If
-        'Catch ex As Exception
-        '    MsgBox("Gagal Di tambah")
-        'End Try
+            MessageBox.Show("Berhasil ditambah")
+            FormAMT_Load(sender, e)
+            KosongkanData()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
-    'Private Sub DataGridTranksaksi_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridAMT.CellMouseClick
-    '    BtnEdit.Text = "EDIT"
-    '    btnHapus.Text = "HAPUS"
-    '    BtnEdit.Image = ImgEdit
-    '    btnClear.Text = "BATAL"
-    '    btnClear.Image = imgBatal
-    '    BtnEdit.Enabled = True
-    '    btnHapus.Enabled = True
-    '    BtnTambah.Enabled = False
-    '    btnClear.Enabled = True
 
-    '    txtJMHole2.Enabled = False
-    '    txtJMHole1.Enabled = False
-    '    txtJMHole1.Text = DataGridAMT.Rows(e.RowIndex).Cells(6).Value
-    '    txtJMHole2.Text = DataGridAMT.Rows(e.RowIndex).Cells(7).Value
-    '    dataId = DataGridAMT.Rows(e.RowIndex).Cells(0).Value
-    '    'lblJam.Text = DataGridTranksaksi.Rows(e.RowIndex).Cells(8).Value
-    'End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         If btnClear.Text = "BATAL" Then
-            FormAMT_Load(sender, e)
-            Call KosongkanData()
+            'LvMTangki.Clear()
+            aktifField()
+            KosongkanData()
+            DataGridAMT.Enabled = True
+
+            BtnTambah.Text = "INPUT"
+            BtnTambah.Image = ImgInput
+            BtnEdit.Text = "EDIT"
+            BtnEdit.Image = ImgEdit
+            btnHapus.Text = "HAPUS"
+            btnHapus.Image = ImgHapus
+            btnClear.Text = "CLEAR"
+            btnClear.Image = ImgClear
+
+            BtnTambah.Enabled = True
+            btnHapus.Enabled = False
+            BtnEdit.Enabled = False
             Exit Sub
         End If
         If btnClear.Text = "CLEAR" Then
-            'txtJMHole1.Text = ""
-            'txtJMHole2.Text = ""
-            'txtJMHole1.Focus()
+            KosongkanData()
+            TXTKRFID.Focus()
             Exit Sub
         End If
     End Sub
-    Private Sub fieldaktif()
-        'txtJMHole1.Enabled = True
-        'txtJMHole2.Enabled = True
-    End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        'Try
+        Try
 
-        '    If BtnEdit.Text = "EDIT" Then
-        '        BtnEdit.Image = imgUpdate
-        '        BtnEdit.Text = "UPDATE"
-        '        btnHapus.Enabled = True
-        '        btnHapus.Text = "BATAL"
-        '        btnHapus.Image = imgBatal
-        '        BtnTambah.Enabled = False
-        '        btnClear.Text = "CLEAR"
-        '        btnClear.Image = ImgClear
-        '        fieldaktif()
-        '    Else
-        '        Call KoneksiKeDatabase()
-        '        QUERY = "UPDATE tbl_transaksi SET no_plat_mobil='" & lblIDPlat.Text & "',jrk_m_hole1='" & txtJMHole1.Text & "',jrk_m_hole2='" & txtJMHole2.Text & "',tgl_jam_ukur='" & Today() & "',a='-',b='-',c='-',d='-',e='-'where id='" & dataId & "'"
-        '        DA = New MySqlDataAdapter(QUERY, CONN)
-        '        DS = New DataSet
-        '        DA.Fill(DS)
+            If BtnEdit.Text = "EDIT" Then
+                aktifField()
+                BtnEdit.Image = imgUpdate
+                BtnEdit.Text = "UPDATE"
+                btnHapus.Enabled = True
+                btnHapus.Text = "BATAL"
+                btnHapus.Image = imgBatal
+                BtnTambah.Enabled = False
+                btnClear.Text = "CLEAR"
+                btnClear.Image = ImgClear
+            Else
+                Call KoneksiKeDatabase()
+                QUERY = "UPDATE `amt` SET `no_urut`='1',`kode_rfid`='" & TXTKRFID.Text & "',`kode_rfid2`='" & TXTKRFID2.Text & "',`no_polis`='" & TXTNOPOLIS.Text & "',`perusahaan`='" & TXTPERUSAHAAN.Text & "',`lokasiamt`='" & TXTLOKASI.Text & "',`nik_amt1`='" & TXTAMT1NIK.Text & "',`nama_amt1`='" & TXTAMT1NAMA.Text & "',`ksong1`='" & TXTAMT1KSONG.Text & "',`tempat_lahir1`='" & TXTAMT1TLAHIR.Text & "',`tgl_lahir1`='" & Format(DATEAMT1TLAHIR.Value, "yyyy-MM-dd") & "',`usia1`='" & TXTAMT1USIA.Text & "',`nik_amt2`='" & TXTAMT2NIK.Text & "',`nama_amt2`='" & TXTAMT2NAMA.Text & "',`ksong2`='" & TXTAMT2KSONG.Text & "',`tempat_lahir2`='" & TXTAMT2TLAHIR.Text & "',`tgl_lahir2`='" & Format(DATEAMT2TLAHIR.Value, "yyyy-MM-dd") & "',`usia2`='" & TXTAMT2USIA.Text & "',`nik_amt3`='" & TXTAMT3NIK.Text & "',`nama_amt3`='" & TXTAMT3NAMA.Text & "',`ksong3`='" & TXTAMT3KSONG.Text & "',`tempat_lahir3`='" & TXTAMT3TLAHIR.Text & "',`tgl_lahir3`='" & Format(DATEAMT3TLAHIR.Value, "yyyy-MM-dd") & "',`usia3`='" & TXTKRFID2.Text & "',`transportir`='" & TXTTRANSPORTASI.Text & "' WHERE `id`='" & dataId & "'"
 
-        '        MsgBox("Edit data berhasil")
+                DA = New MySqlDataAdapter(QUERY, CONN)
+                DS = New DataSet
+                DA.Fill(DS)
 
-        '        Call kondisiawal()
-        '    End If
-        'Catch ex As Exception
-        '    MsgBox("PLAT NOMOR SUDAH TERSEDIA")
-        'End Try
+                MsgBox("Edit data berhasil")
+                DataGridAMT.Enabled = True
+                'CBLevel.Items.Clear()
+                FormAMT_Load(sender, e)
+                'Call KosongkanData()
+            End If
+        Catch ex As Exception
+            'MsgBox("PLAT NOMOR SUDAH TERSEDIA")
+            MsgBox(ex.Message)
+            'CBLevel.Items.Clear()
+            'FormUser_Load(sender, e)
+            btnHapus.Visible = True
+            kondisiawal()
+        End Try
     End Sub
 
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
-        'If btnHapus.Text = "BATAL" Then
-        '    FormAMT_Load(sender, e)
-        '    Call KosongkanData()
-        '    Exit Sub
-        'End If
+        If btnHapus.Text = "BATAL" Then
+            'LvMTangki.Clear()
+            aktifField()
+            KosongkanData()
+            DataGridAMT.Enabled = True
+
+            BtnTambah.Text = "INPUT"
+            BtnTambah.Image = ImgInput
+            BtnEdit.Text = "EDIT"
+            BtnEdit.Image = ImgEdit
+            btnHapus.Text = "HAPUS"
+            btnHapus.Image = ImgHapus
+            btnClear.Text = "CLEAR"
+            btnClear.Image = ImgClear
+
+            BtnTambah.Enabled = True
+            btnHapus.Enabled = False
+            BtnEdit.Enabled = False
+            Exit Sub
+        End If
 
 
-        'Try
-        '    If btnHapus.Text = "HAPUS" Then
-        '        Dim A As String
-        '        A = MsgBox("BENAR DIHAPUS...?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "HAPUS DATA")
-        '        Select Case A
-        '            Case vbCancel
-        '                FormAMT_Load(sender, e)
-        '                Call KosongkanData()
-        '                MsgBox("Data Tidak hapus", MsgBoxStyle.OkOnly, "HAPUS DATA")
-        '                Exit Sub
-        '            Case vbOK
-        '                Call KoneksiKeDatabase()
-        '                QUERY = "delete from tbl_transaksi where id='" & dataId & "'"
-        '                CMD = New MySqlCommand(QUERY, CONN)
-        '                CMD.ExecuteNonQuery()
-        '                FormAMT_Load(sender, e)
-        '                Call KosongkanData()
-        '                MsgBox("Berhasil Di hapus", MsgBoxStyle.OkOnly, "HAPUS DATA")
-        '        End Select
-        '    End If
+        Try
+            If btnHapus.Text = "HAPUS" Then
+                Dim A As String
+                A = MsgBox("Benar data No : " & TXTNOPOLIS.Text & " akan Dihapus...?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "HAPUS DATA")
+                Select Case A
+                    Case vbCancel
+                        'LvMTangki.Clear()
 
-        'Catch ex As Exception
-        '    MsgBox("Data Tidak bisa di Hapus", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Hapus Data")
-        'End Try
+                        'Call KosongkanData()
+                        MsgBox("Data Tidak hapus", MsgBoxStyle.OkOnly, "HAPUS DATA")
+
+                        aktifField()
+                        DataGridAMT.Enabled = True
+                        'KosongkanData()
+                        FormAMT_Load(sender, e)
+                        Exit Sub
+                    Case vbOK
+                        Call KoneksiKeDatabase()
+                        QUERY = "DELETE FROM `amt` where id='" & dataId & "'"
+                        CMD = New MySqlCommand(QUERY, CONN)
+                        CMD.ExecuteNonQuery()
+                        'LvMTangki.Clear()
+
+                        MsgBox("Berhasil Di hapus", MsgBoxStyle.OkOnly, "HAPUS DATA")
+
+                        aktifField()
+                        DataGridAMT.Enabled = True
+                        'KosongkanData()
+                        FormAMT_Load(sender, e)
+
+                End Select
+            End If
+
+        Catch ex As Exception
+            MsgBox("Data Tidak bisa di Hapus", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Hapus Data")
+        End Try
     End Sub
     'Private Sub Caridata(pencarian As String)
     '    Try
@@ -410,8 +470,7 @@ Public Class FormAMT
     Private Sub FormAMT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         KoneksiKeDatabase()
         kondisiawal()
-        'AturGridTransaksi()
-        'Timer1.Start()
+        TXTKRFID.Focus()
     End Sub
     Dim lokasifile As String
 
@@ -617,11 +676,7 @@ Public Class FormAMT
             Dim trimmedName As String = name.Trim("'"c) ' menghapus tanda kutip satu pada awal dan akhir string
             Dim escapedName As String = MySqlHelper.EscapeString(trimmedName) ' melindungi string dari karakter-karakter khusus
 
-
-            'sql = "INSERT INTO `mt`(`id`, `no_urut`, `kode_rfid`, `no_polis`, `ket_blokir`, `title`, `nama_perusahaan`, `sts`, `merk_type`, `model`, `thn_pembuatan`, `kapasitas`, `kompartemen`, `produk`, `no_mesin`, `no_rangka`, `hsl_uji_emisi`, `pas_masuk`, `stnk`, `keur`, `tera`, `ijin_brg_khusus`, `skt`, `no_pas`, `status2`, `ksong`, `keterangan`, `tgl_penerima`, `no_surat_tera`, `komp1_t1`, `komp1_t2`, `komp1_t3`, `komp1_ruang_ksg`, `komp1_k1`, `komp2_t1`, `komp2_t2`, `komp2_t3`, `komp2_ruang_ksg`, `komp2_k1`, `tera2`, `thn_pembuatan2`, `no_stnk`, `m_berlaku_stnk`, `no_keur`, `m_berlaku_kier`, `no_dok_uji_emisi`, `hasil_uji_emisi`, `m_berlaku_uji_emisi`, `no_spb_skt`, `m_berlaku_spb_mkt`, `no_z_m_terminal_bbm`, `no_izin_masuk`, `kode_area`, `area`, `kd_lokasi`, `lokasi`, `kd_kategori`, `kategori`, `delivery_point`, `sewa`, `tarif`, `agen`, `industri`, `angkutan_sendiri`, `umur`, `kat`, `produk2`, `engkel_tronton_semit`, `pabrikan_tangki`, `material_tangki`, `pembuatan_tangki`, `sts_armada`, `plat`, `asuransi`, `alamat`, `telepon`, `email`, `npwp`, `penanggung_jawab`, `jabatan`, `data_umur_mt`) VALUES ('','" & r(0).ToString & "','" & r(1).ToString & "','" & r(2).ToString & "','" & r(3).ToString & "','" & r(4).ToString & "','" & r(5).ToString & "','" & r(6).ToString & "','" & r(7).ToString & "','" & r(8).ToString & "','" & myDate.ToString("yyyy-MM-dd") & "','" & r(10).ToString & "','" & r(11).ToString & "','" & r(12).ToString & "','" & r(13).ToString & "','" & r(14).ToString & "','" & r(15).ToString & "','" & r(16).ToString & "','" & r(17).ToString & "','" & r(18).ToString & "','" & r(19).ToString & "','" & r(20).ToString & "','" & r(21).ToString & "','" & r(22).ToString & "','" & r(23).ToString & "','" & r(24).ToString & "','" & r(25).ToString & "','" & r(26).ToString & "','" & r(27).ToString & "','" & r(28).ToString & "','" & r(29).ToString & "','" & r(30).ToString & "','" & r(31).ToString & "','" & r(32).ToString & "','" & r(33).ToString & "','" & r(34).ToString & "','" & r(35).ToString & "','" & r(36).ToString & "','" & r(37).ToString & "','" & r(38).ToString & "','" & r(39).ToString & "','" & r(40).ToString & "','" & r(41).ToString & "','" & r(42).ToString & "','" & r(43).ToString & "','" & r(44).ToString & "','" & r(45).ToString & "','" & r(46).ToString & "','" & r(47).ToString & "','" & r(48).ToString & "','" & r(49).ToString & "','" & r(50).ToString & "','" & r(51).ToString & "','" & r(52).ToString & "','" & r(53).ToString & "','" & r(54).ToString & "','" & r(55).ToString & "','" & r(56).ToString & "','" & r(57).ToString & "','" & r(58).ToString & "','" & r(59).ToString & "','" & r(69).ToString & "','" & r(61).ToString & "','" & r(62).ToString & "','" & r(63).ToString & "','" & r(64).ToString & "','" & r(65).ToString & "','" & r(66).ToString & "','" & r(67).ToString & "','" & r(68).ToString & "','" & r(69).ToString & "','" & r(70).ToString & "','" & r(71).ToString & "','" & r(72).ToString & "','" & r(73).ToString & "','" & r(74).ToString & "','" & r(75).ToString & "','" & r(76).ToString & "','" & r(77).ToString & "','" & r(78).ToString & "','" & r(79).ToString & "')"
-            'sql = "INSERT INTO `mt`(`id`, `no_urut`, `kode_rfid`, `no_polis`, `ket_blokir`, `title`, `nama_perusahaan`, `sts`, `merk_type`, `model`, `thn_pembuatan`, `kapasitas`, `kompartemen`, `produk`, `no_mesin`, `no_rangka`, `hsl_uji_emisi`, `pas_masuk`, `stnk`, `keur`, `tera`, `ijin_brg_khusus`, `skt`, `no_pas`, `status2`, `ksong`, `keterangan`, `tgl_penerima`, `no_surat_tera`, `komp1_t1`, `komp1_t2`, `komp1_t3`, `komp1_ruang_ksg`, `komp1_k1`, `komp2_t1`, `komp2_t2`, `komp2_t3`, `komp2_ruang_ksg`, `komp2_k1`, `tera2`, `thn_pembuatan2`, `no_stnk`, `m_berlaku_stnk`, `no_keur`, `m_berlaku_kier`, `no_dok_uji_emisi`, `hasil_uji_emisi`, `m_berlaku_uji_emisi`, `no_spb_skt`, `m_berlaku_spb_mkt`, `no_z_m_terminal_bbm`, `no_izin_masuk`, `kode_area`, `area`, `kd_lokasi`, `lokasi`, `kd_kategori`, `kategori`, `delivery_point`, `sewa`, `tarif`, `agen`, `industri`, `angkutan_sendiri`, `umur`, `kat`, `produk2`, `engkel_tronton_semit`, `pabrikan_tangki`, `material_tangki`, `pembuatan_tangki`, `sts_armada`, `plat`, `asuransi`, `alamat`, `telepon`, `email`, `npwp`, `penanggung_jawab`, `jabatan`, `data_umur_mt`) VALUES ('','" & r(0).ToString & "','" & r(1).ToString & "','" & r(2).ToString & "','" & r(3).ToString & "','" & r(4).ToString & "','" & r(5).ToString & "','" & r(6).ToString & "','" & r(7).ToString & "','" & r(8).ToString & "','" & DateValue.ToString("yyyy-MM-dd") & "','" & r(10).ToString & "','" & r(11).ToString & "','" & r(12).ToString & "','" & r(13).ToString & "','" & r(14).ToString & "','" & r(15).ToString & "','" & datemasuk.ToString("yyyy-MM-dd") & "','" & datestnk.ToString("yyyy-MM-dd") & "','" & datekeur.ToString("yyyy-MM-dd") & "','" & datetera.ToString("yyyy-MM-dd") & "','" & r(20).ToString & "','" & dateskt.ToString("yyyy-MM-dd") & "','" & r(22).ToString & "','" & r(23).ToString & "','" & r(24).ToString & "','" & r(25).ToString() & "','" & r(26).ToString & "','" & r(27).ToString & "','" & r(28).ToString & "','" & r(29).ToString & "','" & r(30).ToString & "','" & r(31).ToString & "','" & r(32).ToString & "','" & r(33).ToString & "','" & r(34).ToString & "','" & r(35).ToString & "','" & r(36).ToString & "','" & r(37).ToString & "','" & datetera2.ToString("yyyy-MM-dd") & "','" & r(39).ToString & "','" & r(40).ToString & "','" & datemlakustnk.ToString("yyyy-MM-dd") & "','" & r(42).ToString & "','" & datemlakukier.ToString("yyyy-MM-dd") & "','" & r(44).ToString & "','" & r(45).ToString & "','" & datemlakuemisi.ToString("yyyy-MM-dd") & "','" & r(47).ToString & "','" & r(48).ToString & "','" & r(49).ToString & "','" & r(50).ToString & "','" & r(51).ToString & "','" & r(52).ToString & "','" & r(53).ToString & "','" & r(54).ToString & "','" & r(55).ToString & "','" & r(56).ToString & "','" & r(57).ToString & "','" & r(58).ToString & "','" & r(59).ToString & "','" & r(69).ToString & "','" & r(61).ToString & "','" & r(62).ToString & "','" & r(63).ToString & "','" & r(64).ToString & "','" & r(65).ToString & "','" & r(66).ToString & "','" & r(67).ToString & "','" & r(68).ToString & "','" & r(69).ToString & "','" & r(70).ToString & "','" & r(71).ToString & "','" & r(72).ToString & "','" & r(73).ToString & "','" & r(74).ToString & "','" & r(75).ToString & "','" & r(76).ToString & "','" & r(77).ToString & "','" & r(78).ToString & "','" & r(79).ToString & "')"
-            'sql = "INSERT INTO `amt`(`id`, `rfid`, `nopol`, `perusahaan`, `lokasi`, `nik_amt1`, `nama_amt1`, `ksong1`, `tempat_lahir1`, `tgl_lahir1`, `usia1`, `nik_amt2`, `nama_amt2`, `tempat_lahir2`, `tgl_lahir2`, `usia2`, `nik_amt3`, `nama_amt3`, `tempat_lahir3`, `tgl_lahir3`, `usia3`, `transportir`) VALUES ('','" & r(1).ToString '" &,'" & r(2).toString'" &,'" & r(3).toString'" &,'" & r(4).toString'" &,'" & r(5).toString'" &,'" & r(6).toString'" &,'" & r(7).toString'" &,'" & r(8).toString'" &,'" & r(9).toString'" &,'" & r(10).toString'" &,'" & r(11).toString'" &,'" & r(12).toString'" &,'" & r(13).toString'" &,'" & r(14).toString'" &,'" & r(15).toString'" &,'" & r(16).toString'" &,'" & r(17).toString'" &,'" & r(18).toString'" &,'" & r(19).toString'" &,'" & r(20).toString'" &,'" & r(21).toString'" &,'" & r(22).toString & "')"
-            sql = "INSERT INTO `amt`(`id`, `no_urut`, `kode_rfid`, `no_polis`, `perusahaan`, `lokasiamt`, `nik_amt1`, `nama_amt1`, `ksong1`, `tempat_lahir1`, `tgl_lahir1`, `usia1`, `nik_amt2`, `nama_amt2`, `tempat_lahir2`, `tgl_lahir2`, `usia2`, `nik_amt3`, `nama_amt3`, `tempat_lahir3`, `tgl_lahir3`, `usia3`, `transportir`) VALUES ('','" & nourut.ToString & "','" & r(1).ToString & "','" & r(2).ToString & "','" & r(3).ToString & "','" & r(4).ToString & "','" & r(5).ToString & "','" & escapedName & "','" & r(7).ToString & "','" & r(8).ToString & "','" & tgllahir1.ToString("yyyy-MM-dd") & "','" & r(10).ToString & "','" & r(11).ToString & "','" & r(12).ToString & "','" & r(13).ToString & "','" & tgllahir2.ToString("yyyy-MM-dd") & "','" & r(15).ToString & "','" & r(16).ToString & "','" & r(17).ToString & "','" & r(18).ToString & "','" & tgllahir3.ToString("yyyy-MM-dd") & "','" & r(20).ToString & "','" & r(21).ToString & "')"
+            sql = "INSERT INTO `amt`(`id`, `no_urut`, `kode_rfid`, `kode_rfid2`, `no_polis`, `perusahaan`, `lokasiamt`, `nik_amt1`, `nama_amt1`, `ksong1`, `tempat_lahir1`, `tgl_lahir1`, `usia1`, `nik_amt2`, `nama_amt2`, `ksong2`, `tempat_lahir2`, `tgl_lahir2`, `usia2`, `nik_amt3`, `nama_amt3`, `ksong3`, `tempat_lahir3`, `tgl_lahir3`, `usia3`, `transportir`) VALUES ('','" & nourut.ToString & "','" & r(1).ToString & "','koderfid2','" & r(2).ToString & "','" & r(3).ToString & "','" & r(4).ToString & "','" & r(5).ToString & "','" & escapedName & "','" & r(7).ToString & "','" & r(8).ToString & "','" & tgllahir1.ToString("yyyy-MM-dd") & "','" & r(10).ToString & "','" & r(11).ToString & "','" & r(12).ToString & "','ksong2','" & r(13).ToString & "','" & tgllahir2.ToString("yyyy-MM-dd") & "','" & r(15).ToString & "','" & r(16).ToString & "','" & r(17).ToString & "','ksong3','" & r(18).ToString & "','" & tgllahir3.ToString("yyyy-MM-dd") & "','" & r(20).ToString & "','" & r(21).ToString & "')"
 
 
             result = saveData(sql)
@@ -726,4 +781,91 @@ Public Class FormAMT
         End Try
     End Sub
 
+
+    Private Sub DataGridAMT_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridAMT.CellClick
+        Dim i As Integer
+
+        Try
+            With DataGridAMT
+                If .CurrentCell.Value Is Nothing Then
+                    Exit Sub
+                Else
+
+
+                    i = .CurrentRow.Index
+                    'ID
+                    dataId = .Rows(i).Cells(0).Value
+                    ''untuk date
+                    If i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(11).Value) AndAlso .Rows(i).Cells(11).Value IsNot Nothing Then
+
+                        DATEAMT1TLAHIR.Text = .Rows(i).Cells(11).Value
+                    Else
+                        'jika baris atau sel kosong, lakukan tindakan yang sesuai
+                        DATEAMT1TLAHIR.Value = Today
+                    End If
+                    If i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(17).Value) AndAlso .Rows(i).Cells(17).Value IsNot Nothing Then
+
+                        DATEAMT2TLAHIR.Text = .Rows(i).Cells(17).Value
+                    Else
+                        'jika baris atau sel kosong, lakukan tindakan yang sesuai
+                        DATEAMT2TLAHIR.Value = Today
+                    End If
+
+                    If i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(23).Value) AndAlso .Rows(i).Cells(23).Value IsNot Nothing Then
+                        DATEAMT3TLAHIR.Text = .Rows(i).Cells(23).Value
+                    Else
+                        'jika baris atau sel kosong, lakukan tindakan yang sesuai
+                        DATEAMT3TLAHIR.Value = Today
+                    End If
+
+                    'untuk text
+                    TXTKRFID.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(2).Value) AndAlso .Rows(i).Cells(2).Value IsNot Nothing, .Rows(i).Cells(2).Value.ToString(), "")
+                    TXTKRFID2.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(3).Value) AndAlso .Rows(i).Cells(3).Value IsNot Nothing, .Rows(i).Cells(3).Value.ToString(), "")
+                    TXTNOPOLIS.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(4).Value) AndAlso .Rows(i).Cells(4).Value IsNot Nothing, .Rows(i).Cells(4).Value.ToString(), "")
+                    TXTPERUSAHAAN.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(5).Value) AndAlso .Rows(i).Cells(5).Value IsNot Nothing, .Rows(i).Cells(5).Value.ToString(), "")
+                    TXTLOKASI.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(6).Value) AndAlso .Rows(i).Cells(6).Value IsNot Nothing, .Rows(i).Cells(6).Value.ToString(), "")
+                    TXTAMT1NIK.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(7).Value) AndAlso .Rows(i).Cells(7).Value IsNot Nothing, .Rows(i).Cells(7).Value.ToString(), "")
+                    TXTAMT1NAMA.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(8).Value) AndAlso .Rows(i).Cells(8).Value IsNot Nothing, .Rows(i).Cells(8).Value.ToString(), "")
+                    TXTAMT1KSONG.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(9).Value) AndAlso .Rows(i).Cells(9).Value IsNot Nothing, .Rows(i).Cells(9).Value.ToString(), "")
+                    TXTAMT1TLAHIR.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(10).Value) AndAlso .Rows(i).Cells(10).Value IsNot Nothing, .Rows(i).Cells(10).Value.ToString(), "")
+
+                    TXTAMT1USIA.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(12).Value) AndAlso .Rows(i).Cells(12).Value IsNot Nothing, .Rows(i).Cells(12).Value.ToString(), "")
+                    TXTAMT2NIK.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(13).Value) AndAlso .Rows(i).Cells(13).Value IsNot Nothing, .Rows(i).Cells(13).Value.ToString(), "")
+                    TXTAMT2NAMA.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(14).Value) AndAlso .Rows(i).Cells(14).Value IsNot Nothing, .Rows(i).Cells(14).Value.ToString(), "")
+                    TXTAMT2KSONG.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(15).Value) AndAlso .Rows(i).Cells(15).Value IsNot Nothing, .Rows(i).Cells(15).Value.ToString(), "")
+                    TXTAMT2TLAHIR.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(16).Value) AndAlso .Rows(i).Cells(16).Value IsNot Nothing, .Rows(i).Cells(16).Value.ToString(), "")
+
+
+                    TXTAMT2USIA.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(18).Value) AndAlso .Rows(i).Cells(18).Value IsNot Nothing, .Rows(i).Cells(18).Value.ToString(), "")
+                    TXTAMT3NIK.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(19).Value) AndAlso .Rows(i).Cells(19).Value IsNot Nothing, .Rows(i).Cells(19).Value.ToString(), "")
+                    TXTAMT3NAMA.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(20).Value) AndAlso .Rows(i).Cells(20).Value IsNot Nothing, .Rows(i).Cells(20).Value.ToString(), "")
+                    TXTAMT3KSONG.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(21).Value) AndAlso .Rows(i).Cells(21).Value IsNot Nothing, .Rows(i).Cells(21).Value.ToString(), "")
+                    TXTAMT3TLAHIR.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(22).Value) AndAlso .Rows(i).Cells(22).Value IsNot Nothing, .Rows(i).Cells(22).Value.ToString(), "")
+                    DATEAMT3TLAHIR.Value = Today()
+                    TXTAMT3USIA.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(24).Value) AndAlso .Rows(i).Cells(24).Value IsNot Nothing, .Rows(i).Cells(24).Value.ToString(), "")
+
+                    TXTTRANSPORTASI.Text = If(i < .Rows.Count AndAlso Not IsDBNull(.Rows(i).Cells(25).Value) AndAlso .Rows(i).Cells(25).Value IsNot Nothing, .Rows(i).Cells(25).Value.ToString(), "")
+
+                    BtnEdit.Text = "EDIT"
+                    BtnEdit.Image = ImgEdit
+                    BtnEdit.Enabled = True
+
+                    btnClear.Enabled = True
+                    btnClear.Text = "BATAL"
+                    btnClear.Image = imgBatal
+
+                    btnHapus.Enabled = True
+                    btnHapus.Text = "HAPUS"
+
+                    BtnTambah.Enabled = False
+
+                    Enabledfield()
+                    DataGridAMT.Enabled = False
+
+                End If
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 End Class
