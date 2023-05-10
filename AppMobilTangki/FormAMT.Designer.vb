@@ -23,9 +23,9 @@ Partial Class FormAMT
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.LBLCARIDATA = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -83,14 +83,10 @@ Partial Class FormAMT
         Me.btnHapus = New System.Windows.Forms.Label()
         Me.BtnEdit = New System.Windows.Forms.Label()
         Me.btnTutup = New System.Windows.Forms.Label()
-        Me.LblKode = New System.Windows.Forms.Label()
         Me.btnUploud = New System.Windows.Forms.Button()
         Me.BTNEXCEL = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.BTNEXPORT = New System.Windows.Forms.Button()
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -100,7 +96,8 @@ Partial Class FormAMT
         '
         'txtCari
         '
-        Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Italic)
+        Me.txtCari.ForeColor = System.Drawing.SystemColors.WindowFrame
         Me.txtCari.Location = New System.Drawing.Point(168, 401)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(295, 29)
@@ -669,27 +666,27 @@ Partial Class FormAMT
         '
         Me.DataGridAMT.AllowUserToAddRows = False
         Me.DataGridAMT.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DataGridAMT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridAMT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridAMT.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridAMT.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridAMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridAMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridAMT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridAMT.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DataGridAMT.GridColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.DataGridAMT.Location = New System.Drawing.Point(43, 498)
         Me.DataGridAMT.Name = "DataGridAMT"
         Me.DataGridAMT.ReadOnly = True
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DataGridAMT.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DataGridAMT.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridAMT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridAMT.Size = New System.Drawing.Size(924, 229)
         Me.DataGridAMT.TabIndex = 121
@@ -750,17 +747,6 @@ Partial Class FormAMT
         Me.btnTutup.Size = New System.Drawing.Size(36, 39)
         Me.btnTutup.TabIndex = 111
         '
-        'LblKode
-        '
-        Me.LblKode.BackColor = System.Drawing.Color.Transparent
-        Me.LblKode.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblKode.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblKode.Image = Global.AppMobilTangki.My.Resources.Resources.search
-        Me.LblKode.Location = New System.Drawing.Point(491, 393)
-        Me.LblKode.Name = "LblKode"
-        Me.LblKode.Size = New System.Drawing.Size(40, 44)
-        Me.LblKode.TabIndex = 114
-        '
         'btnUploud
         '
         Me.btnUploud.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
@@ -784,41 +770,22 @@ Partial Class FormAMT
         Me.BTNEXCEL.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNEXCEL.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
         Me.BTNEXCEL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BTNEXCEL.Location = New System.Drawing.Point(50, 458)
+        Me.BTNEXCEL.Location = New System.Drawing.Point(59, 459)
         Me.BTNEXCEL.Name = "BTNEXCEL"
-        Me.BTNEXCEL.Size = New System.Drawing.Size(125, 33)
+        Me.BTNEXCEL.Size = New System.Drawing.Size(167, 33)
         Me.BTNEXCEL.TabIndex = 122
         Me.BTNEXCEL.Text = "IMPORT EXCEL"
         Me.BTNEXCEL.UseVisualStyleBackColor = False
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(322, 459)
+        Me.ProgressBar1.Location = New System.Drawing.Point(232, 459)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(469, 33)
+        Me.ProgressBar1.Size = New System.Drawing.Size(559, 33)
         Me.ProgressBar1.TabIndex = 123
-        '
-        'BackgroundWorker1
-        '
-        Me.BackgroundWorker1.WorkerReportsProgress = True
         '
         'Timer2
         '
-        '
-        'BTNEXPORT
-        '
-        Me.BTNEXPORT.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.BTNEXPORT.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BTNEXPORT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BTNEXPORT.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNEXPORT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.BTNEXPORT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BTNEXPORT.Location = New System.Drawing.Point(181, 459)
-        Me.BTNEXPORT.Name = "BTNEXPORT"
-        Me.BTNEXPORT.Size = New System.Drawing.Size(125, 33)
-        Me.BTNEXPORT.TabIndex = 125
-        Me.BTNEXPORT.Text = "EXPORT EXCEL"
-        Me.BTNEXPORT.UseVisualStyleBackColor = False
         '
         'FormAMT
         '
@@ -827,7 +794,6 @@ Partial Class FormAMT
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1002, 749)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.BTNEXPORT)
         Me.Controls.Add(Me.btnUploud)
         Me.Controls.Add(Me.BTNEXCEL)
         Me.Controls.Add(Me.ProgressBar1)
@@ -838,7 +804,6 @@ Partial Class FormAMT
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.LBLCARIDATA)
         Me.Controls.Add(Me.BtnEdit)
-        Me.Controls.Add(Me.LblKode)
         Me.Controls.Add(Me.btnTutup)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormAMT"
@@ -866,14 +831,10 @@ Partial Class FormAMT
     Friend WithEvents btnTutup As Label
     Friend WithEvents btnClear As Label
     Friend WithEvents DataGridAMT As DataGridView
-    Friend WithEvents LblKode As Label
     Friend WithEvents btnUploud As Button
     Friend WithEvents BTNEXCEL As Button
     Friend WithEvents ProgressBar1 As ProgressBar
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents BTNEXPORT As Button
-    Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents Label13 As Label
     Friend WithEvents TXTPERUSAHAAN As TextBox
     Friend WithEvents TXTNOPOLIS As TextBox

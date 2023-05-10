@@ -38,3 +38,9 @@ C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\Ap
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormLoader2.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.FormAMT.resources
 C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\obj\Debug\AppMobilTangki.vbproj.ResolveComReference.cache
+C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\FlashControlV71.dll
+C:\Users\Andri Syahputra\source\repos\AppMobilTangki\AppMobilTangki\bin\Debug\ShockwaveFlashObjects.dll

@@ -66,56 +66,6 @@ Public Class FormAMT
         DATEAMT3TLAHIR.Enabled = True
         TXTAMT3USIA.Enabled = True
     End Sub
-    'Private Sub AturGridTransaksi()
-
-    'With DataGridTranksaksi
-    '    '.Columns(0).Width = 200
-    '    .Columns(1).Width = 200
-    '    .Columns(2).Width = 80
-    '    .Columns(3).Width = 100
-    '    .Columns(4).Width = 100
-    '    .Columns(5).Width = 100
-    '    .Columns(6).Width = 90
-    '    .Columns(7).Width = 90
-    '    .Columns(8).Width = 120
-
-    '    .Columns(0).DataPropertyName = "id"
-    '    .Columns(1).DataPropertyName = "nama_perusahaan"
-    '    .Columns(2).DataPropertyName = "no_plat_mobil"
-    '    .Columns(3).DataPropertyName = "mobil_tangki"
-    '    .Columns(4).DataPropertyName = "id_kompartemen1"
-    '    .Columns(5).DataPropertyName = "id_kompartemen2"
-    '    .Columns(6).DataPropertyName = "jrk_m_hole1"
-    '    .Columns(7).DataPropertyName = "jrk_m_hole2"
-    '    .Columns(8).DataPropertyName = "tgl_jam_ukur"
-
-    '    .Columns(1).HeaderText = "NAMA PERUSAHAAN"
-    '    .Columns(2).HeaderText = "NO PLAT KENDARAAN"
-    '    .Columns(3).HeaderText = "MOBIL TANGKI"
-    '    .Columns(4).HeaderText = "KOMPARTEMEN 1"
-    '    .Columns(5).HeaderText = "KOMPARTEMEN 2"
-    '    .Columns(6).HeaderText = "JARAK HOLE 1"
-    '    .Columns(7).HeaderText = "JARAK HOLE 2"
-    '    .Columns(8).HeaderText = "TGL JAM UKUR"
-
-    '    .Columns(0).Visible = False
-
-    '    '.Columns(9).Visible = False
-    '    '.Columns(10).Visible = False
-
-    '    .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-    '    .EnableHeadersVisualStyles = False
-    '    '.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue
-    '    '.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
-    '    .ColumnHeadersDefaultCellStyle.Font = New Font(DataGridView.DefaultFont, FontStyle.Bold)
-    '    '.DefaultCellStyle.ForeColor = Color.DarkRed
-    '    '.RowsDefaultCellStyle.BackColor = Color.PaleGreen
-    '    '.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkGreen
-    '    '.AlternatingRowsDefaultCellStyle.ForeColor = Color.White
-    '    '.GridColor = Color.DarkRed
-    'End With
-    'End Sub
-
 
     Private Sub KosongkanData()
         TXTKRFID.Text = ""
@@ -143,40 +93,9 @@ Public Class FormAMT
         DATEAMT3TLAHIR.Value = Today()
         TXTAMT3USIA.Text = ""
     End Sub
-    Private Sub tablePenuhKamar()
-        Try
-            'AturGridKamar()
-            'Query = "Select * FROM tbl_kamar ORDER BY id_kamar"
-
-        Catch ex As Exception
-            MsgBox("Gagal tampil transaksi")
-        End Try
-    End Sub
 
     Private Sub kondisiawal()
         Try
-            ImgInput = AppMobilTangki.My.Resources.Resources.save
-            ImgEdit = AppMobilTangki.My.Resources.Resources.update
-            ImgHapus = AppMobilTangki.My.Resources.Resources.sampah
-            ImgClear = AppMobilTangki.My.Resources.Resources.clear
-            imgBatal = AppMobilTangki.My.Resources.Resources.batal
-            imgSimpan = AppMobilTangki.My.Resources.Resources.simpan
-            imgUpdate = AppMobilTangki.My.Resources.Resources.edit
-
-            BtnTambah.Text = "INPUT"
-            BtnTambah.Image = ImgInput
-            BtnEdit.Text = "EDIT"
-            BtnEdit.Image = ImgEdit
-            btnHapus.Text = "HAPUS"
-            btnHapus.Image = ImgHapus
-            btnClear.Text = "CLEAR"
-            btnClear.Image = ImgClear
-
-            BtnTambah.Enabled = True
-            btnHapus.Enabled = False
-            BtnEdit.Enabled = False
-
-
             KoneksiKeDatabase()
             QUERY = "Select * FROM amt order by id"
             DA = New MySqlDataAdapter(QUERY, CONN)
@@ -271,6 +190,29 @@ Public Class FormAMT
 
             KosongkanData()
             btnUploud.Enabled = False
+
+            ImgInput = AppMobilTangki.My.Resources.Resources.save
+            ImgEdit = AppMobilTangki.My.Resources.Resources.update
+            ImgHapus = AppMobilTangki.My.Resources.Resources.sampah
+            ImgClear = AppMobilTangki.My.Resources.Resources.clear
+            imgBatal = AppMobilTangki.My.Resources.Resources.batal
+            imgSimpan = AppMobilTangki.My.Resources.Resources.simpan
+            imgUpdate = AppMobilTangki.My.Resources.Resources.edit
+
+            BtnTambah.Text = "INPUT"
+            BtnTambah.Image = ImgInput
+            BtnEdit.Text = "EDIT"
+            BtnEdit.Image = ImgEdit
+            btnHapus.Text = "HAPUS"
+            btnHapus.Image = ImgHapus
+            btnClear.Text = "CLEAR"
+            btnClear.Image = ImgClear
+
+            BtnTambah.Enabled = True
+            btnClear.Enabled = True
+            btnHapus.Enabled = False
+            BtnEdit.Enabled = False
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -281,6 +223,26 @@ Public Class FormAMT
         Me.Close()
         Call FormMenu.tampilMenu()
         'FormMenu.FormMenu_Load(sender, e)
+    End Sub
+
+    Private Sub FormAMT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtCari.Enabled = True
+        aktifField()
+        KosongkanData()
+        DataGridAMT.Enabled = True
+        TXTKRFID.Focus()
+        KoneksiKeDatabase()
+        kondisiawal()
+        txtCari.Text = "Cari Data NOPOLIS Dan RFID"
+        DataGridAMT.Enabled = True
+
+
+        'txtCari.Text = "Cari Data NOPOLIS Dan RFID"
+        'KoneksiKeDatabase()
+        'kondisiawal()
+        'TXTKRFID.Focus()
+        'aktifField()
+        'DataGridAMT.Enabled = True
     End Sub
 
 
@@ -306,36 +268,6 @@ Public Class FormAMT
         End Try
     End Sub
 
-
-
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        If btnClear.Text = "BATAL" Then
-            'LvMTangki.Clear()
-            aktifField()
-            KosongkanData()
-            DataGridAMT.Enabled = True
-
-            BtnTambah.Text = "INPUT"
-            BtnTambah.Image = ImgInput
-            BtnEdit.Text = "EDIT"
-            BtnEdit.Image = ImgEdit
-            btnHapus.Text = "HAPUS"
-            btnHapus.Image = ImgHapus
-            btnClear.Text = "CLEAR"
-            btnClear.Image = ImgClear
-
-            BtnTambah.Enabled = True
-            btnHapus.Enabled = False
-            BtnEdit.Enabled = False
-            Exit Sub
-        End If
-        If btnClear.Text = "CLEAR" Then
-            KosongkanData()
-            TXTKRFID.Focus()
-            Exit Sub
-        End If
-    End Sub
-
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         Try
 
@@ -349,9 +281,11 @@ Public Class FormAMT
                 BtnTambah.Enabled = False
                 btnClear.Text = "CLEAR"
                 btnClear.Image = ImgClear
+                DataGridAMT.Enabled = False
             Else
                 Call KoneksiKeDatabase()
-                QUERY = "UPDATE `amt` SET `no_urut`='1',`kode_rfid`='" & TXTKRFID.Text & "',`kode_rfid2`='" & TXTKRFID2.Text & "',`no_polis`='" & TXTNOPOLIS.Text & "',`perusahaan`='" & TXTPERUSAHAAN.Text & "',`lokasiamt`='" & TXTLOKASI.Text & "',`nik_amt1`='" & TXTAMT1NIK.Text & "',`nama_amt1`='" & TXTAMT1NAMA.Text & "',`ksong1`='" & TXTAMT1KSONG.Text & "',`tempat_lahir1`='" & TXTAMT1TLAHIR.Text & "',`tgl_lahir1`='" & Format(DATEAMT1TLAHIR.Value, "yyyy-MM-dd") & "',`usia1`='" & TXTAMT1USIA.Text & "',`nik_amt2`='" & TXTAMT2NIK.Text & "',`nama_amt2`='" & TXTAMT2NAMA.Text & "',`ksong2`='" & TXTAMT2KSONG.Text & "',`tempat_lahir2`='" & TXTAMT2TLAHIR.Text & "',`tgl_lahir2`='" & Format(DATEAMT2TLAHIR.Value, "yyyy-MM-dd") & "',`usia2`='" & TXTAMT2USIA.Text & "',`nik_amt3`='" & TXTAMT3NIK.Text & "',`nama_amt3`='" & TXTAMT3NAMA.Text & "',`ksong3`='" & TXTAMT3KSONG.Text & "',`tempat_lahir3`='" & TXTAMT3TLAHIR.Text & "',`tgl_lahir3`='" & Format(DATEAMT3TLAHIR.Value, "yyyy-MM-dd") & "',`usia3`='" & TXTKRFID2.Text & "',`transportir`='" & TXTTRANSPORTASI.Text & "' WHERE `id`='" & dataId & "'"
+                'no urut tidak di editt
+                QUERY = "UPDATE `amt` SET `kode_rfid`='" & TXTKRFID.Text & "',`kode_rfid2`='" & TXTKRFID2.Text & "',`no_polis`='" & TXTNOPOLIS.Text & "',`perusahaan`='" & TXTPERUSAHAAN.Text & "',`lokasiamt`='" & TXTLOKASI.Text & "',`nik_amt1`='" & TXTAMT1NIK.Text & "',`nama_amt1`='" & TXTAMT1NAMA.Text & "',`ksong1`='" & TXTAMT1KSONG.Text & "',`tempat_lahir1`='" & TXTAMT1TLAHIR.Text & "',`tgl_lahir1`='" & Format(DATEAMT1TLAHIR.Value, "yyyy-MM-dd") & "',`usia1`='" & TXTAMT1USIA.Text & "',`nik_amt2`='" & TXTAMT2NIK.Text & "',`nama_amt2`='" & TXTAMT2NAMA.Text & "',`ksong2`='" & TXTAMT2KSONG.Text & "',`tempat_lahir2`='" & TXTAMT2TLAHIR.Text & "',`tgl_lahir2`='" & Format(DATEAMT2TLAHIR.Value, "yyyy-MM-dd") & "',`usia2`='" & TXTAMT2USIA.Text & "',`nik_amt3`='" & TXTAMT3NIK.Text & "',`nama_amt3`='" & TXTAMT3NAMA.Text & "',`ksong3`='" & TXTAMT3KSONG.Text & "',`tempat_lahir3`='" & TXTAMT3TLAHIR.Text & "',`tgl_lahir3`='" & Format(DATEAMT3TLAHIR.Value, "yyyy-MM-dd") & "',`usia3`='" & TXTKRFID2.Text & "',`transportir`='" & TXTTRANSPORTASI.Text & "' WHERE `id`='" & dataId & "'"
 
                 DA = New MySqlDataAdapter(QUERY, CONN)
                 DS = New DataSet
@@ -368,11 +302,9 @@ Public Class FormAMT
             MsgBox(ex.Message)
             'CBLevel.Items.Clear()
             'FormUser_Load(sender, e)
-            btnHapus.Visible = True
             kondisiawal()
         End Try
     End Sub
-
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
         If btnHapus.Text = "BATAL" Then
             'LvMTangki.Clear()
@@ -433,117 +365,38 @@ Public Class FormAMT
             MsgBox("Data Tidak bisa di Hapus", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Hapus Data")
         End Try
     End Sub
-    'Private Sub Caridata(pencarian As String)
-    '    Try
-    '        KoneksiKeDatabase()
-    '        QUERY = "SELECT * FROM relasitransaksi WHERE nama_perusahaan LIKE '%" & Trim(pencarian) & "%' OR no_plat_mobil LIKE '%" & Trim(pencarian) & "%'"
-    '        DA = New MySqlDataAdapter(QUERY, CONN)
-    '        DA.Fill(DS, "relasitransaksi")
-    '        DataGridTranksaksi.DataSource = DS.Tables("relasitransaksi")
-    '    Catch ex As Exception
-    '        MsgBox("Data tidak di temukan")
-    '    End Try
-    'End Sub
-
-    'Private Sub LblKode_Click(sender As Object, e As EventArgs) Handles LblKode.Click
-    '    Caridata(txtCari.Text)
-    'End Sub
-    Private Sub caridata()
-        Try
-            KoneksiKeDatabase()
-            QUERY = "SELECT * FROM relasitransaksi WHERE nama_perusahaan LIKE '%" & Trim(txtCari.Text) & "%' OR no_plat_mobil LIKE '%" & Trim(txtCari.Text) & "%'"
-            Dim cmd As New MySqlCommand(QUERY, CONN)
-            cmd.Parameters.AddWithValue("relasitransaksi", txtCari.Text)
-            DA.SelectCommand = cmd
-            Dim dt As New DataTable
-            DA.Fill(dt)
-            DataGridAMT.DataSource = dt
-        Catch ex As Exception
-            MsgBox("Data tidak di temukan")
-        End Try
-    End Sub
-
-    Private Sub LblKode_Click(sender As Object, e As EventArgs) Handles LblKode.Click
-        caridata()
-    End Sub
-
-    Private Sub FormAMT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        KoneksiKeDatabase()
-        kondisiawal()
-        TXTKRFID.Focus()
-    End Sub
-    Dim lokasifile As String
-
-    Private Sub BTNEXCEL_Click(sender As Object, e As EventArgs) Handles BTNEXCEL.Click
-        Dim exMessage As Integer = MessageBox.Show("Data Excel Harus Tutup", "Notfikasi", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information)
-        If exMessage = DialogResult.Yes Then
-            Dim ofd As New OpenFileDialog
-            Try
-                With ofd
-                    .Filter = "Excel File|*.xlsx|Excel File|*.xls| All files(*.*)|*.*"
-                    .FilterIndex = 1
-                    .Title = "Import data from excel file"
-                End With
-                If ofd.ShowDialog() = DialogResult.OK Then
-
-                    lokasifile = ofd.FileName
-                    Dim con As OleDb.OleDbConnection
-                    Dim cmd As OleDb.OleDbDataAdapter
-                    Dim dt As New DataSet
-
-                    If Path.GetExtension(lokasifile) = ".xlsx" Then
-                        con = New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + lokasifile + ";Extended Properties=Excel 12.0;")
-                        cmd = New OleDb.OleDbDataAdapter("SELECT * FROM [Daftar AMT $a4:w]", con)
-                    ElseIf Path.GetExtension(lokasifile) = ".xls" Then
-                        con = New OleDb.OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + lokasifile + ";Extended Properties='Excel 8.0;HDR=YES;'")
-                        cmd = New OleDb.OleDbDataAdapter("SELECT * FROM [Daftar AMT $a4:w]", con)
-                    Else
-                        ' Handle unsupported file format
-                        MessageBox.Show("Import failed")
-                        Exit Sub
-                    End If
-                    cmd.Fill(dt)
-                    DataGridAMT.DataSource = dt.Tables(0)
-                    'With DataGridAMT
-                    '    .Columns(0).HeaderText = "No Urut"
-                    '    .Columns(1).HeaderText = "No. RFID"
-                    '    .Columns(2).HeaderText = "NOPOL"
-                    '    .Columns(3).HeaderText = "Perusahaan"
-                    '    .Columns(4).HeaderText = "Lokasi"
-                    '    .Columns(5).HeaderText = "NIK AMT"
-                    '    .Columns(6).HeaderText = "Nama AMT"
-                    '    .Columns(7).HeaderText = "Tempat Lahir"
-                    '    .Columns(8).HeaderText = "Tanggal Lahir"
-                    '    .Columns(9).HeaderText = "USIA"
-                    '    .Columns(10).HeaderText = "NIK AMT"
-                    '    .Columns(11).HeaderText = "Nama AMT"
-                    '    .Columns(12).HeaderText = "Tempat Lahir"
-                    '    .Columns(13).HeaderText = "Tanggal Lahir"
-                    '    .Columns(14).HeaderText = "USIA"
-                    '    .Columns(15).HeaderText = "NIK AMT"
-                    '    .Columns(16).HeaderText = "Nama AMT"
-                    '    .Columns(17).HeaderText = "Tempat Lahir"
-                    '    .Columns(18).HeaderText = "Tanggal Lahir"
-                    '    .Columns(19).HeaderText = "USIA"
-                    '    .Columns(20).HeaderText = "Transportir"
-                    'End With
-
-                    'con.Close()
-                    btnUploud.Enabled = True
-                Else
 
 
-                End If
-            Catch ex As Exception
-                'MessageBox.Show("Sheet Pada Excel Harus MT", "EROR")
-                MessageBox.Show(ex.Message)
-            End Try
 
-        ElseIf exMessage = DialogResult.No Then
-            'MessageBox.Show("User Select No")
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        If btnClear.Text = "BATAL" Then
+            'LvMTangki.Clear()
+            txtCari.Enabled = True
+            aktifField()
+            KosongkanData()
+            DataGridAMT.Enabled = True
+
+            BtnTambah.Text = "INPUT"
+            BtnTambah.Image = ImgInput
+            BtnEdit.Text = "EDIT"
+            BtnEdit.Image = ImgEdit
+            btnHapus.Text = "HAPUS"
+            btnHapus.Image = ImgHapus
+            btnClear.Text = "CLEAR"
+            btnClear.Image = ImgClear
+
+            BtnTambah.Enabled = True
+            btnHapus.Enabled = False
+            BtnEdit.Enabled = False
+            Exit Sub
+        End If
+        If btnClear.Text = "CLEAR" Then
+            KosongkanData()
+            TXTKRFID.Focus()
             Exit Sub
         End If
     End Sub
+
     Private Function saveData(sql As String)
         Dim CONN As MySqlConnection = New MySqlConnection("server=localhost;User Id=root;password=;Persist Security Info=True;database=app_mobil_tangki;Convert Zero Datetime=True")
         Dim mysqlcmd As MySqlCommand
@@ -573,148 +426,115 @@ Public Class FormAMT
 
     End Function
 
-    Private Sub btnUploud_Click(sender As Object, e As EventArgs) Handles btnUploud.Click
-        'Try
-        Dim con As OleDb.OleDbConnection = New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + lokasifile + ";Extended Properties=Excel 12.0;")
-        Dim cmd1 As New OleDb.OleDbCommand
-        Dim da As New OleDb.OleDbDataAdapter
-        Dim dt As New DataTable
-        Dim result As Boolean
-        Dim sql As String
+    Dim lokasifile As String
 
-        Call KoneksiKeDatabase()
-        QUERY = "DELETE FROM `amt`"
-        CMD = New MySqlCommand(QUERY, CONN)
-        CMD.ExecuteNonQuery()
+    Private Sub BTNEXCEL_Click(sender As Object, e As EventArgs) Handles BTNEXCEL.Click
+        If BTNEXCEL.Text = "IMPORT EXCEL" Then
+            BTNEXCEL.Text = "Please Wait..."
 
+            BTNEXCEL.Enabled = False
 
-        With cmd1
-            .Connection = con
-            .CommandText = "Select * FROM [Daftar AMT $a4:w]"
-        End With
+            Dim exMessage As Integer = MessageBox.Show("Data Excel Harus Tutup", "Notfikasi", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+            If exMessage = DialogResult.Yes Then
+                Dim ofd As New OpenFileDialog
+                Try
+                    With ofd
+                        .Filter = "Excel File|*.xlsx|Excel File|*.xls| All files(*.*)|*.*"
+                        .FilterIndex = 1
+                        .Title = "Import data from excel file"
+                    End With
+                    If ofd.ShowDialog() = DialogResult.OK Then
 
-        da.SelectCommand = cmd1
-        da.Fill(dt)
+                        lokasifile = ofd.FileName
+                        Dim con As OleDb.OleDbConnection
+                        Dim cmd As OleDb.OleDbDataAdapter
+                        Dim dt As New DataSet
 
+                        If Path.GetExtension(lokasifile) = ".xlsx" Then
+                            con = New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + lokasifile + ";Extended Properties=Excel 12.0;")
+                            cmd = New OleDb.OleDbDataAdapter("SELECT * FROM [Daftar AMT $a4:w]", con)
+                        ElseIf Path.GetExtension(lokasifile) = ".xls" Then
+                            con = New OleDb.OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + lokasifile + ";Extended Properties='Excel 8.0;HDR=YES;'")
+                            cmd = New OleDb.OleDbDataAdapter("SELECT * FROM [Daftar AMT $a4:w]", con)
+                        Else
+                            ' Handle unsupported file format
+                            MessageBox.Show("Import failed")
+                            Exit Sub
+                        End If
+                        cmd.Fill(dt)
+                        DataGridAMT.DataSource = dt.Tables(0)
 
+                        txtCari.Enabled = False
+                        Enabledfield()
 
-        For Each r As DataRow In dt.Rows
+                        BTNEXCEL.Text = "BATAL IMPORT"
+                        BTNEXCEL.Enabled = True
+                        btnHapus.Enabled = False
+                        BtnEdit.Enabled = False
+                        BtnTambah.Enabled = False
+                        btnClear.Enabled = False
+                        btnUploud.Enabled = True
+                        DataGridAMT.Enabled = True
+                        Exit Sub
+                    Else
+                        BTNEXCEL.Text = "IMPORT EXCEL"
+                        BTNEXCEL.Enabled = True
 
+                    End If
+                Catch ex As Exception
+                    'MessageBox.Show("Sheet Pada Excel Harus MT", "EROR")
+                    MessageBox.Show("SHEET HARUS AMT")
+                    BTNEXCEL.Text = "IMPORT EXCEL"
+                    BTNEXCEL.Enabled = True
+                End Try
 
-
-
-            'Dim iDate As Date = r(9).ToString
-
-
-
-            'If iDate.ToLongDateString Is DBNull.Value Then
-            '    txtIssuedDate.Text = String.Empty
-            'Else
-            '    txtIssuedDate.Text = CType(FormatString(.Item("IssuedDate")).Trim, Date)
-            'End If
-
-
-
-            'Dim iDate1 As Date = r(9).ToString
-            'Dim iDate As Dat 'output
-
-            'If r(9) Is DBNull.Value Then
-            '    iDate = String.Empty
-            'Else
-            '    iDate = iDate1.ToString("yyyy-MM-dd")
-            'End If
-
-            'Dim myDate As Date = r(9).ToString()
-
-
-            'Dim iDate As String = r(9).ToString
-            'Dim oDate As DateTime = Convert.ToDateTime(iDate)
-
-            'Dim iDate
-
-            'Dim myDate As DateTime = r(9).ToString("yyyy-MM-dd")
-
-            'If r(9) Is " " Then
-            '    myDate = Convert.ToString(DBNull.Value)
-            'Else
-            '    myDate = myDate.ToString("yyyy-MM-dd")
-            'End If
-
-            'Dim dateValue As Date
-            'Dim dbNullValue As Object = DBNull.Value 'nul
-
-
-            'If r(9) Is " " Then
-            '    dateValue = Nothing
-            'Else
-            '    dateValue = r(9)
-            'End If
-
-            'Dim dateValue As Date
-
-            'If Convert.IsDBNull(r(9)) Then
-            '    dateValue = Nothing
-            'Else
-            '    dateValue = CType(r(9), Date)
-            'End If
-
-            'Dim datemasuk As Date
-
-            'If Convert.IsDBNull(r(16)) Then
-            '    datemasuk = Nothing
-            'Else
-            '    datemasuk = CType(r(16), Date)
-            'End If
-
-            Dim tgllahir1 As Date = If(Convert.IsDBNull(r(9)), Nothing, CType(r(9), Date))
-            Dim tgllahir2 As Date = If(Convert.IsDBNull(r(14)), Nothing, CType(r(14), Date))
-            Dim tgllahir3 As Date = If(Convert.IsDBNull(r(19)), Nothing, CType(r(19), Date))
-            Dim nourut As Integer = If(Convert.IsDBNull(r(0)), Nothing, CType(r(0), Integer))
-            'Dim nama As Integer = If(Convert.IsDBNull(r(6)), Nothing, CType(r(6), String))
-
-            Dim name As String = r(6).ToString
-            Dim trimmedName As String = name.Trim("'"c) ' menghapus tanda kutip satu pada awal dan akhir string
-            Dim escapedName As String = MySqlHelper.EscapeString(trimmedName) ' melindungi string dari karakter-karakter khusus
-
-            sql = "INSERT INTO `amt`(`id`, `no_urut`, `kode_rfid`, `kode_rfid2`, `no_polis`, `perusahaan`, `lokasiamt`, `nik_amt1`, `nama_amt1`, `ksong1`, `tempat_lahir1`, `tgl_lahir1`, `usia1`, `nik_amt2`, `nama_amt2`, `ksong2`, `tempat_lahir2`, `tgl_lahir2`, `usia2`, `nik_amt3`, `nama_amt3`, `ksong3`, `tempat_lahir3`, `tgl_lahir3`, `usia3`, `transportir`) VALUES ('','" & nourut.ToString & "','" & r(1).ToString & "','koderfid2','" & r(2).ToString & "','" & r(3).ToString & "','" & r(4).ToString & "','" & r(5).ToString & "','" & escapedName & "','" & r(7).ToString & "','" & r(8).ToString & "','" & tgllahir1.ToString("yyyy-MM-dd") & "','" & r(10).ToString & "','" & r(11).ToString & "','" & r(12).ToString & "','ksong2','" & r(13).ToString & "','" & tgllahir2.ToString("yyyy-MM-dd") & "','" & r(15).ToString & "','" & r(16).ToString & "','" & r(17).ToString & "','ksong3','" & r(18).ToString & "','" & tgllahir3.ToString("yyyy-MM-dd") & "','" & r(20).ToString & "','" & r(21).ToString & "')"
-
-
-            result = saveData(sql)
-            If result Then
-                Timer2.Start()
+            ElseIf exMessage = DialogResult.No Then
+                BTNEXCEL.Text = "IMPORT EXCEL"
+                BTNEXCEL.Enabled = True
+                BtnTambah.Enabled = True
+                btnClear.Enabled = True
+                aktifField()
+                DataGridAMT.Enabled = True
+                txtCari.Enabled = True
+                Exit Sub
             End If
-        Next
+        End If
 
-        'FormMobilTangki_Load(sender, e)
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        'End Try
-    End Sub
+        If BTNEXCEL.Text = "BATAL IMPORT" Then
+            BTNEXCEL.Text = "IMPORT EXCEL"
+            btnUploud.Text = "UPLOUD"
+            FormAMT_Load(sender, e)
 
-    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        Try
-            'Dim filepath As String = TXTLOCATION.Text
-            'Dim connstring As String = String.Empty
-            Dim con As OleDb.OleDbConnection
+            aktifField()
+            txtCari.Enabled = True
+            BtnTambah.Text = "INPUT"
+            BtnTambah.Image = ImgInput
+            BtnEdit.Text = "EDIT"
+            BtnEdit.Image = ImgEdit
+            btnHapus.Text = "HAPUS"
+            btnHapus.Image = ImgHapus
+            btnClear.Text = "CLEAR"
+            btnClear.Image = ImgClear
 
-            con = New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + lokasifile + ";Extended Properties=Excel 12.0;")
-            'If filepath.EndsWith(".xls") Then
-            '    connstring =
-            'End If
-            Dim cmd As New OleDb.OleDbDataAdapter("Select * from [Daftar AMT $a5:w]", con)
-            cmd.TableMappings.Add("Table", "Table")
-            Dim dt As New DataSet
-            cmd.Fill(dt)
-            DataGridAMT.DataSource = dt.Tables(0)
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+            BtnTambah.Enabled = True
+            btnClear.Enabled = True
+            btnHapus.Enabled = False
+            BtnEdit.Enabled = False
+            DataGridAMT.Enabled = True
+            Exit Sub
+        End If
+
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         If ProgressBar1.Value = 100 Then
             Timer2.Stop()
             MessageBox.Show("Sucessfully imported", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            FormAMT_Load(sender, e)
+            btnUploud.Text = "UPLOUD"
+            BTNEXCEL.Text = "IMPORT EXCEL"
+            aktifField()
+            txtCari.Enabled = True
 
             ProgressBar1.Value = 0
         Else
@@ -722,67 +542,90 @@ Public Class FormAMT
         End If
     End Sub
 
-    Private Sub BTNEXPORT_Click(sender As Object, e As EventArgs) Handles BTNEXPORT.Click
-        Try
-            BTNEXPORT.Text = "Please Wait..."
-            BTNEXPORT.Enabled = False
 
-            SaveFileDialog1.Filter = "Excel Document (*.xlsx)|*.xlsx"
-            If SaveFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-                Dim xlApp As Microsoft.Office.Interop.Excel.Application
-                Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
-                Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
-                Dim misValue As Object = System.Reflection.Missing.Value
-                'Dim i As Integer
-                'Dim j As Integer
+    Private Sub btnUploud_Click(sender As Object, e As EventArgs) Handles btnUploud.Click
+        Dim A As String
+        A = MsgBox("Benar data Dihapus ganti data baru?", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "UPLOUD DATA")
+        Select Case A
+            Case vbCancel
+                MsgBox("Data Tidak diganti", MsgBoxStyle.OkOnly, "UPLOUD DATA")
 
-                xlApp = New Microsoft.Office.Interop.Excel.Application
-                'xlApp.Workbooks.Open()
-                xlWorkBook = xlApp.Workbooks.Add(misValue)
-                xlWorkSheet = xlWorkBook.Sheets("Daftar AMT")
+                FormAMT_Load(sender, e)
+                btnUploud.Text = "UPLOUD"
+                BTNEXCEL.Text = "IMPORT EXCEL"
+                aktifField()
+                txtCari.Enabled = True
 
-                For i = 0 To DataGridAMT.RowCount - 2
-                    For j = 0 To DataGridAMT.ColumnCount - 1
-                        For k As Integer = 1 To DataGridAMT.Columns.Count
-                            xlWorkSheet.Cells(1, k) = DataGridAMT.Columns(k - 1).HeaderText
-                            xlWorkSheet.Cells(i + 2, j + 1) = DataGridAMT(j, i).Value.ToString()
-                        Next
+                Exit Sub
+            Case vbOK
+                Try
+                    Dim con As OleDb.OleDbConnection = New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + lokasifile + ";Extended Properties=Excel 12.0;")
+                    Dim cmd1 As New OleDb.OleDbCommand
+                    Dim da As New OleDb.OleDbDataAdapter
+                    Dim dt As New DataTable
+                    Dim result As Boolean
+                    Dim sql As String
+
+                    Call KoneksiKeDatabase()
+                    QUERY = "DELETE FROM `amt`"
+                    CMD = New MySqlCommand(QUERY, CONN)
+                    CMD.ExecuteNonQuery()
+
+                    'Call KoneksiKeDatabase()
+                    Dim QUERY1 As String = "ALTER TABLE `amt` AUTO_INCREMENT = 1"
+                    CMD = New MySqlCommand(QUERY1, CONN)
+                    CMD.ExecuteNonQuery()
+
+
+                    With cmd1
+                        .Connection = con
+                        .CommandText = "Select * FROM [Daftar AMT $a4:w]"
+                    End With
+
+                    da.SelectCommand = cmd1
+                    da.Fill(dt)
+
+
+
+                    For Each r As DataRow In dt.Rows
+
+                        If (IsDBNull(r(1)) And IsDBNull(r(2)) And IsDBNull(r(3)) And IsDBNull(r(4))) Then
+                            ' if true, do nothing and continue to next row
+                        Else
+                            'buat data pisah
+                            Dim myString As String = r(1).ToString
+                            Dim myValues() As String = myString.Split(" "c)
+
+                            Dim value1 As String = myValues(0)
+                            Dim value2 As String = If(myValues.Length > 1, myValues(1), String.Empty)
+
+                            Dim tgllahir1 As Date = If(Convert.IsDBNull(r(9)), Nothing, CType(r(9), Date))
+                            Dim tgllahir2 As Date = If(Convert.IsDBNull(r(14)), Nothing, CType(r(14), Date))
+                            Dim tgllahir3 As Date = If(Convert.IsDBNull(r(19)), Nothing, CType(r(19), Date))
+                            Dim nourut As Integer = If(Convert.IsDBNull(r(0)), Nothing, CType(r(0), Integer))
+                            'Dim nama As Integer = If(Convert.IsDBNull(r(6)), Nothing, CType(r(6), String))
+
+                            Dim name As String = r(6).ToString
+                            Dim trimmedName As String = name.Trim("'"c) ' menghapus tanda kutip satu pada awal dan akhir string
+                            Dim escapedName As String = MySqlHelper.EscapeString(trimmedName) ' melindungi string dari karakter-karakter khusus
+
+                            sql = "INSERT INTO `amt`(`id`, `no_urut`, `kode_rfid`, `kode_rfid2`, `no_polis`, `perusahaan`, `lokasiamt`, `nik_amt1`, `nama_amt1`, `ksong1`, `tempat_lahir1`, `tgl_lahir1`, `usia1`, `nik_amt2`, `nama_amt2`, `ksong2`, `tempat_lahir2`, `tgl_lahir2`, `usia2`, `nik_amt3`, `nama_amt3`, `ksong3`, `tempat_lahir3`, `tgl_lahir3`, `usia3`, `transportir`) VALUES ('','" & nourut.ToString & "','" & value1 & "','" & value2 & "','" & r(2).ToString & "','" & r(3).ToString & "','" & r(4).ToString & "','" & r(5).ToString & "','" & escapedName & "','" & r(7).ToString & "','" & r(8).ToString & "','" & tgllahir1.ToString("yyyy-MM-dd") & "','" & r(10).ToString & "','" & r(11).ToString & "','" & r(12).ToString & "','','" & r(13).ToString & "','" & tgllahir2.ToString("yyyy-MM-dd") & "','" & r(15).ToString & "','" & r(16).ToString & "','" & r(17).ToString & "','','" & r(18).ToString & "','" & tgllahir3.ToString("yyyy-MM-dd") & "','" & r(20).ToString & "','" & r(21).ToString & "')"
+
+
+                            result = saveData(sql)
+                            If result Then
+                                Timer2.Start()
+                            End If
+                        End If
                     Next
-                Next
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message)
+                    btnUploud.Text = "Failed Import..."
+                End Try
 
-                xlWorkSheet.SaveAs(SaveFileDialog1.FileName)
-                xlWorkBook.Close()
-                xlApp.Quit()
-
-                releaseObject(xlApp)
-                releaseObject(xlWorkBook)
-                releaseObject(xlWorkSheet)
-
-                MsgBox("Successfully saved" & vbCrLf & "File are saved at : " & SaveFileDialog1.FileName, MsgBoxStyle.Information, "Information")
-
-                BTNEXPORT.Text = "Export To MS Excel"
-                BTNEXPORT.Enabled = True
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Buka File excel Failed to save !!!" & vbCrLf & ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            'MessageBox.Show("Failed to save !!!", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End Try
+        End Select
     End Sub
-
-    Private Sub releaseObject(ByVal obj As Object)
-        Try
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(obj)
-            obj = Nothing
-        Catch ex As Exception
-            obj = Nothing
-        Finally
-            GC.Collect()
-        End Try
-    End Sub
-
-
-    Private Sub DataGridAMT_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridAMT.CellClick
+    Sub clickdatagrid()
         Dim i As Integer
 
         Try
@@ -859,13 +702,56 @@ Public Class FormAMT
 
                     BtnTambah.Enabled = False
 
+                    'txtCari.Enabled = False
                     Enabledfield()
-                    DataGridAMT.Enabled = False
+                    DataGridAMT.Enabled = True
 
                 End If
             End With
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            'MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Private Sub DataGridAMT_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridAMT.CellClick
+        clickdatagrid()
+    End Sub
+
+    Private Sub txtCari_MouseClick(sender As Object, e As MouseEventArgs) Handles txtCari.MouseClick
+        txtCari.Text = ""
+        ' Mengubah font
+        txtCari.Font = New Font("Times New Roman", 14.25)
+        ' Mengubah warna
+        txtCari.ForeColor = Color.Black
+    End Sub
+
+    Private Sub txtCari_Leave(sender As Object, e As EventArgs) Handles txtCari.Leave
+
+
+        'FormAMT_Load(sender, e)
+        txtCari.Text = "Cari Data NOPOLIS Dan RFID"
+        ' Mengubah font
+        txtCari.Font = New Font("Times New Roman", 14.25)
+        ' Mengubah warna
+        txtCari.ForeColor = SystemColors.WindowFrame
+
+    End Sub
+
+    Private Sub txtCari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCari.KeyPress
+        If e.KeyChar = Chr(13) Then
+            Try
+                KoneksiKeDatabase()
+                QUERY = "SELECT * FROM amt WHERE `no_polis` LIKE '%" & Trim(txtCari.Text) & "%' OR `kode_rfid` LIKE '%" & Trim(txtCari.Text) & "%' OR `kode_rfid2` LIKE '%" & Trim(txtCari.Text) & "%'"
+
+                DA = New MySqlDataAdapter(QUERY, CONN)
+                DS = New DataSet
+                DA.Fill(DS, "mt")
+                DataGridAMT.DataSource = DS.Tables("mt")
+
+            Catch ex As Exception
+                MsgBox("Data tidak di temukan")
+            End Try
+        End If
+    End Sub
+
 End Class

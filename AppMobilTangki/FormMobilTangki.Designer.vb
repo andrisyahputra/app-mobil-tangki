@@ -23,9 +23,9 @@ Partial Class FormMobilTangki
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DATEMLAKUKIER = New System.Windows.Forms.DateTimePicker()
         Me.DATEPASMASUK = New System.Windows.Forms.DateTimePicker()
@@ -67,7 +67,6 @@ Partial Class FormMobilTangki
         Me.Label50 = New System.Windows.Forms.Label()
         Me.BtnTambah = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
-        Me.LblKode = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
@@ -128,9 +127,7 @@ Partial Class FormMobilTangki
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnUploud = New System.Windows.Forms.Button()
         Me.btnTutup = New System.Windows.Forms.Label()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.DTGridMT = New System.Windows.Forms.DataGridView()
-        Me.BTNEXPORT = New System.Windows.Forms.Button()
         Me.BTNEXCEL = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -161,7 +158,6 @@ Partial Class FormMobilTangki
         Me.GroupBox1.Controls.Add(Me.Label50)
         Me.GroupBox1.Controls.Add(Me.BtnTambah)
         Me.GroupBox1.Controls.Add(Me.Label33)
-        Me.GroupBox1.Controls.Add(Me.LblKode)
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label49)
         Me.GroupBox1.Controls.Add(Me.Label32)
@@ -574,7 +570,8 @@ Partial Class FormMobilTangki
         '
         'txtCari
         '
-        Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCari.ForeColor = System.Drawing.SystemColors.WindowFrame
         Me.txtCari.Location = New System.Drawing.Point(69, 435)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(347, 20)
@@ -663,17 +660,6 @@ Partial Class FormMobilTangki
         Me.Label33.Size = New System.Drawing.Size(120, 14)
         Me.Label33.TabIndex = 95
         Me.Label33.Text = "TANGGAL PENERIMA"
-        '
-        'LblKode
-        '
-        Me.LblKode.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.LblKode.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblKode.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblKode.Image = Global.AppMobilTangki.My.Resources.Resources.search
-        Me.LblKode.Location = New System.Drawing.Point(426, 430)
-        Me.LblKode.Name = "LblKode"
-        Me.LblKode.Size = New System.Drawing.Size(38, 30)
-        Me.LblKode.TabIndex = 104
         '
         'Label14
         '
@@ -1285,35 +1271,31 @@ Partial Class FormMobilTangki
         Me.btnTutup.Size = New System.Drawing.Size(36, 39)
         Me.btnTutup.TabIndex = 101
         '
-        'BackgroundWorker1
-        '
-        Me.BackgroundWorker1.WorkerReportsProgress = True
-        '
         'DTGridMT
         '
         Me.DTGridMT.AllowUserToAddRows = False
         Me.DTGridMT.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.DTGridMT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.DTGridMT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.DTGridMT.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTGridMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTGridMT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DTGridMT.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTGridMT.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTGridMT.DefaultCellStyle = DataGridViewCellStyle9
         Me.DTGridMT.GridColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.DTGridMT.Location = New System.Drawing.Point(25, 528)
         Me.DTGridMT.Name = "DTGridMT"
@@ -1321,21 +1303,6 @@ Partial Class FormMobilTangki
         Me.DTGridMT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DTGridMT.Size = New System.Drawing.Size(952, 196)
         Me.DTGridMT.TabIndex = 116
-        '
-        'BTNEXPORT
-        '
-        Me.BTNEXPORT.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.BTNEXPORT.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BTNEXPORT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BTNEXPORT.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNEXPORT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.BTNEXPORT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BTNEXPORT.Location = New System.Drawing.Point(149, 480)
-        Me.BTNEXPORT.Name = "BTNEXPORT"
-        Me.BTNEXPORT.Size = New System.Drawing.Size(125, 33)
-        Me.BTNEXPORT.TabIndex = 50
-        Me.BTNEXPORT.Text = "EXPORT EXCEL"
-        Me.BTNEXPORT.UseVisualStyleBackColor = False
         '
         'BTNEXCEL
         '
@@ -1345,9 +1312,9 @@ Partial Class FormMobilTangki
         Me.BTNEXCEL.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BTNEXCEL.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(214, Byte), Integer))
         Me.BTNEXCEL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BTNEXCEL.Location = New System.Drawing.Point(18, 480)
+        Me.BTNEXCEL.Location = New System.Drawing.Point(65, 480)
         Me.BTNEXCEL.Name = "BTNEXCEL"
-        Me.BTNEXCEL.Size = New System.Drawing.Size(125, 33)
+        Me.BTNEXCEL.Size = New System.Drawing.Size(174, 33)
         Me.BTNEXCEL.TabIndex = 49
         Me.BTNEXCEL.Text = "IMPORT EXCEL"
         Me.BTNEXCEL.UseVisualStyleBackColor = False
@@ -1359,7 +1326,6 @@ Partial Class FormMobilTangki
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1002, 749)
         Me.Controls.Add(Me.btnTutup)
-        Me.Controls.Add(Me.BTNEXPORT)
         Me.Controls.Add(Me.DTGridMT)
         Me.Controls.Add(Me.btnUploud)
         Me.Controls.Add(Me.BTNEXCEL)
@@ -1384,7 +1350,6 @@ Partial Class FormMobilTangki
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents LblKode As Label
     Friend WithEvents txtCari As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents btnHapus As Label
@@ -1395,9 +1360,7 @@ Partial Class FormMobilTangki
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnUploud As Button
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents DTGridMT As DataGridView
-    Friend WithEvents BTNEXPORT As Button
     Friend WithEvents BTNEXCEL As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
